@@ -28,7 +28,7 @@ export default function BusinessGrid({ businesses }) {
   }];
 
   return (
-    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
       {businesses.map(business => (
         <div class="col mb-4">
           <Card>
