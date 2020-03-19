@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import { Link } from 'react-router-dom';
 import { Card, CardTitle, CardText } from 'reactstrap';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -16,6 +17,21 @@ export default class BusinessDetails extends Component {
       business: null,
       menuItems: [],
     };
+
+    // Bind class methods.
+    this.handleAddressClick = this.handleAddressClick.bind(this);
+  }
+
+  handleAddressClick() {
+    const { business: { address } } = this.state;
+
+    if ((navigator.platform.indexOf("iPhone") != -1) ||
+     (navigator.platform.indexOf("iPad") != -1) ||
+     (navigator.platform.indexOf("iPod") != -1)) {
+      window.open("maps://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+    } else {
+      window.open(`https://maps.google.com/maps?daddr=${address}&amp;ll=`);
+    }
   }
 
   componentDidMount() {
@@ -63,7 +79,13 @@ export default class BusinessDetails extends Component {
             <h2 className="mb-0 text-center text-dark business-heading">
               {name}
             </h2>
-            <p className="mb-0 text-center text-secondary">{address}</p>
+            {/* <p className="mb-0 text-center text-secondary">{address}</p> */}
+            <Link
+              onClick={this.handleAddressClick}
+              className="mx-2"
+            >
+              {address}
+            </Link>
             <div className="d-sm-flex flex-md-column justify-content-sm-around text-center text-secondary">
               <div className="d-flex justify-content-around font-lg">
                 <span className="font-weight-bold">Phone:</span>

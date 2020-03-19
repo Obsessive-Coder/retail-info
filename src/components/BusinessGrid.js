@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function BusinessGrid({ businesses }) {
+export default function BusinessGrid({ businesses, handleAddressClick }) {
   const booleanFields = [{
     propertyName: 'isCurbside',
     labelText: 'Curbside',
@@ -46,9 +46,12 @@ export default function BusinessGrid({ businesses }) {
                   fixedWidth
                   icon={faMapMarker}
                 />
-                <span className="mx-2">
+                <Link
+                  onClick={() => handleAddressClick(business.address)}
+                  className="mx-2"
+                >
                   {business.address}
-                </span>
+                </Link>
               </div>
               <div className="font-weight-bold">
                 <FontAwesomeIcon

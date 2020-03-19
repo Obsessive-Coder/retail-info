@@ -19,6 +19,19 @@ export default class BusinessList extends Component {
     this.state = {
       businesses: dataFile.businesses || [],
     };
+
+    // Bind class methods.
+    this.handleAddressClick = this.handleAddressClick.bind(this);
+  }
+
+  handleAddressClick(address) {
+    if ((navigator.platform.indexOf("iPhone") != -1) ||
+     (navigator.platform.indexOf("iPad") != -1) ||
+     (navigator.platform.indexOf("iPod") != -1)) {
+      window.open("maps://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+    } else {
+      window.open(`https://maps.google.com/maps?daddr=${address}&amp;ll=`);
+    }
   }
 
   // componentDidMount() {
@@ -46,7 +59,7 @@ export default class BusinessList extends Component {
         </h1>
 
         <div className="mx-2">
-          <BusinessGrid businesses={businesses} />
+          <BusinessGrid businesses={businesses} handleAddressClick={this.handleAddressClick} />
         </div>
       </div>
     )
