@@ -1,9 +1,8 @@
 import React from 'react'
-import google from 'google-parser';
+import { Link } from 'react-router-dom';
 
 import {
-  Button, Card, CardImg, CardBody,
-  CardTitle, CardSubtitle, CardHeader,
+  Button, Card, CardImg, CardBody, CardHeader,
 } from 'reactstrap';
 
 import {
@@ -24,14 +23,14 @@ export default function BusinessGrid({ businesses }) {
     labelText: 'In-Store',
   }, {
     propertyName: 'isDrivethrough',
-    labelText: 'DT',
+    labelText: 'D-T',
   }];
 
   return (
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
       {businesses.map(business => (
-        <div class="col mb-4">
-          <Card>
+        <div key={business.name} className="col mb-4">
+          <Card className="shadow">
             {/* <CardImg
               top
               width="100%"
@@ -92,14 +91,12 @@ export default function BusinessGrid({ businesses }) {
                 ))}
               </div>
 
-              <Button
-                block
-                outline
-                color="info"
-                onClick={() => alert('This feature is currently being developed.')}
+              <Link
+                to={`/businesses/${business.menuId}`}
+                className="btn btn-block btn-outline-dark"
               >
-                Menu (coming soon)
-              </Button>
+                More Info
+              </Link>
             </CardBody>
           </Card>
         </div>

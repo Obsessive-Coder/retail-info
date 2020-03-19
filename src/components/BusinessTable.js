@@ -1,9 +1,6 @@
 import React from 'react'
 
-import {
-  faCheck, faTimes, faMapMarker,
-  faClock, faPhoneAlt,
-} from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function BusinessTable({ businesses }) {

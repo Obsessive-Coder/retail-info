@@ -1,0 +1,73 @@
+{
+  "hazels-cafe": [
+    {
+      "name": "Chicken Salad (1 side)",
+      "subText": "Sides - Chips, potato salad, or fruit",
+      "price": 9.00
+    },
+    {
+      "name": "Brisket Grilled Cheese (1 side)",
+      "subText": "Sides - Chips, potato salad, or fruit",
+      "price": 12.00
+    },
+    {
+      "name": "Black Bean and Hummus Tacos (1 side)",
+      "subText": "Sides - Chips, potato salad, or fruit",
+      "price": 9.00
+    },
+    {
+      "name": "Grass Fed Cheeseburger (1 side)",
+      "subText": "Sides - Chips, potato salad, or fruit",
+      "price": 12.00
+    },
+    {
+      "name": "Sunrise Salad",
+      "price": 12.00
+    },
+    {
+      "name": "Flatbread",
+      "price": 12.00
+    },
+    {
+      "name": "Frozen Flatbread",
+      "price": 10.00
+    },
+    {
+      "name": "Smoked Turkey Bacon Aioli Melt",
+      "price": 12.00
+    },
+    {
+      "name": "Hame or Turkey Melt",
+      "price": 9.00
+    },
+    {
+      "name": "Soup of the Day with Bread",
+      "price": 5.00
+    },
+    {
+      "name": "All Day Breakfast",
+      "subText": "Ham, Bacon, or Turkey",
+      "price": 7.00
+    },
+    {
+      "name": "Quiche",
+      "price": 4.00
+    },
+    {
+      "name": "Apple Cinnamon Muffin",
+      "price": 3.50
+    },
+    {
+      "name": "Chocolate Raspberry Muffin",
+      "price": 3.00
+    },
+    {
+      "name": "Low Fat Blueberry Scone",
+      "price": 3.00
+    },
+    {
+      "name": "Chocolate Cookie",
+      "price": 2.00
+    }
+  ]
+}
