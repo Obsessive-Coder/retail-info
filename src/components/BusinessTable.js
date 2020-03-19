@@ -38,7 +38,6 @@ export default function BusinessTable({ businesses }) {
                       {typeof business[column] === 'string' ? (
                         business[column]
                       ) : (
-                        // business[column] === true ? 'yes' : 'no'
                         <FontAwesomeIcon
                           fixedWidth
                           size="lg"
