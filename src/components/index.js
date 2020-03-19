@@ -1,18 +1,18 @@
 import Home from './Home';
-import BusinessTable from './BusinessTable';
 import BusinessList from './BusinessList';
-import BusinessItem from './BusinessItem';
+import BusinessTable from './BusinessTable';
+import BusinessGrid from './BusinessGrid';
 
 export {
   Home,
-  BusinessTable,
   BusinessList,
-  BusinessItem,
+  BusinessTable,
+  BusinessGrid,
 };
 
 export default {
   Home,
-  BusinessTable,
   BusinessList,
-  BusinessItem,
+  BusinessTable,
+  BusinessGrid,
 };

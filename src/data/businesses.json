@@ -7,8 +7,8 @@
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "801 S 4th St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "801 S 4th St, Oregon"
     },
     {
       "name": "Bella's",
@@ -17,8 +17,8 @@
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": false,
-      "hours": "normal",
-      "address": "317 W Washington St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "317 W Washington St, Oregon"
     },
     {
       "name": "Blackhawk Nutrition",
@@ -27,8 +27,8 @@
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "312 W Washington St Suite B, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "312 W Washington St Suite B, Oregon"
     },
     {
       "name": "Blackhawk Steak Pit",
@@ -37,18 +37,18 @@
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "1429 IL-2, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "1429 IL-2, Oregon"
     },
     {
-      "name": "Breakers Saloon & Eatery",
+      "name": "Breakers Saloon",
       "phone": "(815) 732-3319",
       "isCurbside": true,
       "isDelivery": false,
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "4pm - 8pm",
-      "address": "100 S 2nd St, Oregon, IL 61061"
+      "address": "100 S 2nd St, Oregon"
     },
     {
       "name": "Campus Cafe",
@@ -57,8 +57,8 @@
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "101 S Wesley Ave, Mt Morris, IL 61054"
+      "hours": "normal hours",
+      "address": "101 S Wesley Ave, Mt Morris"
     },
     {
       "name": "Chile Pepper",
@@ -68,7 +68,7 @@
       "isDrivethrough": false,
       "isInStore": false,
       "hours": "Thurs-Sat 5-8",
-      "address": "416 W Washington St, Oregon, IL 61061"
+      "address": "416 W Washington St, Oregon"
     },
     {
       "name": "China King",
@@ -77,8 +77,8 @@
       "isDelivery": false,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "509 W Washington St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "509 W Washington St, Oregon"
     },
     {
       "name": "Dairy Queen",
@@ -87,8 +87,8 @@
       "isDelivery": false,
       "isDrivethrough": true,
       "isInStore": false,
-      "hours": "normal",
-      "address": "210 E Washington St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "210 E Washington St, Oregon"
     },
     {
       "name": "Dos Amigos",
@@ -97,28 +97,28 @@
       "isDelivery": false,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "198-100 N Hastings Ave, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "198-100 N Hastings Ave, Oregon"
     },
     {
-      "name": "Father & Sons Pizzeria",
+      "name": "Father & Sons",
       "phone": "(815) 732-9700",
       "isCurbside": true,
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "137 S 4th St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "137 S 4th St, Oregon"
     },
     {
-      "name": "Hazel's Cafe, Coffee & Chocolates",
+      "name": "Hazel's Cafe",
       "phone": "(815) 732-7017",
       "isCurbside": true,
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "307 W Washington St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "307 W Washington St, Oregon"
     },
     {
       "name": "Hectors Cocina",
@@ -127,8 +127,8 @@
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "201 N 3rd St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "201 N 3rd St, Oregon"
     },
     {
       "name": "Home Town Diner",
@@ -137,8 +137,8 @@
       "isDelivery": false,
       "isDrivethrough": true,
       "isInStore": false,
-      "hours": "normal",
-      "address": "312 E Hitt St Mount Morris, Illinois 61054"
+      "hours": "normal hours",
+      "address": "312 E Hitt St, Mt Morris"
     },
     {
       "name": "McDonalds",
@@ -147,8 +147,8 @@
       "isDelivery": false,
       "isDrivethrough": true,
       "isInStore": true,
-      "hours": "normal",
-      "address": "211 S 4th St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "211 S 4th St, Oregon"
     },
     {
       "name": "Messie's Bar & Grill",
@@ -157,8 +157,8 @@
       "isDelivery": false,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "17 N River Rd, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "17 N River Rd, Oregon"
     },
     {
       "name": "Northside BBQ",
@@ -167,8 +167,8 @@
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "117 N 4th St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "117 N 4th St, Oregon"
     },
     {
       "name": "The Pepper Mill",
@@ -177,8 +177,8 @@
       "isDelivery": false,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal",
-      "address": "10 E Hitt St, Mt Morris, IL 61054"
+      "hours": "normal hours",
+      "address": "10 E Hitt St, Mt Morris"
     },
     {
       "name": "Scoops",
@@ -187,8 +187,8 @@
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": false,
-      "hours": "normal",
-      "address": "108 N 4th St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "108 N 4th St, Oregon"
     },
     {
       "name": "Spring Valley",
@@ -197,8 +197,8 @@
       "isDelivery": false,
       "isDrivethrough": false,
       "isInStore": false,
-      "hours": "normal",
-      "address": "300 E Washington St, Oregon, IL 61061"
+      "hours": "normal hours",
+      "address": "300 E Washington St, Oregon"
     },
     {
       "name": "Subway",
@@ -208,7 +208,7 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "10am - 6pm",
-      "address": "511 W Washington St, Oregon, IL 61061"
+      "address": "511 W Washington St, Oregon"
     }
   ]
 }
