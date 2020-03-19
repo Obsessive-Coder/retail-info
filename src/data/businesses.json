@@ -1,0 +1,214 @@
+{
+  "businesses": [
+    {
+      "name": "Alfano's",
+      "phone": "(815) 732-2774",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "801 S 4th St, Oregon, IL 61061"
+    },
+    {
+      "name": "Bella's",
+      "phone": "(815) 732-0991",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": false,
+      "hours": "normal",
+      "address": "317 W Washington St, Oregon, IL 61061"
+    },
+    {
+      "name": "Blackhawk Nutrition",
+      "phone": "(815) 881-8239",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "312 W Washington St Suite B, Oregon, IL 61061"
+    },
+    {
+      "name": "Blackhawk Steak Pit",
+      "phone": "(815) 732-2500",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "1429 IL-2, Oregon, IL 61061"
+    },
+    {
+      "name": "Breakers Saloon & Eatery",
+      "phone": "(815) 732-3319",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "4pm - 8pm",
+      "address": "100 S 2nd St, Oregon, IL 61061"
+    },
+    {
+      "name": "Campus Cafe",
+      "phone": "(779) 545-0007",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "101 S Wesley Ave, Mt Morris, IL 61054"
+    },
+    {
+      "name": "Chile Pepper",
+      "phone": "(815) 732-1583",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": false,
+      "isInStore": false,
+      "hours": "Thurs-Sat 5-8",
+      "address": "416 W Washington St, Oregon, IL 61061"
+    },
+    {
+      "name": "China King",
+      "phone": "(815) 732-0887",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "509 W Washington St, Oregon, IL 61061"
+    },
+    {
+      "name": "Dairy Queen",
+      "phone": "(815) 881-8025",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": true,
+      "isInStore": false,
+      "hours": "normal",
+      "address": "210 E Washington St, Oregon, IL 61061"
+    },
+    {
+      "name": "Dos Amigos",
+      "phone": "(815) 732-4444",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "198-100 N Hastings Ave, Oregon, IL 61061"
+    },
+    {
+      "name": "Father & Sons Pizzeria",
+      "phone": "(815) 732-9700",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "137 S 4th St, Oregon, IL 61061"
+    },
+    {
+      "name": "Hazel's Cafe, Coffee & Chocolates",
+      "phone": "(815) 732-7017",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "307 W Washington St, Oregon, IL 61061"
+    },
+    {
+      "name": "Hectors Cocina",
+      "phone": "(815) 881-8338",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "201 N 3rd St, Oregon, IL 61061"
+    },
+    {
+      "name": "Home Town Diner",
+      "phone": "(815) 994-0573",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": true,
+      "isInStore": false,
+      "hours": "normal",
+      "address": "312 E Hitt St Mount Morris, Illinois 61054"
+    },
+    {
+      "name": "McDonalds",
+      "phone": "(815) 732-6053",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": true,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "211 S 4th St, Oregon, IL 61061"
+    },
+    {
+      "name": "Messie's Bar & Grill",
+      "phone": "(815) 732-1234",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "17 N River Rd, Oregon, IL 61061"
+    },
+    {
+      "name": "Northside BBQ",
+      "phone": "(815) 881-8277",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "117 N 4th St, Oregon, IL 61061"
+    },
+    {
+      "name": "The Pepper Mill",
+      "phone": "(815) 734-4141",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal",
+      "address": "10 E Hitt St, Mt Morris, IL 61054"
+    },
+    {
+      "name": "Scoops",
+      "phone": "(815) 979-1037",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": false,
+      "hours": "normal",
+      "address": "108 N 4th St, Oregon, IL 61061"
+    },
+    {
+      "name": "Spring Valley",
+      "phone": "(815) 732-4877",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": false,
+      "isInStore": false,
+      "hours": "normal",
+      "address": "300 E Washington St, Oregon, IL 61061"
+    },
+    {
+      "name": "Subway",
+      "phone": "(815) 732-7827",
+      "isCurbside": true,
+      "isDelivery": false,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "10am - 6pm",
+      "address": "511 W Washington St, Oregon, IL 61061"
+    }
+  ]
+}

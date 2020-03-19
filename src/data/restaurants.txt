@@ -1,0 +1,22 @@
+name;phone;isCurbside;isDelivery;isDriveThrough;isInStoreOrderPickup;address;hours:
+Alfano's;(815) 732-2774;true;true;false;true;801 S 4th St, Oregon, IL 61061;'':
+Bella's;(815) 732-0991;true;true;false;false;317 W Washington St, Oregon, IL 61061;'':
+Blackhawk Nutrition;(815) 881-8239;true;true;false;true;312 W Washington St Suite B, Oregon, IL 61061;'':
+Blackhawk Steak Pit;(815) 732-2500;false;true;false;false;1429 IL-2, Oregon, IL 61061;'':
+Breakers Saloon & Eatery;(815) 732-3319;true;false;false;false;100 S 2nd St, Oregon, IL 61061;4pm - 8pm:
+Campus Cafe;(779) 545-0007;true;false;false;true;101 S Wesley Ave, Mt Morris, IL 61054;'':
+Chile Pepper;(815) 732-1583,true,false,false,true;;Thurs-Sat 5-8:
+China King;(815) 732-0887;true;false;false;true;509 W Washington St, Oregon, IL 61061;'':
+Dairy Queen;(815) 881-8025;true;false;true;false;210 E Washington St, Oregon, IL 61061;'':
+Dos Amigos;(815) 732-4444;true;false;false;true;198-100 N Hastings Ave, Oregon, IL 61061;'':
+Father & Sons Pizzeria;(815) 732-9700;true;true;false;true;137 S 4th St, Oregon, IL 61061;'':
+Hazel's Cafe, Coffee & Chocolates;(815) 732-7017;true;true;false;true;307 W Washington St, Oregon, IL 61061;'':
+Hectors Cocina;(815) 881-8338;true;true;false;true;201 N 3rd St, Oregon, IL 61061;'':
+Home Town Diner;(815) 994-0573;true;false;true;false;312 E Hitt St Mount Morris, Illinois 61054;'':
+McDonalds;(815) 732-6053;true;false;true;true;211 S 4th St, Oregon, IL 61061;'':
+Messie's Bar & Grill;(815) 732-1234;true;false;false;true;17 N River Rd, Oregon, IL 61061;'':
+Northside BBQ;(815) 881-8277;true;true;false;true;117 N 4th St, Oregon, IL 61061;'':
+The Pepper Mill;(815) 734-4141;true;false;false;true;10 E Hitt St, Mt Morris, IL 61054;'':
+Scoops;(815) 979-1037;true;true;false;false;108 N 4th St, Oregon, IL 61061;'':
+Spring Valley;(815) 732-4877;true;false;false;false;300 E Washington St, Oregon, IL 61061;'':
+Subway;(815) 732-7827;true;false;false;false;511 W Washington St, Oregon, IL 61061;10am - 6pm:
