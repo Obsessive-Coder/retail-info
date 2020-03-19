@@ -28,9 +28,9 @@ export default class BusinessList extends Component {
     if ((navigator.platform.indexOf("iPhone") != -1) ||
      (navigator.platform.indexOf("iPad") != -1) ||
      (navigator.platform.indexOf("iPod") != -1)) {
-      window.open("maps://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+      window.open(`maps://maps.google.com/maps/dir/?daddr=${address}&amp;ll=`);
     } else {
-      window.open(`https://maps.google.com/maps?daddr=${address}&amp;ll=`);
+      window.open(`https://maps.google.com/maps/dir/?daddr=${address}&amp;ll=`);
     }
   }
 
