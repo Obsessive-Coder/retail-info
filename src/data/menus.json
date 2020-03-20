@@ -3,71 +3,285 @@
     {
       "name": "Chicken Salad (1 side)",
       "subText": "Sides - Chips, potato salad, or fruit",
-      "price": 9.00
+      "price": 9.00,
+      "category": "entrees"
     },
     {
       "name": "Brisket Grilled Cheese (1 side)",
       "subText": "Sides - Chips, potato salad, or fruit",
-      "price": 12.00
+      "price": 12.00,
+      "category": "entrees"
     },
     {
       "name": "Black Bean and Hummus Tacos (1 side)",
       "subText": "Sides - Chips, potato salad, or fruit",
-      "price": 9.00
+      "price": 9.00,
+      "category": "entrees"
     },
     {
       "name": "Grass Fed Cheeseburger (1 side)",
       "subText": "Sides - Chips, potato salad, or fruit",
-      "price": 12.00
+      "price": 12.00,
+      "category": "entrees"
     },
     {
       "name": "Sunrise Salad",
-      "price": 12.00
+      "price": 12.00,
+      "category": "soups & salads"
     },
     {
       "name": "Flatbread",
-      "price": 12.00
+      "price": 12.00,
+      "category": "other"
     },
     {
       "name": "Frozen Flatbread",
-      "price": 10.00
+      "price": 10.00,
+      "category": "other"
     },
     {
       "name": "Smoked Turkey Bacon Aioli Melt",
-      "price": 12.00
+      "price": 12.00,
+      "category": "sandwiches"
     },
     {
       "name": "Hame or Turkey Melt",
-      "price": 9.00
+      "price": 9.00,
+      "category": "sandwiches"
     },
     {
       "name": "Soup of the Day with Bread",
-      "price": 5.00
+      "price": 5.00,
+      "category": "soups & salads"
     },
     {
       "name": "All Day Breakfast",
       "subText": "Ham, Bacon, or Turkey",
-      "price": 7.00
+      "price": 7.00,
+      "category": "entrees"
     },
     {
       "name": "Quiche",
-      "price": 4.00
+      "price": 4.00,
+      "category": "other"
     },
     {
       "name": "Apple Cinnamon Muffin",
-      "price": 3.50
+      "price": 3.50,
+      "category": "other"
     },
     {
       "name": "Chocolate Raspberry Muffin",
-      "price": 3.00
+      "price": 3.00,
+      "category": "other"
     },
     {
       "name": "Low Fat Blueberry Scone",
-      "price": 3.00
+      "price": 3.00,
+      "category": "desserts"
     },
     {
       "name": "Chocolate Cookie",
-      "price": 2.00
+      "price": 2.00,
+      "category": "desserts"
+    }
+  ],
+  "hectors-cocina": [
+    {
+      "name": "Burrito (Bean, Beef, or Chicken)",
+      "subText": "Beans, rice, lettuce, shredded cheese, tomato, salsa, and crema",
+      "price": 5.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Burrito (Pork, Steak, or Guacamole)",
+      "subText": "Beans, rice, lettuce, shredded cheese, tomato, salsa, and crema",
+      "price": 6.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Burrito Bowl (Bean, Beef, or Chicken)",
+      "subText": "Beans, rice, lettuce, shredded cheese, tomato, salsa, and crema",
+      "price": 5.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Burrito Bowl (Pork, Steak, or Guacamole)",
+      "subText": "Beans, rice, lettuce, shredded cheese, tomato, salsa, and crema",
+      "price": 6.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Chimichanga (Bean, Beef, or Chicken)",
+      "subText": "Beans, rice, shredded cheese, salsa, and crema\nAdd 2oz queso for $1 more",
+      "price": 5.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Chimichanga (Pork, Steak, or Guacamole)",
+      "subText": "Beans, rice, shredded cheese, salsa, and crema\nAdd 2oz queso for $1 more",
+      "price": 6.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Quesadilla (Bean, Beef, or Chicken)",
+      "subText": "Shredded cheese, salsa, and crema",
+      "price": 5.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Quesadilla (Pork, Steak, or Guacamole)",
+      "subText": "Shredded cheese, salsa, and crema",
+      "price": 6.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Nachos (Bean, Beef, or Chicken)",
+      "subText": "Beans, queso, lettuce, shredded cheese, salsa, and crema",
+      "price": 5.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Nachos (Pork, Steak, or Guacamole)",
+      "subText": "Beans, queso, lettuce, shredded cheese, salsa, and crema",
+      "price": 6.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Torta Sandwich (Bean, Beef, or Chicken)",
+      "subText": "Beans, lettuce, shredded cheese, guacamole, mayo\nServed on toasted Mexican bread",
+      "price": 5.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Torta Sandwich (Pork, Steak, Guacamole)",
+      "subText": "Beans, lettuce, shredded cheese, guacamole, mayo\nServed on toasted Mexican bread",
+      "price": 6.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Taco Salad (Bean, Beef, or Chicken)",
+      "subText": "Lettuce, shredded cheese, tomato, salsa, and crema",
+      "price": 5.00,
+      "category": "entrees"
+    },
+    {
+      "name": "Torta Sandwich (Pork, Steak, Guacamole)",
+      "subText": "Lettuce, shredded cheese, tomato, salsa, and crema",
+      "price": 6.00,
+      "category": "entrees"
+    },
+
+    {
+      "name": "3 Beef Tacos",
+      "subText": "Corn or flour tortillas\nHector Style: Cilantro and Onion\nMichelle Style: Lettuce, Cheese, Tomato, Onion, Crema\nEvyn Style: Hector & Michelle combo\n* Red or green salsa and jalapenos upon request",
+      "price": 5.00,
+      "category": "tacos"
+    },
+    {
+      "name": "3 Chicken Tacos",
+      "subText": "Corn or flour tortillas\nHector Style: Cilantro and Onion\nMichelle Style: Lettuce, Cheese, Tomato, Onion, Crema\nEvyn Style: Hector & Michelle combo\n* Red or green salsa and jalapenos upon request",
+      "price": 5.00,
+      "category": "tacos"
+    },
+    {
+      "name": "3 Pork Tacos",
+      "subText": "Corn or flour tortillas\nHector Style: Cilantro and Onion\nMichelle Style: Lettuce, Cheese, Tomato, Onion, Crema\nEvyn Style: Hector & Michelle combo\n* Red or green salsa and jalapenos upon request",
+      "price": 7.00,
+      "category": "tacos"
+    },
+    {
+      "name": "3 Steak Tacos",
+      "subText": "Corn or flour tortillas\nHector Style: Cilantro and Onion\nMichelle Style: Lettuce, Cheese, Tomato, Onion, Crema\nEvyn Style: Hector & Michelle combo\n* Red or green salsa and jalapenos upon request",
+      "price": 7.00,
+      "category": "tacos"
+    },
+    {
+      "name": "Plain Chips",
+      "price": 2.50,
+      "category": "chips"
+    },
+    {
+      "name": "Chips & Salsa",
+      "price": 3.00,
+      "category": "chips"
+    },
+    {
+      "name": "Chips & Guacamole",
+      "price": 4.00,
+      "category": "chips"
+    },
+    {
+      "name": "Chips & Queso",
+      "price": 4.00,
+      "category": "chips"
+    },
+    {
+      "name": "Chips & Bean Dip",
+      "price": 4.00,
+      "category": "chips"
+    },
+    {
+      "name": "Chips & Guacamole & Queso",
+      "price": 6.00,
+      "category": "chips"
+    },
+    {
+      "name": "Rice & Beans Combo",
+      "price": 3.50,
+      "category": "sides"
+    },
+    {
+      "name": "Beans",
+      "price": 2.00,
+      "category": "sides"
+    },
+    {
+      "name": "Rice",
+      "price": 2.00,
+      "category": "sides"
+    },
+    {
+      "name": "Queso 5oz",
+      "price": 3.00,
+      "category": "sides"
+    },
+    {
+      "name": "Guacamole 5oz",
+      "price": 3.00,
+      "category": "sides"
+    },
+    {
+      "name": "Extra Crema",
+      "price": 0.75,
+      "category": "sides"
+    },
+    {
+      "name": "Extra Meat",
+      "price": 2.00,
+      "category": "sides"
+    },
+    {
+      "name": "Fountain Soda",
+      "subText": "Pepsi, Diet Pepsi, Mt Dew, Diet Mt Dew, Lemonade, Iced Tea, and Root Bear",
+      "price": 2.00,
+      "category": "beverages"
+    },
+    {
+      "name": "Horchata 16oz",
+      "price": 2.00,
+      "category": "beverages"
+    },
+    {
+      "name": "Mexican Coke (bottle)",
+      "price": 2.00,
+      "category": "beverages"
+    },
+    {
+      "name": "Jarrito (bottle)",
+      "subText": "Mango, Fruit Punch, Orange, Line, Guava, Strawberry, Tamarind, and Pineapple",
+      "price": 2.00,
+      "category": "beverages"
     }
   ]
 }

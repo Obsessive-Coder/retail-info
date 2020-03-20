@@ -11,6 +11,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+const menuData = require('../data/menus.json');
+
 export default function BusinessGrid({ businesses, handleAddressClick }) {
   const booleanFields = [{
     propertyName: 'isCurbside',
@@ -94,6 +96,12 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
                   </div>
                 ))}
               </div>
+
+              {menuData.hasOwnProperty(business.menuId) && (
+                <span className="d-block font-weight-bold font-lg text-center text-success">
+                  Menu Available
+                </span>
+              )}
 
               <Link
                 to={`/businesses/${business.menuId}`}

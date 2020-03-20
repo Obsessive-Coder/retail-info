@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
-import { Card, CardTitle, CardText } from 'reactstrap';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Map, Marker , GoogleApiWrapper } from 'google-maps-react';
+import { MenuTabs } from './';
 
 // Restaurant Data File.
 const businessData = require('../data/businesses.json')
@@ -57,9 +57,12 @@ export class BusinessDetails extends Component {
         for (var i = 0; i < results.length; i++) {
           const {
             geometry: { location: { lat, lng }},
-            photos: [ previewImage ],
+            photos,
           } = results[i];
-          business.image = previewImage.getUrl();
+          if (photos) {
+            business.image = photos[0].getUrl();
+          }
+
           business.location = {
             lat: lat(),
             lng: lng(),
@@ -67,6 +70,9 @@ export class BusinessDetails extends Component {
         }
 
         this.setState(() => ({ business, menuItems }));
+
+
+        console.log(request.query)
       }
     });
   }
@@ -209,25 +215,9 @@ export class BusinessDetails extends Component {
               </div>
             )}
 
-            <div>
-              {menuItems.map(({ name, price, subText }) => (
-                <Card
-                  key={`${name}-${price}`}
-                  body
-                  className="d-flex flex-sm-row align-items-center mb-2 bg-light shadow-sm"
-                >
-                  <CardTitle className="flex-fill d-flex flex-column mb-2 mb-sm-0  text-dark font-weight-bold font-lg">
-                    <span>{name}</span>
-                    {subText && (
-                      <small className="font-italic">{subText}</small>
-                    )}
-                  </CardTitle>
-                  <CardText className="text-dark font-weight-bold font-xl">
-                    {`$${price.toFixed(2)}`}
-                  </CardText>
-                </Card>
-              ))}
-            </div>
+            {menuItems.length > 0 && (
+              <MenuTabs menuItems={menuItems} />
+            )}
           </div>
         </div>
       </div>

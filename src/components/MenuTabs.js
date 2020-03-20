@@ -1,0 +1,77 @@
+import React, { useState } from 'react'
+import {
+  Card, CardTitle, CardText, TabContent,
+  TabPane, Nav, NavItem, NavLink
+} from 'reactstrap';
+
+export default function MenuTabs({ menuItems }) {
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+
+  const displayedCategories = menuItems.map(({ category }) => category);
+
+  const categories = displayedCategories.filter((a, b) => displayedCategories.indexOf(a) === b);
+
+  const otherIndex = categories.indexOf('other');
+
+  if (otherIndex >= 0) {
+    categories.splice(otherIndex, 1);
+    categories.push('other');
+  }
+
+  const separatedMenu = { all: menuItems };
+
+  for (let i = 0; i < categories.length; i++) {
+    const category = categories[i];
+    const categoryMenuItems = menuItems.filter(({
+      category: itemCategory
+    }) => (category === itemCategory));
+
+    separatedMenu[category] = categoryMenuItems;
+  }
+
+  categories.unshift('all');
+
+  return (
+    <div>
+      <Nav tabs>
+        {categories.map((category, index) => (
+          <NavItem className="flex-fill">
+            <NavLink
+              onClick={() => setActiveTabIndex(index)}
+              className={`text-capitalize cursor-pointer ${activeTabIndex === index ? 'bg-dark text-light' : ''}`}
+            >
+              {category}
+            </NavLink>
+          </NavItem>
+        ))}
+      </Nav>
+      <TabContent activeTab={activeTabIndex}>
+        {categories.map((category, index) => (
+          <TabPane tabId={index}>
+            <div>
+              {separatedMenu[category].map(({ name, price, subText }) => (
+                <Card
+                  key={`${name}-${price}`}
+                  body
+                  className="d-flex flex-sm-row align-items-center mb-2 bg-light shadow-sm"
+                >
+                  <CardTitle className="flex-fill d-flex flex-column mb-2 mb-sm-0  text-dark font-weight-bold font-lg">
+                    <span>{name}</span>
+                    {subText && (
+                      subText.split('\n').map(line => (
+                        <small className="font-italic">{line}</small>
+                      ))
+                    )}
+                  </CardTitle>
+                  <CardText className="text-dark font-weight-bold font-xl">
+                    {`$${price.toFixed(2)}`}
+                  </CardText>
+                </Card>
+              ))}
+            </div>
+          </TabPane>
+        ))}
+      </TabContent>
+    </div>
+  )
+}

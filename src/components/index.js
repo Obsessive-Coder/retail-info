@@ -3,6 +3,7 @@ import BusinessList from './BusinessList';
 import BusinessTable from './BusinessTable';
 import BusinessGrid from './BusinessGrid';
 import BusinessDetails from './BusinessDetails';
+import MenuTabs from './MenuTabs';
 
 export {
   Home,
@@ -10,6 +11,7 @@ export {
   BusinessTable,
   BusinessGrid,
   BusinessDetails,
+  MenuTabs,
 };
 
 export default {
@@ -18,4 +20,5 @@ export default {
   BusinessTable,
   BusinessGrid,
   BusinessDetails,
+  MenuTabs,
 };
