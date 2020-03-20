@@ -29,6 +29,10 @@ code {
   font-size: 24pt;
 }
 
+.business-details-image {
+  max-height: 250px;
+}
+
 .font-xs {
   font-size: x-small;
 }
@@ -49,8 +53,8 @@ code {
   font-size: xx-large;
 }
 
-/* @media (max-width: 575px) {
-  .page-heading {
-    font-size: 36pt;
+@media (min-width: 768px) {
+  .details-sidebar {
+    width: 33%;
   }
-} */
+}
