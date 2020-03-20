@@ -47,7 +47,8 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
                   icon={faMapMarker}
                 />
                 <Link
-                  onClick={() => handleAddressClick(business.address)}
+                  to="#"
+                  onClick={() => handleAddressClick(business.name, business.address)}
                   className="mx-2"
                 >
                   {business.address}

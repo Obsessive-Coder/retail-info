@@ -15,6 +15,7 @@ function App() {
           path="/businesses/:menuId"
           render={props => <BusinessDetails {...props} />}
         />
+        <Route exact path="/retail-info/businesses" render={props => <BusinessList {...props} />} />
         <Route path="/" render={props => <BusinessList {...props} />} />
       </Switch>
     </Router>
