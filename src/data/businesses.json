@@ -73,7 +73,7 @@
       "isDelivery": false,
       "isDrivethrough": false,
       "isInStore": false,
-      "hours": "Thurs-Sat 5-8",
+      "hours": "Thurs-Sat: 5-8",
       "address": "416 W Washington St, Oregon, IL",
       "menuId": "chile-pepper"
     },
@@ -117,7 +117,7 @@
       "isDelivery": true,
       "isDrivethrough": false,
       "isInStore": true,
-      "hours": "normal hours",
+      "hours": "Sun-Thurs: 11am-9pm\nFri-Sat: 11am-10pm",
       "address": "137 S 4th St, Oregon, IL",
       "menuId": "father-and-sons"
     },

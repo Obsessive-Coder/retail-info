@@ -70,9 +70,6 @@ export class BusinessDetails extends Component {
         }
 
         this.setState(() => ({ business, menuItems }));
-
-
-        console.log(request.query)
       }
     });
   }

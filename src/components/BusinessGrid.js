@@ -68,14 +68,19 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
                   {business.phone}
                 </a>
               </div>
-              <div>
+              <div className="d-flex">
                 <FontAwesomeIcon
                   fixedWidth
                   icon={faClock}
                 />
-                <span className="mx-2 text-capitalize">
-                  {business.hours}
-                </span>
+
+                <div className="flex-fill">
+                  {business.hours.split('\n').map((line, index) => (
+                    <small className="d-block mx-2 text-capitalize">
+                      {line}
+                    </small>
+                  ))}
+                </div>
               </div>
 
               <div className="d-flex my-3">
