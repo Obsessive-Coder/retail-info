@@ -2,7 +2,7 @@
   "name": "retail-info",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Obsessive-Coder.github.io/retail-info",
+  "homepage": "http://Obsessive-Coder.github.io/retail-info/businesses",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
