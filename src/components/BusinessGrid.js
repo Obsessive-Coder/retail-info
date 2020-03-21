@@ -19,7 +19,7 @@ const menuData = require('../data/menus.json');
 
 export default function BusinessGrid({ businesses, handleAddressClick }) {
   return (
-    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
+    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 mt-2">
       {businesses.map(business => (
         <div key={business.name} className="col mb-4">
           <Card className="shadow">

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import { Button, Collapse, ListGroup, ListGroupItem } from 'reactstrap';
+import { Button, Collapse, ListGroup } from 'reactstrap';
 import {
   faAngleRight, faAngleLeft
 } from '@fortawesome/free-solid-svg-icons';
@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Map, Marker , GoogleApiWrapper, InfoWindow
 } from 'google-maps-react';
-import { MapListItem, MapInfo } from './'
+import { MapListItem, MapInfo, CityDropdown } from './'
 
 const businessesData = require('../data/businesses.json');
 
@@ -37,6 +37,7 @@ export class MapPage extends Component {
     this.handleMapOnClick = this.handleMapOnClick.bind(this);
     this.handleInfoWindowOnOpen = this.handleInfoWindowOnOpen.bind(this);
     this.handleBusinessItemOnClick = this.handleBusinessItemOnClick.bind(this);
+    this.handleLocationItemOnClick = this.handleLocationItemOnClick.bind(this);
     this.handleAddressClick = this.handleAddressClick.bind(this);
     this.handleGoToOnClick = this.handleGoToOnClick.bind(this);
   }
@@ -90,6 +91,17 @@ export class MapPage extends Component {
     }
   }
 
+  handleLocationItemOnClick(city) {
+    let { businesses } = businessesData;
+    if (city.toLowerCase() !== 'all') {
+      businesses = businessesData.businesses.filter(({ city: cityData }) => (
+        cityData === city
+      ));
+    }
+
+    this.setState(() => ({ businesses }));
+  }
+
   handleGoToOnClick() {
     const { selectedBusiness: { menuId } } = this.state;
     const { history } = this.props;
@@ -108,14 +120,24 @@ export class MapPage extends Component {
 
     const { google } = this.props;
 
+    let cities = businessesData.businesses.map(({ city }) => city);
+    cities = cities.filter((a, b) => cities.indexOf(a) === b);
+    cities.unshift('all');
+
     return (
       <div className="d-flex" style={{ height: '90vh' }}>
         <div className={`position-relative border-right border-dark bg-dark map-sidebar ${!isSidebarOpen ? 'closed' : ''}`}>
           <div className={`d-flex justify-content-between align-items-center py-1 text-secondary sidebar-collapse-header ${!isSidebarOpen ? 'h-100' : ''}`}>
             {isSidebarOpen && (
-              <h3 className="flex-fill mb-0 text-center">
-                Businesses
-              </h3>
+              <div className="flex-fill">
+                {/* <h3 className="mb-0 text-center">
+                  Businesses
+                </h3> */}
+                <CityDropdown
+                  cities={cities}
+                  handleLocationItemOnClick={this.handleLocationItemOnClick}
+                />
+              </div>
             )}
 
             <Button

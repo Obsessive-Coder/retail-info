@@ -8,6 +8,7 @@ import MenuTabs from './MenuTabs';
 import MapPage from './MapPage';
 import MapInfo from './MapInfo';
 import MapListItem from './MapListItem';
+import CityDropdown from './CityDropdown';
 
 export {
   SiteHeader,
@@ -20,6 +21,7 @@ export {
   MapPage,
   MapInfo,
   MapListItem,
+  CityDropdown,
 };
 
 export default {
@@ -33,4 +35,5 @@ export default {
   MapPage,
   MapInfo,
   MapListItem,
+  CityDropdown,
 };

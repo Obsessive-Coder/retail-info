@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { BusinessGrid } from './';
+import { BusinessGrid, CityDropdown } from './';
 
 // Restaurant Data File.
 const businessesData = require('../data/businesses.json');
@@ -17,6 +17,7 @@ export default class BusinessList extends Component {
 
     // Bind class methods.
     this.handleAddressClick = this.handleAddressClick.bind(this);
+    this.handleLocationItemOnClick = this.handleLocationItemOnClick.bind(this);
   }
 
   handleAddressClick(name, address, city) {
@@ -29,11 +30,31 @@ export default class BusinessList extends Component {
     }
   }
 
+  handleLocationItemOnClick(city) {
+    let { businesses } = businessesData;
+    if (city.toLowerCase() !== 'all') {
+      businesses = businessesData.businesses.filter(({ city: cityData }) => (
+        cityData === city
+      ));
+    }
+
+    this.setState(() => ({ businesses }));
+  }
+
   render() {
     const { businesses } = this.state;
 
+    let cities = businessesData.businesses.map(({ city }) => city);
+    cities = cities.filter((a, b) => cities.indexOf(a) === b);
+    cities.unshift('all');
+
     return (
-      <div className="mx-2 my-4">
+      <div className="m-2">
+        <CityDropdown
+          cities={cities}
+          handleLocationItemOnClick={this.handleLocationItemOnClick}
+        />
+
         <BusinessGrid
           businesses={businesses}
           handleAddressClick={this.handleAddressClick}
