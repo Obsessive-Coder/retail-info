@@ -92,3 +92,13 @@ code {
     width: 33%;
   }
 }
+
+@media (max-width: 575px) {
+  .font-xxl {
+    font-size: large !important;
+  }
+
+  .font-xl {
+    font-size: medium !important;
+  }
+}
