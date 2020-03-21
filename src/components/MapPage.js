@@ -161,6 +161,7 @@ export class MapPage extends Component {
             initialCenter={mapCenterLocation}
             onClick={this.handleMapOnClick}
             className="position-relative"
+            containerStyle={{ height: '90%' }}
           >
             {businesses.map((business, index) => (
               <Marker

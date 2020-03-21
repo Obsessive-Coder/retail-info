@@ -99,13 +99,48 @@ code {
   min-width: 220px !important;
 }
 
+.coffee-button img {
+  height: 28px !important;
+  width: 28px !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.coffee-button {
+  color: #ffffff !important;
+  background-color: #FF813F !important;
+  border-radius: 5px !important;
+  font-size: 24px !important;
+  letter-spacing: 0.6px !important;
+  box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
+  -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  -o-transition: 0.3s all linear !important;
+  -webkit-transition: 0.3s all linear !important;
+  -moz-transition: 0.3s all linear !important;
+  -ms-transition: 0.3s all linear !important;
+  transition: 0.3s all linear !important;
+  font-family: 'Cookie', cursive !important;
+}
+
+.bmc-button:hover,
+.bmc-button:active,
+.bmc-button:focus {
+  -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+  text-decoration: none !important;
+  box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+  opacity: 0.85 !important;
+  color: #ffffff !important;
+}
+
 @media (min-width: 768px) {
   .details-sidebar {
     width: 33%;
   }
 
   .menu-tab-content {
-    height: 70vh;
+    height: 60vh;
     overflow-y: auto;
   }
 }

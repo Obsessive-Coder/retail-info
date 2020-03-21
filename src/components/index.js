@@ -1,4 +1,5 @@
 import SiteHeader from './SiteHeader';
+import SiteFooter from './SiteFooter';
 import Home from './Home';
 import BusinessList from './BusinessList';
 import BusinessGrid from './BusinessGrid';
@@ -10,6 +11,7 @@ import MapListItem from './MapListItem';
 
 export {
   SiteHeader,
+  SiteFooter,
   Home,
   BusinessList,
   BusinessGrid,
@@ -22,6 +24,7 @@ export {
 
 export default {
   SiteHeader,
+  SiteFooter,
   Home,
   BusinessList,
   BusinessGrid,

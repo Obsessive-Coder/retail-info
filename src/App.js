@@ -4,14 +4,14 @@ import { Route, Router, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BusinessList, BusinessDetails, SiteHeader,
-  MapPage,
+  MapPage, SiteFooter,
 } from './components';
 
 import './index.css';
 
 function App() {
   return (
-    <Router history={createBrowserHistory()}>
+    <Router history={createBrowserHistory()} basename={process.env.PUBLIC_URL}>
       <SiteHeader />
       <Switch>
         <Route
@@ -34,6 +34,8 @@ function App() {
 
         <Route path="/" render={props => <BusinessList {...props} />} />
       </Switch>
+
+      <SiteFooter />
     </Router>
   );
 }

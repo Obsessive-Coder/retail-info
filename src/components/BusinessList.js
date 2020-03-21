@@ -33,7 +33,7 @@ export default class BusinessList extends Component {
     const { businesses } = this.state;
 
     return (
-      <div className="mx-2 my-4 overflow-auto">
+      <div className="mx-2 my-4">
         <BusinessGrid
           businesses={businesses}
           handleAddressClick={this.handleAddressClick}
