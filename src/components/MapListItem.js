@@ -7,9 +7,8 @@ import {
   faMapMarkerAlt, faPhoneAlt, faUtensils,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { CONSTANTS } from '../utils';
+import { Services } from './';
 
-const { BOOLEAN_FIELDS } = CONSTANTS;
 const menuData = require('../data/menus.json');
 
 export default function MapListItem({
@@ -89,24 +88,11 @@ export default function MapListItem({
         isOpen={isCollapseOpen}
         className="pt-2 text-center"
       >
-        <div className="d-flex text-secondary">
-          {BOOLEAN_FIELDS.map(({ propertyName, labelText }) => (
-            <div
-              key={`${business.name}-${propertyName}`}
-              className="d-flex flex-column align-items-center flex-fill mx-1 text-center"
-            >
-              <FontAwesomeIcon
-                fixedWidth
-                // size="2x"
-                icon={business[propertyName] ? faCheck : faTimes}
-                className={business[propertyName] ? 'text-success' : 'text-danger'}
-              />
-              <span className="font-weight-bold font-xs">
-                {labelText}
-              </span>
-            </div>
-          ))}
-        </div>
+        <Services
+          services={business.services}
+          businessName={business.name}
+          fontSize="font-xs"
+        />
 
         <div className="d-flex justify-content-around align-items-center mt-3">
           {menuData.hasOwnProperty(business.menuId) && (

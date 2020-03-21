@@ -1,17 +1,35 @@
-// const fs = require('fs');
+const fs = require('fs');
 
-// const businessesData = require('./businesses.json');
+const businessesData = require('./businesses.json');
 
 // const businesses = businessesData.businesses.map(business => {
-//   const { address } = business;
-//   const splitAddress = address.split(', ');
+//   const fields = [{
+//     prop: 'isCurbside',
+//     service: 'curbside',
+//   }, {
+//     prop: 'isDelivery',
+//     service: 'delivery',
+//   }, {
+//     prop: 'isDrivethrough',
+//     service: 'D-T',
+//   }, {
+//     prop: 'isInStore',
+//     service: 'in-store',
+//   }]
+
+//   let services = fields.map(({ prop, service }) => {
+//     const businessService = business[prop] ? service : null;
+//     delete business[prop];
+//     return businessService;
+//   });
+
+//   services = services.filter(service => service);
+
 //   return {
 //     ...business,
-//     address: splitAddress[0],
-//     city: splitAddress[1]
+//     services,
 //   };
 // });
-
 
 // fs.writeFile('businesses.json', JSON.stringify({ businesses }, null, 2), (err) => {
 //   if (err) throw err;

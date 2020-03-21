@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom';
 import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Map, Marker , GoogleApiWrapper } from 'google-maps-react';
-import { MenuTabs } from './';
-
-import { CONSTANTS } from '../utils';
-
-const { BOOLEAN_FIELDS } = CONSTANTS;
+import { MenuTabs, Services } from './';
 
 // Restaurant Data File.
 const businessData = require('../data/businesses.json');
@@ -130,24 +126,14 @@ export class BusinessDetails extends Component {
                   <span className="mx-2 text-capitalize">{hours}</span>
                 </div>
               </div>
-              <div className="d-flex my-3 text-secondary">
-                {BOOLEAN_FIELDS.map(({ propertyName, labelText }) => (
-                  <div
-                    key={propertyName}
-                    className="d-flex flex-column align-items-center flex-fill text-center"
-                  >
-                    <FontAwesomeIcon
-                      fixedWidth
-                      size="lg"
-                      icon={business[propertyName] ? faCheck : faTimes}
-                      className={business[propertyName] ? 'text-success' : 'text-danger'}
-                    />
-                    <span className="font-weight-bold font-sm">
-                      {labelText}
-                    </span>
-                  </div>
-                ))}
-              </div>
+
+              <Services
+                services={business.services}
+                businessName={business.name}
+                iconSize="lg"
+                fontSize="font-sm"
+                containerClassName="my-3"
+              />
             </div>
 
             {menuItems.length > 0 && (

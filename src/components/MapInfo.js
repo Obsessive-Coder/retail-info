@@ -3,10 +3,8 @@ import React, { Fragment } from 'react';
 import { Button } from 'reactstrap';
 import { faCheck, faTimes, faPhoneAlt, faClock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Services } from './';
 
-import { CONSTANTS } from '../utils';
-
-const { BOOLEAN_FIELDS } = CONSTANTS;
 const menuData = require('../data/menus.json');
 
 export default function MapInfo({ business, handleGoToOnClick }) {
@@ -40,24 +38,14 @@ export default function MapInfo({ business, handleGoToOnClick }) {
           ))}
         </div>
       </div>
-      <div className="d-flex my-2 text-secondary">
-        {BOOLEAN_FIELDS.map(({ propertyName, labelText }) => (
-          <div
-            key={propertyName}
-            className="d-flex flex-column align-items-center flex-fill text-center"
-          >
-            <FontAwesomeIcon
-              fixedWidth
-              // size="2x"
-              icon={business[propertyName] ? faCheck : faTimes}
-              className={business[propertyName] ? 'text-success' : 'text-danger'}
-            />
-            <span className="font-weight-bold font-xs">
-              {labelText}
-            </span>
-          </div>
-        ))}
-      </div>
+
+      <Services
+        services={business.services}
+        businessName={business.name}
+        fontSize="font-xs"
+        containerClassName="my-2"
+      />
+
       <div className="d-flex justify-content-around align-items-center">
         {menuData.hasOwnProperty(business.menuId) && (
           <div className="d-flex flex-column font-weight-bold text-center text-success">

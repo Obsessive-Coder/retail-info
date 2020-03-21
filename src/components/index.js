@@ -9,6 +9,7 @@ import MapPage from './MapPage';
 import MapInfo from './MapInfo';
 import MapListItem from './MapListItem';
 import CityDropdown from './CityDropdown';
+import Services from './Services';
 
 export {
   SiteHeader,
@@ -22,6 +23,7 @@ export {
   MapInfo,
   MapListItem,
   CityDropdown,
+  Services,
 };
 
 export default {
@@ -36,4 +38,5 @@ export default {
   MapInfo,
   MapListItem,
   CityDropdown,
+  Services,
 };

@@ -3,10 +3,6 @@
     {
       "name": "Alfano's",
       "phone": "(815) 732-2774",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "801 S 4th St",
       "menuId": "alfanos",
@@ -15,15 +11,16 @@
         "lng": -89.33232
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "delivery",
+        "in-store"
+      ]
     },
     {
       "name": "Bella's",
       "phone": "(815) 732-0991",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": false,
       "hours": "normal hours",
       "address": "317 W Washington St",
       "menuId": "bellas",
@@ -32,15 +29,15 @@
         "lng": -89.332181
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "delivery"
+      ]
     },
     {
       "name": "Blackhawk Nutrition",
       "phone": "(815) 881-8239",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "312 W Washington St Suite B",
       "menuId": "blackhawk-nutrition",
@@ -49,15 +46,16 @@
         "lng": -89.331781
       },
       "isOpen": false,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "delivery",
+        "in-store"
+      ]
     },
     {
       "name": "Blackhawk Steak Pit",
       "phone": "(815) 732-2500",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "1429 IL-2",
       "menuId": "blackhawk-steak-pit",
@@ -66,15 +64,16 @@
         "lng": -89.338594
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "delivery",
+        "in-store"
+      ]
     },
     {
       "name": "Breakers Saloon",
       "phone": "(815) 732-3319",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "4pm - 8pm",
       "address": "100 S 2nd St",
       "menuId": "breakers-saloon",
@@ -83,15 +82,15 @@
         "lng": -89.330121
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "in-store"
+      ]
     },
     {
       "name": "Campus Cafe",
       "phone": "(779) 545-0007",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "101 S Wesley Ave",
       "menuId": "campus-cafe",
@@ -100,15 +99,16 @@
         "lng": -89.433114
       },
       "isOpen": true,
-      "city": "Mt Morris"
+      "city": "Mt Morris",
+      "services": [
+        "curbside",
+        "delivery",
+        "in-store"
+      ]
     },
     {
       "name": "Chile Pepper",
       "phone": "(815) 732-1583",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": false,
-      "isInStore": false,
       "hours": "Thurs-Sat: 5-8",
       "address": "416 W Washington St",
       "menuId": "chile-pepper",
@@ -117,15 +117,14 @@
         "lng": -89.333377
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside"
+      ]
     },
     {
       "name": "China King",
       "phone": "(815) 732-0887",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "509 W Washington St",
       "menuId": "china-king",
@@ -134,15 +133,15 @@
         "lng": -89.334536
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "in-store"
+      ]
     },
     {
       "name": "Cimino's Pizza",
       "phone": "(815) 734-6660",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "202 E Hitt St",
       "menuId": "ciminos",
@@ -151,15 +150,15 @@
         "lng": -89.430219
       },
       "isOpen": true,
-      "city": "Mt Morris"
+      "city": "Mt Morris",
+      "services": [
+        "curbside",
+        "delivery"
+      ]
     },
     {
       "name": "Dairy Queen",
       "phone": "(815) 881-8025",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": true,
-      "isInStore": false,
       "hours": "normal hours",
       "address": "210 E Washington St",
       "menuId": "dairy-queen",
@@ -168,15 +167,15 @@
         "lng": -89.32285
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "D-T"
+      ]
     },
     {
       "name": "Dos Amigos",
       "phone": "(815) 732-4444",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "198-100 N Hastings Ave",
       "menuId": "dos-amigos",
@@ -185,15 +184,15 @@
         "lng": -89.320443
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "in-store"
+      ]
     },
     {
       "name": "Father & Son",
       "phone": "(815) 732-9700",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "Sun-Thurs: 11am-9pm\nFri-Sat: 11am-10pm",
       "address": "137 S 4th St",
       "menuId": "father-and-sons",
@@ -202,15 +201,16 @@
         "lng": -89.332379
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "delivery",
+        "in-store"
+      ]
     },
     {
       "name": "Hazel's Cafe",
       "phone": "(815) 732-7017",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "307 W Washington St",
       "menuId": "hazels-cafe",
@@ -219,15 +219,16 @@
         "lng": -89.331778
       },
       "isOpen": false,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "delivery",
+        "in-store"
+      ]
     },
     {
       "name": "Hectors Cocina",
       "phone": "(815) 881-8338",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "201 N 3rd St",
       "menuId": "hectors-cocina",
@@ -236,15 +237,16 @@
         "lng": -89.330639
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "delivery",
+        "in-store"
+      ]
     },
     {
       "name": "Garden View",
       "phone": "(815) 994-0573",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": true,
-      "isInStore": false,
       "hours": "normal hours",
       "address": "312 E Hitt St",
       "menuId": "home-town-diner",
@@ -253,15 +255,15 @@
         "lng": -89.426523
       },
       "isOpen": true,
-      "city": "Mt Morris"
+      "city": "Mt Morris",
+      "services": [
+        "curbside",
+        "D-T"
+      ]
     },
     {
       "name": "McDonalds",
       "phone": "(815) 732-6053",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": true,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "211 S 4th St",
       "menuId": "mcdonalds",
@@ -270,15 +272,16 @@
         "lng": -89.332348
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "D-T",
+        "in-store"
+      ]
     },
     {
       "name": "Messie's Bar & Grill",
       "phone": "(815) 732-1234",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "17 N River Rd",
       "menuId": "messies-bar-and-grill",
@@ -287,15 +290,15 @@
         "lng": -89.323367
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "in-store"
+      ]
     },
     {
       "name": "Northside BBQ",
       "phone": "(815) 881-8277",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "117 N 4th St",
       "menuId": "northside-bbq",
@@ -304,15 +307,16 @@
         "lng": -89.332336
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "delivery",
+        "in-store"
+      ]
     },
     {
       "name": "The Pepper Mill",
       "phone": "(815) 734-4141",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "normal hours",
       "address": "10 E Hitt St",
       "menuId": "the-pepper-mill",
@@ -321,15 +325,15 @@
         "lng": -89.432565
       },
       "isOpen": true,
-      "city": "Mt Morris"
+      "city": "Mt Morris",
+      "services": [
+        "curbside",
+        "in-store"
+      ]
     },
     {
       "name": "Scoops",
       "phone": "(815) 979-1037",
-      "isCurbside": true,
-      "isDelivery": true,
-      "isDrivethrough": false,
-      "isInStore": false,
       "hours": "normal hours",
       "address": "108 N 4th St",
       "menuId": "scoops",
@@ -338,15 +342,15 @@
         "lng": -89.332779
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "delivery"
+      ]
     },
     {
       "name": "Spring Valley",
       "phone": "(815) 732-4877",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": false,
-      "isInStore": false,
       "hours": "normal hours",
       "address": "300 E Washington St",
       "menuId": "spring-valley",
@@ -355,15 +359,14 @@
         "lng": -89.321945
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside"
+      ]
     },
     {
       "name": "Subway",
       "phone": "(815) 732-7827",
-      "isCurbside": true,
-      "isDelivery": false,
-      "isDrivethrough": false,
-      "isInStore": true,
       "hours": "10am - 6pm",
       "address": "511 W Washington St",
       "menuId": "subway",
@@ -372,7 +375,11 @@
         "lng": -89.334658
       },
       "isOpen": true,
-      "city": "Oregon"
+      "city": "Oregon",
+      "services": [
+        "curbside",
+        "in-store"
+      ]
     }
   ]
 }

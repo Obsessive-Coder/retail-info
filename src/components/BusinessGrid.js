@@ -11,9 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { CONSTANTS } from '../utils';
-
-const { BOOLEAN_FIELDS } = CONSTANTS;
+import { Services } from './';
 
 const menuData = require('../data/menus.json');
 
@@ -43,7 +41,7 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
                   onClick={() => handleAddressClick(business.name, business.address, business.city)}
                   className="mx-2 font-sm"
                 >
-                  {`${business.address}, ${business.address}`}
+                  {`${business.address}, ${business.city}`}
                 </Link>
               </div>
               <div className="font-weight-bold">
@@ -74,24 +72,13 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
                 </div>
               </div>
 
-              <div className="d-flex my-3">
-                {BOOLEAN_FIELDS.map(({ propertyName, labelText }) => (
-                  <div
-                    key={propertyName}
-                    className="d-flex flex-column align-items-center w-25 text-center"
-                  >
-                    <FontAwesomeIcon
-                      fixedWidth
-                      size="2x"
-                      icon={business[propertyName] ? faCheck : faTimes}
-                      className={business[propertyName] ? 'text-success' : 'text-danger'}
-                    />
-                    <span className="font-weight-bold font-sm">
-                      {labelText}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <Services
+                services={business.services}
+                businessName={business.name}
+                iconSize="lg"
+                fontSize="font-sm"
+                containerClassName="my-2"
+              />
 
               {menuData.hasOwnProperty(business.menuId) && (
                 <span className="d-block font-weight-bold font-lg text-center text-success">

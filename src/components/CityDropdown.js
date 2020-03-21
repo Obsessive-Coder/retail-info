@@ -23,6 +23,7 @@ export default function CityDropdown({
       <DropdownMenu>
         {cities.map(city => (
           <DropdownItem
+            key={`${city}-dropdown-item`}
             onClick={() => {
               setSelectedLocation(city);
               handleLocationItemOnClick(city);
