@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
+
+import { Button, Collapse, ListGroup, ListGroupItem } from 'reactstrap';
+import {
+  faAngleRight, faAngleLeft
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Map, Marker , GoogleApiWrapper, InfoWindow
 } from 'google-maps-react';
-import { ListGroup } from 'reactstrap';
+import { MapListItem, MapInfo } from './'
 
-import { MapInfo, MapListItem } from './';
-
-const { businesses } = require('../data/businesses.json')
+const { businesses } = require('../data/businesses.json');
 
 export class MapPage extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      isSidebarOpen: true,
       businesses: businesses || [],
       selectedBusiness: null,
       activeMarker: null,
@@ -24,10 +29,15 @@ export class MapPage extends Component {
     };
 
     // Bind class methods.
+    this.toggleIsSidebarOpen = this.toggleIsSidebarOpen.bind(this);
     this.handleMarkerOnClick = this.handleMarkerOnClick.bind(this);
     this.handleMapOnClick = this.handleMapOnClick.bind(this);
     this.handleBusinessItemOnClick = this.handleBusinessItemOnClick.bind(this);
     this.handleAddressClick = this.handleAddressClick.bind(this);
+  }
+
+  toggleIsSidebarOpen() {
+    this.setState(({ isSidebarOpen }) => ({ isSidebarOpen: !isSidebarOpen }));
   }
 
   handleMarkerOnClick(markerProps, marker) {
@@ -47,7 +57,9 @@ export class MapPage extends Component {
   }
 
   handleBusinessItemOnClick(business) {
-    this.setState(() => ({ mapCenterLocation: business.location }));
+    this.setState(() => ({
+      mapCenterLocation: business.location
+    }));
   }
 
   handleAddressClick(name, address) {
@@ -62,6 +74,7 @@ export class MapPage extends Component {
 
   render() {
     const {
+      isSidebarOpen,
       businesses,
       activeMarker,
       isInfoWindowShown,
@@ -72,25 +85,45 @@ export class MapPage extends Component {
     const { google } = this.props;
 
     return (
-      <div className="d-flex">
-        <div style={{ width: '35%'}}>
-          <div className="py-2">
-            <h2 className="text-center">Businesses</h2>
+      <div className="d-flex" style={{ height: '90vh' }}>
+        <div className={`position-relative border-right border-dark bg-dark map-sidebar ${!isSidebarOpen ? 'closed' : ''}`}>
+          <div className={`d-flex justify-content-between align-items-center py-1 text-secondary sidebar-collapse-header ${!isSidebarOpen ? 'h-100' : ''}`}>
+            {isSidebarOpen && (
+              <h3 className="flex-fill mb-0 text-center">
+                Businesses
+              </h3>
+            )}
+
+            <Button
+              color="link"
+              onClick={this.toggleIsSidebarOpen}
+              className={`p-0 border-0 ${!isSidebarOpen ? 'w-100 h-100' : ''}`}
+            >
+              <FontAwesomeIcon
+                fixedWidth={isSidebarOpen}
+                size={isSidebarOpen ? '2x' : '3x'}
+                icon={isSidebarOpen ? faAngleLeft : faAngleRight}
+                className="text-success"
+              />
+            </Button>
           </div>
-          <div
-            style={{ width: '35%', top: '18%', bottom: 0, right: 0, left: 0 }}
-            className="position-absolute overflow-auto"
-          >
-            <ListGroup className="mb-3">
-              {businesses.map(business => (
-                <MapListItem
-                  business={business}
-                  handleItemOnClick={this.handleBusinessItemOnClick}
-                  handleAddressClick={this.handleAddressClick}
-                />
-              ))}
+
+          <Collapse isOpen={isSidebarOpen} className="position-absolute w-100 sidebar-collapse">
+            <ListGroup className="mb-3" className="pb-5 overflow-auto">
+              {businesses.map(business => {
+                const isSelected = isInfoWindowShown && selectedBusiness.name === business.name;
+                return (
+                  <MapListItem
+                    key={`${business.name}-${isSelected}`}
+                    business={business}
+                    isSelected={isSelected}
+                    handleItemOnClick={this.handleBusinessItemOnClick}
+                    handleAddressClick={this.handleAddressClick}
+                  />
+                );
+              })}
             </ListGroup>
-          </div>
+          </Collapse>
         </div>
 
         <div className="flex-fill">
@@ -100,13 +133,11 @@ export class MapPage extends Component {
             zoom={12}
             initialCenter={mapCenterLocation}
             onClick={this.handleMapOnClick}
-            containerStyle={{ width: '65%', top: '9%', bottom: 0, right: 0 }}
-            className="h-auto"
+            className="position-relative"
           >
             {businesses.map((business, index) => (
               <Marker
                 key={index}
-                id={index}
                 title={business.name}
                 name={business.name}
                 business={business}
@@ -135,3 +166,4 @@ export class MapPage extends Component {
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyBWc45Eb4D3pf2A-I3aki-aM8HxMHRPfpc'
 })(MapPage);
+

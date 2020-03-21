@@ -18,7 +18,7 @@ export default function SiteHeader() {
     <Navbar
       dark
       color="dark"
-      className="navbar-expand-sm mb-1 py-0 page-header"
+      className="navbar-expand-sm py-0 page-header"
     >
       <NavbarBrand href="/" className="mr-auto font-xxl">
         Restaurants and Bars
