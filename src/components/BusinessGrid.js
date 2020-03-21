@@ -40,10 +40,10 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
                 />
                 <Link
                   to="#"
-                  onClick={() => handleAddressClick(business.name, business.address)}
+                  onClick={() => handleAddressClick(business.name, business.address, business.city)}
                   className="mx-2 font-sm"
                 >
-                  {business.address}
+                  {`${business.address}, ${business.address}`}
                 </Link>
               </div>
               <div className="font-weight-bold">

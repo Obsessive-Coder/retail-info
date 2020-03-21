@@ -4,7 +4,7 @@ export default function SiteFooter() {
   return (
     <div
       style={{ bottom: 0, left: 0, right: 0 }}
-      className="position-sticky px-3 py-2 bg-dark text-center"
+      className="position-sticky px-3 py-2 bg-dark text-center border-top border-warning"
     >
       <a
         target="_blank"

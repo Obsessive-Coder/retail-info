@@ -28,14 +28,14 @@ export class BusinessDetails extends Component {
   }
 
   handleAddressClick() {
-    const { business: { name, address } } = this.state;
+    const { business: { name, address, city } } = this.state;
 
     if ((navigator.platform.indexOf("iPhone") !== -1) ||
      (navigator.platform.indexOf("iPad") !== -1) ||
      (navigator.platform.indexOf("iPod") !== -1)) {
-      window.open(`maps://maps.google.com/maps/dir/?daddr=${name}%20${address}&amp;ll=`);
+      window.open(`maps://maps.google.com/maps/dir/?daddr=${name}%20${address},%20${city}&amp;ll=`);
     } else {
-      window.open(`https://maps.google.com/maps/dir/?daddr=${name}%20${address}&amp;ll=`);
+      window.open(`https://maps.google.com/maps/dir/?daddr=${name}%20${address},%20${city}&amp;ll=`);
     }
   }
 
@@ -44,7 +44,7 @@ export class BusinessDetails extends Component {
     const { menuId } = this.props.match.params;
     const menuItems = menuData[menuId] || [];
     const business = businessData.businesses.filter(business => business.menuId === menuId)[0];
-    const { name, address } = business;
+    const { name, address, city } = business;
 
     const { google } = this.props;
     const map = new google.maps.Map(<div></div>);
@@ -52,7 +52,7 @@ export class BusinessDetails extends Component {
     var service = new google.maps.places.PlacesService(map);
 
     const request = {
-      query: `${name} ${address}`,
+      query: `${name} ${address}, ${city}`,
       fields: ['photos', 'geometry'],
     };
 
@@ -87,6 +87,7 @@ export class BusinessDetails extends Component {
     const {
       name,
       address,
+      city,
       phone,
       hours,
       image,
@@ -111,7 +112,7 @@ export class BusinessDetails extends Component {
                 onClick={this.handleAddressClick}
                 className="d-inline-block w-100 mx-2 text-center"
               >
-                {address}
+                {`${address}, ${city}`}
               </Link>
               <div className="d-sm-flex flex-md-column justify-content-sm-around text-center text-secondary">
                 <div className="d-flex justify-content-around">

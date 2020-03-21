@@ -19,13 +19,13 @@ export default class BusinessList extends Component {
     this.handleAddressClick = this.handleAddressClick.bind(this);
   }
 
-  handleAddressClick(name, address) {
+  handleAddressClick(name, address, city) {
     if ((navigator.platform.indexOf("iPhone") !== -1) ||
      (navigator.platform.indexOf("iPad") !== -1) ||
      (navigator.platform.indexOf("iPod") !== -1)) {
-      window.open(`maps://maps.google.com/maps/dir/?daddr=${name}%20${address}&amp;ll=`);
+      window.open(`maps://maps.google.com/maps/dir/?daddr=${name}%20${address},%20${city}&amp;ll=`);
     } else {
-      window.open(`https://maps.google.com/maps/dir/?daddr=${name}%20${address}&amp;ll=`);
+      window.open(`https://maps.google.com/maps/dir/?daddr=${name}%20${address},%20${city}&amp;ll=`);
     }
   }
 

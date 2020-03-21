@@ -59,7 +59,7 @@ export default function MapListItem({
           <div className="text-truncate">
             <Link
               to="#"
-              onClick={() => handleAddressClick(business.name, business.address)}
+              onClick={() => handleAddressClick(business.name, business.address, business.city)}
               className="mx-1 font-sm"
             >
               <FontAwesomeIcon

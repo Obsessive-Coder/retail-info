@@ -8,13 +8,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "801 S 4th St, Oregon, IL 61061",
+      "address": "801 S 4th St",
       "menuId": "alfanos",
       "location": {
         "lat": 42.005764,
-        "lng": -89.332320
+        "lng": -89.33232
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Bella's",
@@ -24,13 +25,14 @@
       "isDrivethrough": false,
       "isInStore": false,
       "hours": "normal hours",
-      "address": "317 W Washington St, Oregon, IL",
+      "address": "317 W Washington St",
       "menuId": "bellas",
       "location": {
         "lat": 42.014386,
         "lng": -89.332181
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Blackhawk Nutrition",
@@ -40,13 +42,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "312 W Washington St Suite B, Oregon, IL",
+      "address": "312 W Washington St Suite B",
       "menuId": "blackhawk-nutrition",
       "location": {
-        "lat": 42.014920,
+        "lat": 42.01492,
         "lng": -89.331781
       },
-      "isOpen": false
+      "isOpen": false,
+      "city": "Oregon"
     },
     {
       "name": "Blackhawk Steak Pit",
@@ -56,13 +59,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "1429 IL-2, Oregon, IL",
+      "address": "1429 IL-2",
       "menuId": "blackhawk-steak-pit",
       "location": {
         "lat": 42.034566,
         "lng": -89.338594
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Breakers Saloon",
@@ -72,13 +76,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "4pm - 8pm",
-      "address": "100 S 2nd St, Oregon, IL",
+      "address": "100 S 2nd St",
       "menuId": "breakers-saloon",
       "location": {
         "lat": 42.014532,
         "lng": -89.330121
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Campus Cafe",
@@ -88,13 +93,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "101 S Wesley Ave, Mt Morris, IL",
+      "address": "101 S Wesley Ave",
       "menuId": "campus-cafe",
       "location": {
         "lat": 42.047612,
         "lng": -89.433114
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Mt Morris"
     },
     {
       "name": "Chile Pepper",
@@ -104,13 +110,14 @@
       "isDrivethrough": false,
       "isInStore": false,
       "hours": "Thurs-Sat: 5-8",
-      "address": "416 W Washington St, Oregon, IL",
+      "address": "416 W Washington St",
       "menuId": "chile-pepper",
       "location": {
         "lat": 42.014777,
         "lng": -89.333377
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "China King",
@@ -120,13 +127,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "509 W Washington St, Oregon, IL",
+      "address": "509 W Washington St",
       "menuId": "china-king",
       "location": {
         "lat": 42.014255,
         "lng": -89.334536
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Cimino's Pizza",
@@ -136,13 +144,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "202 E Hitt St, Mt Morris",
+      "address": "202 E Hitt St",
       "menuId": "ciminos",
       "location": {
         "lat": 42.049909,
         "lng": -89.430219
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Mt Morris"
     },
     {
       "name": "Dairy Queen",
@@ -152,13 +161,14 @@
       "isDrivethrough": true,
       "isInStore": false,
       "hours": "normal hours",
-      "address": "210 E Washington St, Oregon, IL",
+      "address": "210 E Washington St",
       "menuId": "dairy-queen",
       "location": {
         "lat": 42.014817,
-        "lng": -89.322850
+        "lng": -89.32285
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Dos Amigos",
@@ -168,13 +178,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "198-100 N Hastings Ave, Oregon, IL",
+      "address": "198-100 N Hastings Ave",
       "menuId": "dos-amigos",
       "location": {
         "lat": 42.014749,
         "lng": -89.320443
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Father & Son",
@@ -184,13 +195,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "Sun-Thurs: 11am-9pm\nFri-Sat: 11am-10pm",
-      "address": "137 S 4th St, Oregon, IL",
+      "address": "137 S 4th St",
       "menuId": "father-and-sons",
       "location": {
         "lat": 42.013424,
         "lng": -89.332379
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Hazel's Cafe",
@@ -200,13 +212,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "307 W Washington St, Oregon, IL",
+      "address": "307 W Washington St",
       "menuId": "hazels-cafe",
       "location": {
-        "lat": 42.014350,
+        "lat": 42.01435,
         "lng": -89.331778
       },
-      "isOpen": false
+      "isOpen": false,
+      "city": "Oregon"
     },
     {
       "name": "Hectors Cocina",
@@ -216,13 +229,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "201 N 3rd St, Oregon, IL",
+      "address": "201 N 3rd St",
       "menuId": "hectors-cocina",
       "location": {
         "lat": 42.016233,
         "lng": -89.330639
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Garden View",
@@ -232,13 +246,14 @@
       "isDrivethrough": true,
       "isInStore": false,
       "hours": "normal hours",
-      "address": "312 E Hitt St, Mt Morris, IL",
+      "address": "312 E Hitt St",
       "menuId": "home-town-diner",
       "location": {
         "lat": 42.049696,
         "lng": -89.426523
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Mt Morris"
     },
     {
       "name": "McDonalds",
@@ -248,13 +263,14 @@
       "isDrivethrough": true,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "211 S 4th St, Oregon, IL",
+      "address": "211 S 4th St",
       "menuId": "mcdonalds",
       "location": {
         "lat": 42.012295,
         "lng": -89.332348
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Messie's Bar & Grill",
@@ -264,13 +280,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "17 N River Rd, Oregon, IL",
+      "address": "17 N River Rd",
       "menuId": "messies-bar-and-grill",
       "location": {
         "lat": 42.015225,
         "lng": -89.323367
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Northside BBQ",
@@ -280,13 +297,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "117 N 4th St, Oregon, IL",
+      "address": "117 N 4th St",
       "menuId": "northside-bbq",
       "location": {
-        "lat": 42.015180,
+        "lat": 42.01518,
         "lng": -89.332336
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "The Pepper Mill",
@@ -296,13 +314,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "10 E Hitt St, Mt Morris, IL",
+      "address": "10 E Hitt St",
       "menuId": "the-pepper-mill",
       "location": {
         "lat": 42.049843,
         "lng": -89.432565
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Mt Morris"
     },
     {
       "name": "Scoops",
@@ -312,13 +331,14 @@
       "isDrivethrough": false,
       "isInStore": false,
       "hours": "normal hours",
-      "address": "108 N 4th St, Oregon, IL",
+      "address": "108 N 4th St",
       "menuId": "scoops",
       "location": {
         "lat": 42.014963,
         "lng": -89.332779
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Spring Valley",
@@ -328,13 +348,14 @@
       "isDrivethrough": false,
       "isInStore": false,
       "hours": "normal hours",
-      "address": "300 E Washington St, Oregon, IL",
+      "address": "300 E Washington St",
       "menuId": "spring-valley",
       "location": {
         "lat": 42.014748,
         "lng": -89.321945
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     },
     {
       "name": "Subway",
@@ -344,13 +365,14 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "10am - 6pm",
-      "address": "511 W Washington St, Oregon, IL",
+      "address": "511 W Washington St",
       "menuId": "subway",
       "location": {
         "lat": 42.014235,
         "lng": -89.334658
       },
-      "isOpen": true
+      "isOpen": true,
+      "city": "Oregon"
     }
   ]
 }
