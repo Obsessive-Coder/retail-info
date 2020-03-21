@@ -94,8 +94,8 @@ export class MapPage extends Component {
   handleLocationItemOnClick(city) {
     let { businesses } = businessesData;
     if (city.toLowerCase() !== 'all') {
-      businesses = businessesData.businesses.filter(({ city: cityData }) => (
-        cityData === city
+      businesses = businesses.filter(({ city: cityData, isOpen }) => (
+        isOpen && cityData === city
       ));
     }
 
@@ -163,7 +163,7 @@ export class MapPage extends Component {
                 const isSelected = isInfoWindowShown && selectedBusiness.name === business.name;
                 return (
                   <MapListItem
-                    key={`${business.name}-${isSelected}`}
+                    key={`${business.name}-${business.city}-${isSelected}`}
                     business={business}
                     isSelected={isSelected}
                     handleItemOnClick={this.handleBusinessItemOnClick}

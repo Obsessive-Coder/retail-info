@@ -33,8 +33,8 @@ export default class BusinessList extends Component {
   handleLocationItemOnClick(city) {
     let { businesses } = businessesData;
     if (city.toLowerCase() !== 'all') {
-      businesses = businessesData.businesses.filter(({ city: cityData }) => (
-        cityData === city
+      businesses = businesses.filter(({ city: cityData, isOpen }) => (
+        isOpen && cityData === city
       ));
     }
 

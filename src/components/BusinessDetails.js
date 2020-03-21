@@ -48,7 +48,7 @@ export class BusinessDetails extends Component {
     var service = new google.maps.places.PlacesService(map);
 
     const request = {
-      query: `${name} ${address}, ${city}`,
+      query: `${name} ${address}, ${city} IL`,
       fields: ['photos', 'geometry'],
     };
 
