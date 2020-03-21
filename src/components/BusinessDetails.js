@@ -96,14 +96,14 @@ export class BusinessDetails extends Component {
     return (
       <div>
         <div className="d-flex flex-column flex-md-row">
-          <div className="mb-4 px-1 pb-3 mb-md-0 border-right border-bottom details-sidebar">
+          <div className="mb-4 px-1 pb-3 mb-md-0 bg-dark border-right border-bottom details-sidebar">
             <img
               src={image}
               alt={name}
               className="w-100 h-auto business-details-image"
             />
             <div className="p-3">
-              <h2 className="mb-0 text-center text-dark business-heading">
+              <h2 className="mb-0 text-center text-light business-heading">
                 {name}
               </h2>
               <Link
@@ -167,7 +167,9 @@ export class BusinessDetails extends Component {
             )}
           </div>
           <div className="flex-fill px-4 py-2">
-            <h3 className="text-center border-bottom menu-heading">Menu</h3>
+            <h3 className="py-2 text-center text-light bg-dark border-bottom menu-heading">
+              Menu
+            </h3>
 
             {menuItems.length === 0 && (
               <div className="text-center">

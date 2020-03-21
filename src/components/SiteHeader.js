@@ -18,7 +18,7 @@ export default function SiteHeader() {
     <Navbar
       dark
       color="dark"
-      className="py-0 border-bottom page-header"
+      className="py-0 border-bottom border-warning page-header"
     >
       <NavbarBrand tag={Link} to="/retail-info" className="mr-auto font-xxl">
         Restaurants and Bars

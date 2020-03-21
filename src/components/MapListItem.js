@@ -120,12 +120,12 @@ export default function MapListItem({
             </div>
           )}
 
-          <a
-            href={`/businesses/${business.menuId}`}
+          <Link
+            to={`/businesses/${business.menuId}`}
             className="btn btn-outline-success btn-sm px-4"
           >
             More Info
-          </a>
+          </Link>
         </div>
       </Collapse>
     </ListGroupItem>

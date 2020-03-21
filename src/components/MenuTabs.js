@@ -33,7 +33,7 @@ export default function MenuTabs({ menuItems }) {
 
   return (
     <div>
-      <Nav tabs>
+      <Nav tabs className="mb-2">
         {categories.map((category, index) => (
           <NavItem key={`${category}-nav`} className="flex-fill">
             <NavLink
@@ -55,7 +55,7 @@ export default function MenuTabs({ menuItems }) {
                   body
                   className="d-flex flex-sm-row align-items-center mb-2 bg-light shadow-sm"
                 >
-                  <CardTitle className="flex-fill d-flex flex-column mb-2 mb-sm-0  text-dark font-weight-bold font-lg">
+                  <CardTitle className="flex-fill d-flex flex-column mb-2 mb-sm-0 text-info font-weight-bold font-lg">
                     <span>{name}</span>
                     {subText && (
                       subText.split('\n').map(line => (
@@ -65,7 +65,7 @@ export default function MenuTabs({ menuItems }) {
                       ))
                     )}
                   </CardTitle>
-                  <CardText className="text-dark font-weight-bold font-xl">
+                  <CardText className="text-info font-weight-bold font-xl">
                     {`$${price.toFixed(2)}`}
                   </CardText>
                 </Card>
