@@ -11,11 +11,13 @@ import {
 } from 'google-maps-react';
 import { MapListItem, MapInfo } from './'
 
-const { businesses } = require('../data/businesses.json');
+const businessesData = require('../data/businesses.json');
 
 export class MapPage extends Component {
   constructor(props) {
     super(props);
+
+    const businesses = businessesData.businesses.filter(({ isOpen }) => isOpen);
 
     this.state = {
       isSidebarOpen: false,

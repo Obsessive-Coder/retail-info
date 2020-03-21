@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 import { BusinessGrid } from './';
 
 // Restaurant Data File.
-const { businesses } = require('../data/businesses.json');
+const businessesData = require('../data/businesses.json');
 
 export default class BusinessList extends Component {
   constructor(props) {
     super(props);
+
+    const businesses = businessesData.businesses.filter(({ isOpen }) => isOpen);
 
     this.state = {
       businesses: businesses || [],

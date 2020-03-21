@@ -1,7 +1,6 @@
 import SiteHeader from './SiteHeader';
 import Home from './Home';
 import BusinessList from './BusinessList';
-import BusinessTable from './BusinessTable';
 import BusinessGrid from './BusinessGrid';
 import BusinessDetails from './BusinessDetails';
 import MenuTabs from './MenuTabs';
@@ -13,7 +12,6 @@ export {
   SiteHeader,
   Home,
   BusinessList,
-  BusinessTable,
   BusinessGrid,
   BusinessDetails,
   MenuTabs,
@@ -26,7 +24,6 @@ export default {
   SiteHeader,
   Home,
   BusinessList,
-  BusinessTable,
   BusinessGrid,
   BusinessDetails,
   MenuTabs,

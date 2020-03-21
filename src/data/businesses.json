@@ -13,7 +13,8 @@
       "location": {
         "lat": 42.005764,
         "lng": -89.332320
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Bella's",
@@ -28,7 +29,8 @@
       "location": {
         "lat": 42.014386,
         "lng": -89.332181
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Blackhawk Nutrition",
@@ -43,7 +45,8 @@
       "location": {
         "lat": 42.014920,
         "lng": -89.331781
-      }
+      },
+      "isOpen": false
     },
     {
       "name": "Blackhawk Steak Pit",
@@ -58,7 +61,8 @@
       "location": {
         "lat": 42.034566,
         "lng": -89.338594
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Breakers Saloon",
@@ -73,7 +77,8 @@
       "location": {
         "lat": 42.014532,
         "lng": -89.330121
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Campus Cafe",
@@ -88,7 +93,8 @@
       "location": {
         "lat": 42.047612,
         "lng": -89.433114
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Chile Pepper",
@@ -103,7 +109,8 @@
       "location": {
         "lat": 42.014777,
         "lng": -89.333377
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "China King",
@@ -118,7 +125,24 @@
       "location": {
         "lat": 42.014255,
         "lng": -89.334536
-      }
+      },
+      "isOpen": true
+    },
+    {
+      "name": "Cimino's Pizza",
+      "phone": "(815) 734-6660",
+      "isCurbside": true,
+      "isDelivery": true,
+      "isDrivethrough": false,
+      "isInStore": true,
+      "hours": "normal hours",
+      "address": "202 E Hitt St, Mt Morris",
+      "menuId": "ciminos",
+      "location": {
+        "lat": 42.049909,
+        "lng": -89.430219
+      },
+      "isOpen": true
     },
     {
       "name": "Dairy Queen",
@@ -133,7 +157,8 @@
       "location": {
         "lat": 42.014817,
         "lng": -89.322850
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Dos Amigos",
@@ -148,7 +173,8 @@
       "location": {
         "lat": 42.014749,
         "lng": -89.320443
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Father & Son",
@@ -163,7 +189,8 @@
       "location": {
         "lat": 42.013424,
         "lng": -89.332379
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Hazel's Cafe",
@@ -178,7 +205,8 @@
       "location": {
         "lat": 42.014350,
         "lng": -89.331778
-      }
+      },
+      "isOpen": false
     },
     {
       "name": "Hectors Cocina",
@@ -193,7 +221,8 @@
       "location": {
         "lat": 42.016233,
         "lng": -89.330639
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Garden View",
@@ -208,7 +237,8 @@
       "location": {
         "lat": 42.049696,
         "lng": -89.426523
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "McDonalds",
@@ -223,7 +253,8 @@
       "location": {
         "lat": 42.012295,
         "lng": -89.332348
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Messie's Bar & Grill",
@@ -238,7 +269,8 @@
       "location": {
         "lat": 42.015225,
         "lng": -89.323367
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Northside BBQ",
@@ -253,7 +285,8 @@
       "location": {
         "lat": 42.015180,
         "lng": -89.332336
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "The Pepper Mill",
@@ -268,7 +301,8 @@
       "location": {
         "lat": 42.049843,
         "lng": -89.432565
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Scoops",
@@ -283,7 +317,8 @@
       "location": {
         "lat": 42.014963,
         "lng": -89.332779
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Spring Valley",
@@ -298,7 +333,8 @@
       "location": {
         "lat": 42.014748,
         "lng": -89.321945
-      }
+      },
+      "isOpen": true
     },
     {
       "name": "Subway",
@@ -313,7 +349,8 @@
       "location": {
         "lat": 42.014235,
         "lng": -89.334658
-      }
+      },
+      "isOpen": true
     }
   ]
 }
