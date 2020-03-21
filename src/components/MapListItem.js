@@ -121,7 +121,7 @@ export default function MapListItem({
           )}
 
           <Link
-            to={`/businesses/${business.menuId}`}
+            to={`/retail-info/businesses/${business.menuId}`}
             className="btn btn-outline-success btn-sm px-4"
           >
             More Info

@@ -93,7 +93,7 @@ export class MapPage extends Component {
   handleGoToOnClick() {
     const { selectedBusiness: { menuId } } = this.state;
     const { history } = this.props;
-    history.push(`/businesses/${menuId}`);
+    history.push(`/retail-info/businesses/${menuId}`);
   }
 
   render() {

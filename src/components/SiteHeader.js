@@ -29,7 +29,7 @@ export default function SiteHeader() {
           <NavLink tag={Link} to="/retail-info">Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink tag={Link} to="/map">Map</NavLink>
+          <NavLink tag={Link} to="/retail-info/map">Map</NavLink>
         </NavItem>
       </Nav>
     </Navbar>

@@ -100,7 +100,7 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
               )}
 
               <Link
-                to={`/businesses/${business.menuId}`}
+                to={`/retail-info/businesses/${business.menuId}`}
                 className="btn btn-block btn-outline-dark"
               >
                 More Info

@@ -16,13 +16,13 @@ function App() {
       <Switch>
         <Route
           exact
-          path="/businesses/:menuId"
+          path="/retail-info/businesses/:menuId"
           render={props => <BusinessDetails {...props} />}
         />
 
         <Route
           exact
-          path="/map"
+          path="/retail-info/map"
           render={props => <MapPage {...props} />}
         />
 
