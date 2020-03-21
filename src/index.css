@@ -54,6 +54,12 @@ code {
   transition: width .35s ease !important;
 }
 
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-family: monospace;
+}
+
 .font-xs {
   font-size: x-small;
 }
@@ -85,6 +91,12 @@ code {
 .outline-none:focus {
   outline: none;
   box-shadow: none !important;
+}
+
+.gm-style-iw-d,
+.gm-style-iw,
+.gm-style-iw-c {
+  min-width: 220px !important;
 }
 
 @media (min-width: 768px) {

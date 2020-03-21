@@ -18,7 +18,7 @@ export class MapPage extends Component {
     super(props);
 
     this.state = {
-      isSidebarOpen: true,
+      isSidebarOpen: false,
       businesses: businesses || [],
       selectedBusiness: null,
       activeMarker: null,
@@ -119,7 +119,7 @@ export class MapPage extends Component {
             <Button
               color="link"
               onClick={this.toggleIsSidebarOpen}
-              className={`p-0 border-0 ${!isSidebarOpen ? 'w-100 h-100' : ''}`}
+              className={`p-0 border-0 text-decoration-none ${!isSidebarOpen ? 'w-100 h-100 d-flex flex-column align-items-center' : ''}`}
             >
               <FontAwesomeIcon
                 fixedWidth={isSidebarOpen}
@@ -127,6 +127,9 @@ export class MapPage extends Component {
                 icon={isSidebarOpen ? faAngleLeft : faAngleRight}
                 className="text-success"
               />
+              {!isSidebarOpen && (
+                <p className="mx-auto my-3 text-nowrap font-xxl text-success vertical-text">Show List</p>
+              )}
             </Button>
           </div>
 
@@ -173,7 +176,7 @@ export class MapPage extends Component {
               onClose={this.handleMapOnClick}
               onOpen={this.handleInfoWindowOnOpen}
             >
-              <div id="info-window" style={{ minWidth: '200px' }} />
+              <div id="info-window" />
             </InfoWindow>
           </Map>
         </div>

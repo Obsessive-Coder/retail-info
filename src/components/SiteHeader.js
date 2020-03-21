@@ -20,13 +20,13 @@ export default function SiteHeader() {
       color="dark"
       className="py-0 border-bottom page-header"
     >
-      <NavbarBrand tag={Link} to="/" className="mr-auto font-xxl">
+      <NavbarBrand tag={Link} to="/retail-info" className="mr-auto font-xxl">
         Restaurants and Bars
       </NavbarBrand>
 
       <Nav navbar className="flex-row justify-content-around ml-auto font-xl">
         <NavItem className="mx-3">
-          <NavLink tag={Link} to="/">Home</NavLink>
+          <NavLink tag={Link} to="/retail-info">Home</NavLink>
         </NavItem>
         <NavItem>
           <NavLink tag={Link} to="/map">Map</NavLink>
