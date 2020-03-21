@@ -103,6 +103,11 @@ code {
   .details-sidebar {
     width: 33%;
   }
+
+  .menu-tab-content {
+    height: 70vh;
+    overflow-y: auto;
+  }
 }
 
 @media (max-width: 575px) {

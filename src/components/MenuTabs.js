@@ -38,16 +38,19 @@ export default function MenuTabs({ menuItems }) {
           <NavItem key={`${category}-nav`} className="flex-fill">
             <NavLink
               onClick={() => setActiveTabIndex(index)}
-              className={`text-capitalize cursor-pointer ${activeTabIndex === index ? 'bg-dark text-light' : ''}`}
+              className={`text-capitalize cursor-pointer border-right rounded-0 ${activeTabIndex === index ? 'bg-dark text-info' : 'text-secondary'}`}
             >
               {category}
             </NavLink>
           </NavItem>
         ))}
       </Nav>
-      <TabContent activeTab={activeTabIndex}>
+      <TabContent activeTab={activeTabIndex} className="menu-tab-content">
         {categories.map((category, index) => (
-          <TabPane key={`${category}-pane`} tabId={index}>
+          <TabPane
+            key={`${category}-pane`}
+            tabId={index}
+          >
             <div>
               {separatedMenu[category].map(({ name, price, subText }) => (
                 <Card

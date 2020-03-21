@@ -102,19 +102,19 @@ export class BusinessDetails extends Component {
               alt={name}
               className="w-100 h-auto business-details-image"
             />
-            <div className="p-3">
+            <div className="pt-3 px-3">
               <h2 className="mb-0 text-center text-light business-heading">
                 {name}
               </h2>
               <Link
                 to="#"
                 onClick={this.handleAddressClick}
-                className="mx-2"
+                className="d-inline-block w-100 mx-2 text-center"
               >
                 {address}
               </Link>
               <div className="d-sm-flex flex-md-column justify-content-sm-around text-center text-secondary">
-                <div className="d-flex justify-content-around font-lg">
+                <div className="d-flex justify-content-around">
                   <span className="font-weight-bold">Phone:</span>
                   <a
                     href={`tel:${phone}`}
@@ -124,7 +124,7 @@ export class BusinessDetails extends Component {
                     {phone}
                   </a>
                 </div>
-                <div className="d-flex justify-content-around font-lg">
+                <div className="d-flex justify-content-around">
                   <span className="font-weight-bold">Hours:</span>
                   <span className="mx-2 text-capitalize">{hours}</span>
                 </div>
@@ -137,7 +137,7 @@ export class BusinessDetails extends Component {
                   >
                     <FontAwesomeIcon
                       fixedWidth
-                      size="2x"
+                      size="lg"
                       icon={business[propertyName] ? faCheck : faTimes}
                       className={business[propertyName] ? 'text-success' : 'text-danger'}
                     />
@@ -166,8 +166,8 @@ export class BusinessDetails extends Component {
               </div>
             )}
           </div>
-          <div className="flex-fill px-4 py-2">
-            <h3 className="py-2 text-center text-light bg-dark border-bottom menu-heading">
+          <div className="flex-fill px-4 py-2 bg-light">
+            <h3 className="py-2 text-center text-light bg-dark border-bottom border-warning menu-heading">
               Menu
             </h3>
 
