@@ -14,9 +14,8 @@ code {
     monospace;
 }
 
-.page-heading {
+.page-header {
   font-family: 'Josefin Sans', cursive;
-  font-size: 36pt;
 }
 
 .business-heading {
@@ -50,11 +49,20 @@ code {
 }
 
 .font-xxl {
-  font-size: xx-large;
+  font-size: xx-large !important;
 }
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.no-pointer-events {
+  pointer-events: none;
+}
+
+.outline-none:focus {
+  outline: none;
+  box-shadow: none !important;
 }
 
 @media (min-width: 768px) {

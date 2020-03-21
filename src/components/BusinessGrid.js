@@ -6,28 +6,18 @@ import {
 } from 'reactstrap';
 
 import {
-  faCheck, faTimes, faMapMarker,
+  faCheck, faTimes, faMapMarkerAlt,
   faClock, faPhoneAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import { CONSTANTS } from '../utils';
+
+const { BOOLEAN_FIELDS } = CONSTANTS;
+
 const menuData = require('../data/menus.json');
 
 export default function BusinessGrid({ businesses, handleAddressClick }) {
-  const booleanFields = [{
-    propertyName: 'isCurbside',
-    labelText: 'Curbside',
-  }, {
-    propertyName: 'isDelivery',
-    labelText: 'Delivery',
-  }, {
-    propertyName: 'isInStore',
-    labelText: 'In-Store',
-  }, {
-    propertyName: 'isDrivethrough',
-    labelText: 'D-T',
-  }];
-
   return (
     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4">
       {businesses.map(business => (
@@ -39,19 +29,19 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
               alt={business.name}
               src="https://via.placeholder.com/150x75"
             /> */}
-            <CardHeader className="py-1 bg-dark text-light font-weight-bold font-xl">
+            <CardHeader className="py-1 bg-dark text-light font-weight-bold font-lg">
               {business.name}
             </CardHeader>
             <CardBody className="py-2 text-secondary">
               <div className="text-truncate">
                 <FontAwesomeIcon
                   fixedWidth
-                  icon={faMapMarker}
+                  icon={faMapMarkerAlt}
                 />
                 <Link
                   to="#"
                   onClick={() => handleAddressClick(business.name, business.address)}
-                  className="mx-2"
+                  className="mx-2 font-sm"
                 >
                   {business.address}
                 </Link>
@@ -63,7 +53,8 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
                 />
                 <a
                   href={`tel:${business.phone}`}
-                  className="mx-2"
+                  target="_blank"
+                  className="mx-2 font-sm"
                 >
                   {business.phone}
                 </a>
@@ -76,7 +67,7 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
 
                 <div className="flex-fill">
                   {business.hours.split('\n').map((line, index) => (
-                    <small className="d-block mx-2 text-capitalize">
+                    <small key={line} className="d-block mx-2 text-capitalize">
                       {line}
                     </small>
                   ))}
@@ -84,7 +75,7 @@ export default function BusinessGrid({ businesses, handleAddressClick }) {
               </div>
 
               <div className="d-flex my-3">
-                {booleanFields.map(({ propertyName, labelText }) => (
+                {BOOLEAN_FIELDS.map(({ propertyName, labelText }) => (
                   <div
                     key={propertyName}
                     className="d-flex flex-column align-items-center w-25 text-center"

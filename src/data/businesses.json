@@ -8,8 +8,12 @@
       "isDrivethrough": false,
       "isInStore": true,
       "hours": "normal hours",
-      "address": "801 S 4th St, Oregon, IL",
-      "menuId": "alfanos"
+      "address": "801 S 4th St, Oregon, IL 61061",
+      "menuId": "alfanos",
+      "location": {
+        "lat": 42.005764,
+        "lng": -89.332320
+      }
     },
     {
       "name": "Bella's",
@@ -20,7 +24,11 @@
       "isInStore": false,
       "hours": "normal hours",
       "address": "317 W Washington St, Oregon, IL",
-      "menuId": "bellas"
+      "menuId": "bellas",
+      "location": {
+        "lat": 42.014386,
+        "lng": -89.332181
+      }
     },
     {
       "name": "Blackhawk Nutrition",
@@ -31,7 +39,11 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "312 W Washington St Suite B, Oregon, IL",
-      "menuId": "blackhawk-nutrition"
+      "menuId": "blackhawk-nutrition",
+      "location": {
+        "lat": 42.014920,
+        "lng": -89.331781
+      }
     },
     {
       "name": "Blackhawk Steak Pit",
@@ -42,7 +54,11 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "1429 IL-2, Oregon, IL",
-      "menuId": "blackhawk-steak-pit"
+      "menuId": "blackhawk-steak-pit",
+      "location": {
+        "lat": 42.034566,
+        "lng": -89.338594
+      }
     },
     {
       "name": "Breakers Saloon",
@@ -53,7 +69,11 @@
       "isInStore": true,
       "hours": "4pm - 8pm",
       "address": "100 S 2nd St, Oregon, IL",
-      "menuId": "breakers-saloon"
+      "menuId": "breakers-saloon",
+      "location": {
+        "lat": 42.014532,
+        "lng": -89.330121
+      }
     },
     {
       "name": "Campus Cafe",
@@ -64,7 +84,11 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "101 S Wesley Ave, Mt Morris, IL",
-      "menuId": "campus-cafe"
+      "menuId": "campus-cafe",
+      "location": {
+        "lat": 42.047612,
+        "lng": -89.433114
+      }
     },
     {
       "name": "Chile Pepper",
@@ -75,7 +99,11 @@
       "isInStore": false,
       "hours": "Thurs-Sat: 5-8",
       "address": "416 W Washington St, Oregon, IL",
-      "menuId": "chile-pepper"
+      "menuId": "chile-pepper",
+      "location": {
+        "lat": 42.014777,
+        "lng": -89.333377
+      }
     },
     {
       "name": "China King",
@@ -86,7 +114,11 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "509 W Washington St, Oregon, IL",
-      "menuId": "china-king"
+      "menuId": "china-king",
+      "location": {
+        "lat": 42.014255,
+        "lng": -89.334536
+      }
     },
     {
       "name": "Dairy Queen",
@@ -97,7 +129,11 @@
       "isInStore": false,
       "hours": "normal hours",
       "address": "210 E Washington St, Oregon, IL",
-      "menuId": "dairy-queen"
+      "menuId": "dairy-queen",
+      "location": {
+        "lat": 42.014817,
+        "lng": -89.322850
+      }
     },
     {
       "name": "Dos Amigos",
@@ -108,10 +144,14 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "198-100 N Hastings Ave, Oregon, IL",
-      "menuId": "dos-amigos"
+      "menuId": "dos-amigos",
+      "location": {
+        "lat": 42.014749,
+        "lng": -89.320443
+      }
     },
     {
-      "name": "Father & Sons",
+      "name": "Father & Son",
       "phone": "(815) 732-9700",
       "isCurbside": true,
       "isDelivery": true,
@@ -119,7 +159,11 @@
       "isInStore": true,
       "hours": "Sun-Thurs: 11am-9pm\nFri-Sat: 11am-10pm",
       "address": "137 S 4th St, Oregon, IL",
-      "menuId": "father-and-sons"
+      "menuId": "father-and-sons",
+      "location": {
+        "lat": 42.013424,
+        "lng": -89.332379
+      }
     },
     {
       "name": "Hazel's Cafe",
@@ -130,7 +174,11 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "307 W Washington St, Oregon, IL",
-      "menuId": "hazels-cafe"
+      "menuId": "hazels-cafe",
+      "location": {
+        "lat": 42.014350,
+        "lng": -89.331778
+      }
     },
     {
       "name": "Hectors Cocina",
@@ -141,7 +189,11 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "201 N 3rd St, Oregon, IL",
-      "menuId": "hectors-cocina"
+      "menuId": "hectors-cocina",
+      "location": {
+        "lat": 42.016233,
+        "lng": -89.330639
+      }
     },
     {
       "name": "Garden View",
@@ -152,7 +204,11 @@
       "isInStore": false,
       "hours": "normal hours",
       "address": "312 E Hitt St, Mt Morris, IL",
-      "menuId": "home-town-diner"
+      "menuId": "home-town-diner",
+      "location": {
+        "lat": 42.049696,
+        "lng": -89.426523
+      }
     },
     {
       "name": "McDonalds",
@@ -163,7 +219,11 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "211 S 4th St, Oregon, IL",
-      "menuId": "mcdonalds"
+      "menuId": "mcdonalds",
+      "location": {
+        "lat": 42.012295,
+        "lng": -89.332348
+      }
     },
     {
       "name": "Messie's Bar & Grill",
@@ -174,7 +234,11 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "17 N River Rd, Oregon, IL",
-      "menuId": "messies-bar-and-grill"
+      "menuId": "messies-bar-and-grill",
+      "location": {
+        "lat": 42.015225,
+        "lng": -89.323367
+      }
     },
     {
       "name": "Northside BBQ",
@@ -185,7 +249,11 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "117 N 4th St, Oregon, IL",
-      "menuId": "northside-bbq"
+      "menuId": "northside-bbq",
+      "location": {
+        "lat": 42.015180,
+        "lng": -89.332336
+      }
     },
     {
       "name": "The Pepper Mill",
@@ -196,7 +264,11 @@
       "isInStore": true,
       "hours": "normal hours",
       "address": "10 E Hitt St, Mt Morris, IL",
-      "menuId": "the-pepper-mill"
+      "menuId": "the-pepper-mill",
+      "location": {
+        "lat": 42.049843,
+        "lng": -89.432565
+      }
     },
     {
       "name": "Scoops",
@@ -207,7 +279,11 @@
       "isInStore": false,
       "hours": "normal hours",
       "address": "108 N 4th St, Oregon, IL",
-      "menuId": "scoops"
+      "menuId": "scoops",
+      "location": {
+        "lat": 42.014963,
+        "lng": -89.332779
+      }
     },
     {
       "name": "Spring Valley",
@@ -218,7 +294,11 @@
       "isInStore": false,
       "hours": "normal hours",
       "address": "300 E Washington St, Oregon, IL",
-      "menuId": "spring-valley"
+      "menuId": "spring-valley",
+      "location": {
+        "lat": 42.014748,
+        "lng": -89.321945
+      }
     },
     {
       "name": "Subway",
@@ -229,7 +309,11 @@
       "isInStore": true,
       "hours": "10am - 6pm",
       "address": "511 W Washington St, Oregon, IL",
-      "menuId": "subway"
+      "menuId": "subway",
+      "location": {
+        "lat": 42.014235,
+        "lng": -89.334658
+      }
     }
   ]
 }

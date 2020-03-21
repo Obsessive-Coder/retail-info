@@ -6,8 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Map, Marker , GoogleApiWrapper } from 'google-maps-react';
 import { MenuTabs } from './';
 
+import { CONSTANTS } from '../utils';
+
+const { BOOLEAN_FIELDS } = CONSTANTS;
+
 // Restaurant Data File.
-const businessData = require('../data/businesses.json')
+const businessData = require('../data/businesses.json');
 const menuData = require('../data/menus.json');
 
 export class BusinessDetails extends Component {
@@ -89,25 +93,8 @@ export class BusinessDetails extends Component {
       location,
     } = business;
 
-    const booleanFields = [{
-      propertyName: 'isCurbside',
-      labelText: 'Curbside',
-    }, {
-      propertyName: 'isDelivery',
-      labelText: 'Delivery',
-    }, {
-      propertyName: 'isInStore',
-      labelText: 'In-Store',
-    }, {
-      propertyName: 'isDrivethrough',
-      labelText: 'D-T',
-    }];
-
     return (
       <div>
-        <h1 className="py-3 bg-dark text-light text-center page-heading">
-          Restaurants and Bars
-        </h1>
         <div className="d-flex flex-column flex-md-row">
           <div className="mb-4 px-1 pb-3 mb-md-0 border-right border-bottom details-sidebar">
             <img
@@ -131,6 +118,7 @@ export class BusinessDetails extends Component {
                   <span className="font-weight-bold">Phone:</span>
                   <a
                     href={`tel:${phone}`}
+                    target="_blank"
                     className="mx-2"
                   >
                     {phone}
@@ -142,7 +130,7 @@ export class BusinessDetails extends Component {
                 </div>
               </div>
               <div className="d-flex my-3 text-secondary">
-                {booleanFields.map(({ propertyName, labelText }) => (
+                {BOOLEAN_FIELDS.map(({ propertyName, labelText }) => (
                   <div
                     key={propertyName}
                     className="d-flex flex-column align-items-center flex-fill text-center"

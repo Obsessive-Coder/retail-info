@@ -31,17 +31,11 @@ export default class BusinessList extends Component {
     const { businesses } = this.state;
 
     return (
-      <div className="overflow-auto">
-        <h1 className="py-3 bg-dark text-light text-center page-heading">
-          Restaurants and Bars
-        </h1>
-
-        <div className="mx-2">
-          <BusinessGrid
-            businesses={businesses}
-            handleAddressClick={this.handleAddressClick}
-          />
-        </div>
+      <div className="mx-2 my-4 overflow-auto">
+        <BusinessGrid
+          businesses={businesses}
+          handleAddressClick={this.handleAddressClick}
+        />
       </div>
     )
   }
