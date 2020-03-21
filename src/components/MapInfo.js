@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 
+import { Button } from 'reactstrap';
 import { faCheck, faTimes, faPhoneAlt, faClock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -8,7 +9,7 @@ import { CONSTANTS } from '../utils';
 const { BOOLEAN_FIELDS } = CONSTANTS;
 const menuData = require('../data/menus.json');
 
-export default function MapInfo({ business }) {
+export default function MapInfo({ business, handleGoToOnClick }) {
   return (
     <Fragment>
       <h6 className="text-center">{business.name}</h6>
@@ -69,12 +70,14 @@ export default function MapInfo({ business }) {
           </div>
         )}
 
-        <a
-          href={`/businesses/${business.menuId}`}
-          className="btn btn-outline-dark btn-sm"
+        <Button
+          outline
+          color="dark"
+          size="sm"
+          onClick={handleGoToOnClick}
         >
           More Info
-        </a>
+        </Button>
       </div>
     </Fragment>
   );

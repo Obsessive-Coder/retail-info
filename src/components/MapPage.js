@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 
 import { Button, Collapse, ListGroup, ListGroupItem } from 'reactstrap';
 import {
@@ -32,8 +33,10 @@ export class MapPage extends Component {
     this.toggleIsSidebarOpen = this.toggleIsSidebarOpen.bind(this);
     this.handleMarkerOnClick = this.handleMarkerOnClick.bind(this);
     this.handleMapOnClick = this.handleMapOnClick.bind(this);
+    this.handleInfoWindowOnOpen = this.handleInfoWindowOnOpen.bind(this);
     this.handleBusinessItemOnClick = this.handleBusinessItemOnClick.bind(this);
     this.handleAddressClick = this.handleAddressClick.bind(this);
+    this.handleGoToOnClick = this.handleGoToOnClick.bind(this);
   }
 
   toggleIsSidebarOpen() {
@@ -56,6 +59,19 @@ export class MapPage extends Component {
     }) : null);
   }
 
+  handleInfoWindowOnOpen() {
+    const mapInfo = (
+      <MapInfo
+        business={this.state.selectedBusiness}
+        handleGoToOnClick={this.handleGoToOnClick}
+      />
+    );
+    ReactDOM.render(
+      React.Children.only(mapInfo),
+      document.getElementById("info-window")
+    );
+  }
+
   handleBusinessItemOnClick(business) {
     this.setState(() => ({
       mapCenterLocation: business.location
@@ -70,6 +86,12 @@ export class MapPage extends Component {
     } else {
       window.open(`https://maps.google.com/maps/dir/?daddr=${name}%20${address}&amp;ll=`);
     }
+  }
+
+  handleGoToOnClick() {
+    const { selectedBusiness: { menuId } } = this.state;
+    const { history } = this.props;
+    history.push(`/businesses/${menuId}`);
   }
 
   render() {
@@ -149,12 +171,9 @@ export class MapPage extends Component {
               marker={activeMarker}
               visible={isInfoWindowShown}
               onClose={this.handleMapOnClick}
+              onOpen={this.handleInfoWindowOnOpen}
             >
-              <div style={{ minWidth: '200px' }}>
-                {selectedBusiness && (
-                  <MapInfo business={selectedBusiness} />
-                )}
-              </div>
+              <div id="info-window" style={{ minWidth: '200px' }} />
             </InfoWindow>
           </Map>
         </div>
