@@ -798,13 +798,13 @@
       "phone": "(815) 766-0668",
       "hours": "normal hours",
       "address": "1490 S Krishill Rd",
-      "menuId": "ralfies-bbq-oregon",
+      "menuId": "ralfies-bbq-chana",
       "location": {
         "lat": 41.997154,
         "lng": -89.299561
       },
       "isOpen": true,
-      "city": "Oregon",
+      "city": "Chana",
       "services": [
         "pickup"
       ]

@@ -193,7 +193,7 @@ export class MapPage extends Component {
           </div>
 
           <Collapse isOpen={isSidebarOpen} className="position-absolute w-100 sidebar-collapse">
-            <ListGroup className="mb-3" className="pb-5 overflow-auto">
+            <ListGroup className="mb-3 pb-5 overflow-auto">
               {businesses.map(business => {
                 const isSelected = isInfoWindowShown && selectedBusiness.name === business.name;
                 return (
