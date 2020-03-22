@@ -521,6 +521,22 @@
       "services": [
         "pickup"
       ]
+    },{
+      "name": "Dog Hub",
+      "phone": "(815) 561-0001",
+      "hours": "normal hours",
+      "address": "134 May Mart Dr",
+      "menuId": "dog-hub-rochelle",
+      "location": {
+        "lat": 41.933476,
+        "lng":  -89.062014
+      },
+      "isOpen": true,
+      "city": "Rochelle",
+      "services": [
+        "pickup",
+        "delivery"
+      ]
     },
     {
       "name": "Dunkin Donuts",
