@@ -59,6 +59,12 @@ code {
   transition: width .35s ease !important;
 }
 
+.dollar:before {
+  content: '$';
+  font-size: 0.7em;
+  vertical-align: text-top;
+}
+
 .vertical-text {
   writing-mode: vertical-rl;
   text-orientation: upright;
@@ -116,11 +122,10 @@ code {
   height: 42px;
   color: #ffffff !important;
   background-color: #FF813F !important;
-  /* border-radius: 5px !important; */
   font-size: 24px !important;
   letter-spacing: 0.6px !important;
-  box-shadow: 2px 2px 2px 2px #111 !important;
-  -webkit-box-shadow: 2px 2px 2px 2px #111 !important;
+  box-shadow: 2px 2px 5px 1px #111 !important;
+  -webkit-box-shadow: 2px 2px 5px 1px #111 !important;
   -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
   -o-transition: 0.3s all linear !important;
@@ -172,10 +177,10 @@ code {
   }
 
   .font-xxl {
-    font-size: large !important;
+    font-size: x-large !important;
   }
 
   .font-xl {
-    font-size: medium !important;
+    font-size: large !important;
   }
 }

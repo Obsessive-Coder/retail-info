@@ -68,8 +68,8 @@ export default function MenuTabs({ menuItems }) {
                       ))
                     )}
                   </CardTitle>
-                  <CardText className="text-info font-weight-bold font-xl">
-                    {`$${price.toFixed(2)}`}
+                  <CardText className="text-info font-weight-bold font-xl dollar">
+                    {`${price.toFixed(2)}`}
                   </CardText>
                 </Card>
               ))}

@@ -100,7 +100,7 @@ export class BusinessDetails extends Component {
               className="w-100 h-auto business-details-image"
             />
             <div className="pt-3 px-3">
-              <h2 className="mb-0 text-center text-light business-heading">
+              <h2 className="mb-0 text-center text-light font-xxl business-heading">
                 {name}
               </h2>
               <Link
@@ -158,7 +158,9 @@ export class BusinessDetails extends Component {
               Menu
             </h3>
 
-            {menuItems.length === 0 && (
+            {menuItems.length > 0 ? (
+              <MenuTabs menuItems={menuItems} />
+            ) : (
               <div className="text-center">
                 <p className="font-weight-bold font-xl text-dark">
                   No Menu Available
@@ -187,10 +189,6 @@ export class BusinessDetails extends Component {
                   </Map>
                 </div>
               </div>
-            )}
-
-            {menuItems.length > 0 && (
-              <MenuTabs menuItems={menuItems} />
             )}
           </div>
         </div>
