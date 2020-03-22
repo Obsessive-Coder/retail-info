@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Map, Marker , GoogleApiWrapper, InfoWindow
 } from 'google-maps-react';
-import { MapListItem, MapInfo, CityDropdown } from './'
+import { MapListItem, MapInfo, FilterDropdown } from './'
 
 const businessesData = require('../data/businesses.json');
 
@@ -25,6 +25,8 @@ export class MapPage extends Component {
       selectedBusiness: null,
       activeMarker: null,
       isInfoWindowShown: false,
+      filteredLocation: null,
+      filteredService: null,
       mapCenterLocation: {
         lat: 42.030169,
         lng: -89.363343
@@ -37,7 +39,8 @@ export class MapPage extends Component {
     this.handleMapOnClick = this.handleMapOnClick.bind(this);
     this.handleInfoWindowOnOpen = this.handleInfoWindowOnOpen.bind(this);
     this.handleBusinessItemOnClick = this.handleBusinessItemOnClick.bind(this);
-    this.handleLocationItemOnClick = this.handleLocationItemOnClick.bind(this);
+    this.handleLocationsItemOnClick = this.handleLocationsItemOnClick.bind(this);
+    this.handleServicesItemOnClick = this.handleServicesItemOnClick.bind(this);
     this.handleAddressClick = this.handleAddressClick.bind(this);
     this.handleGoToOnClick = this.handleGoToOnClick.bind(this);
   }
@@ -91,7 +94,7 @@ export class MapPage extends Component {
     }
   }
 
-  handleLocationItemOnClick(city) {
+  handleLocationsItemOnClick(city) {
     let { businesses } = businessesData;
     if (city.toLowerCase() !== 'all') {
       businesses = businesses.filter(({ city: cityData, isOpen }) => (
@@ -99,7 +102,30 @@ export class MapPage extends Component {
       ));
     }
 
-    this.setState(() => ({ businesses }));
+    const { filteredService } = this.state;
+    if (filteredService && filteredService.toLowerCase() !== 'all') {
+      businesses = businesses.filter(({ services }) => (
+        services.includes(filteredService)
+      ));
+    }
+
+    this.setState(() => ({ businesses, filteredLocation: city }));
+  }
+
+  handleServicesItemOnClick(service) {
+    let { businesses } = businessesData;
+    if (service.toLowerCase() !== 'all') {
+      businesses = businesses.filter(({ services, isOpen }) => (
+        isOpen && services.includes(service)
+      ));
+    }
+
+    const { filteredLocation } = this.state;
+    if (filteredLocation && filteredLocation.toLowerCase() !== 'all') {
+      businesses = businesses.filter(({ city }) => filteredLocation === city);
+    }
+
+    this.setState(() => ({ businesses, filteredService: service }));
   }
 
   handleGoToOnClick() {
@@ -124,18 +150,27 @@ export class MapPage extends Component {
     cities = cities.filter((a, b) => cities.indexOf(a) === b);
     cities.unshift('all');
 
+    let services = businessesData.businesses.map(({ services }) => services);
+    services = [].concat.apply([], services);
+    services = services.filter((a, b) => services.indexOf(a) === b);
+    services.unshift('all');
+
     return (
       <div className="d-flex" style={{ height: '90vh' }}>
         <div className={`position-relative border-right border-dark bg-dark map-sidebar ${!isSidebarOpen ? 'closed' : ''}`}>
           <div className={`d-flex justify-content-between align-items-center py-1 text-secondary sidebar-collapse-header ${!isSidebarOpen ? 'h-100' : ''}`}>
             {isSidebarOpen && (
-              <div className="flex-fill">
-                {/* <h3 className="mb-0 text-center">
-                  Businesses
-                </h3> */}
-                <CityDropdown
-                  cities={cities}
-                  handleLocationItemOnClick={this.handleLocationItemOnClick}
+              <div className="d-flex flex-fill">
+                <FilterDropdown
+                  items={cities}
+                  labelText="location"
+                  handleItemOnClick={this.handleLocationsItemOnClick}
+                />
+
+                <FilterDropdown
+                  items={services}
+                  labelText="service"
+                  handleItemOnClick={this.handleServicesItemOnClick}
                 />
               </div>
             )}

@@ -41,7 +41,7 @@ code {
 }
 
 .map-sidebar:not(.closed) .sidebar-collapse {
-  top: 45px;
+  top: 65px;
   bottom: 0;
   overflow: auto;
 }
@@ -112,8 +112,8 @@ code {
   /* border-radius: 5px !important; */
   font-size: 24px !important;
   letter-spacing: 0.6px !important;
-  box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;
-  -webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;
+  box-shadow: 2px 2px 2px 2px #111 !important;
+  -webkit-box-shadow: 2px 2px 2px 2px #111 !important;
   -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
   -o-transition: 0.3s all linear !important;

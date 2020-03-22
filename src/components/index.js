@@ -8,7 +8,7 @@ import MenuTabs from './MenuTabs';
 import MapPage from './MapPage';
 import MapInfo from './MapInfo';
 import MapListItem from './MapListItem';
-import CityDropdown from './CityDropdown';
+import FilterDropdown from './FilterDropdown';
 import Services from './Services';
 
 export {
@@ -22,7 +22,7 @@ export {
   MapPage,
   MapInfo,
   MapListItem,
-  CityDropdown,
+  FilterDropdown,
   Services,
 };
 
@@ -37,6 +37,6 @@ export default {
   MapPage,
   MapInfo,
   MapListItem,
-  CityDropdown,
+  FilterDropdown,
   Services,
 };
