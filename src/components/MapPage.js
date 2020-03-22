@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import { Button, Collapse, ListGroup } from 'reactstrap';
+import {
+  Button, Collapse, ListGroup, ListGroupItem
+} from 'reactstrap';
 import {
   faAngleRight, faAngleLeft
 } from '@fortawesome/free-solid-svg-icons';
@@ -211,6 +213,16 @@ export class MapPage extends Component {
 
           <Collapse isOpen={isSidebarOpen} className="position-absolute w-100 sidebar-collapse">
             <ListGroup className="mb-3 overflow-auto">
+              {businesses.length === 0 && (
+                <ListGroupItem
+                  className="py-2 rounded-0 bg-dark text-secondary"
+                >
+                  <p className="font-xl">
+                    There are no businesses for these filter options. Please choose different filter options.
+                  </p>
+                </ListGroupItem>
+              )}
+
               {businesses.map(business => {
                 const isSelected = isInfoWindowShown && selectedBusiness.name === business.name;
                 return (
