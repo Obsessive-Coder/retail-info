@@ -3,7 +3,7 @@ import { createBrowserHistory } from 'history';
 import { Route, Router, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-  BusinessList, BusinessDetails, SiteHeader,
+  BusinessDetails, SiteHeader,
   MapPage, SiteFooter,
 } from './components';
 
@@ -20,19 +20,7 @@ function App() {
           render={props => <BusinessDetails {...props} />}
         />
 
-        <Route
-          exact
-          path="/retail-info/map"
-          render={props => <MapPage {...props} />}
-        />
-
-        <Route
-          exact
-          path="/retail-info/businesses"
-          render={props => <BusinessList {...props} />}
-        />
-
-        <Route path="/" render={props => <BusinessList {...props} />} />
+        <Route path="/" render={props => <MapPage {...props} />} />
       </Switch>
 
       <SiteFooter />

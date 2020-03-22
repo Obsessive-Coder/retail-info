@@ -28,9 +28,6 @@ export default function SiteHeader() {
         <NavItem className="mx-3">
           <NavLink tag={Link} to="/retail-info">Home</NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink tag={Link} to="/retail-info/map">Map</NavLink>
-        </NavItem>
       </Nav>
     </Navbar>
   );
