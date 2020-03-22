@@ -137,12 +137,15 @@ export class MapPage extends Component {
   render() {
     const {
       isSidebarOpen,
-      businesses,
       activeMarker,
       isInfoWindowShown,
       selectedBusiness,
       mapCenterLocation,
+      filteredLocation,
+      filteredService,
     } = this.state;
+
+    let { businesses } = this.state;
 
     const { google } = this.props;
 
@@ -155,21 +158,35 @@ export class MapPage extends Component {
     services = services.filter((a, b) => services.indexOf(a) === b);
     services.unshift('all');
 
+    if (filteredLocation && filteredLocation.toLowerCase() !== 'all') {
+      businesses = businesses.filter(({ isOpen, city }) => (
+        isOpen && city.toLowerCase() === filteredLocation.toLowerCase()
+      ));
+    }
+
+    if (filteredService && filteredService.toLowerCase() !== 'all') {
+      businesses = businesses.filter(({ isOpen, services }) => (
+        isOpen && services.includes(filteredService)
+      ));
+    }
+
     return (
-      <div className="d-flex" style={{ height: '90vh' }}>
+      <div className="d-flex map-page">
         <div className={`position-relative border-right border-dark bg-dark map-sidebar ${!isSidebarOpen ? 'closed' : ''}`}>
-          <div className={`d-flex justify-content-between align-items-center py-1 text-secondary sidebar-collapse-header ${!isSidebarOpen ? 'h-100' : ''}`}>
+          <div className={`d-flex justify-content-between mw-100 text-secondary sidebar-collapse-header ${!isSidebarOpen ? 'h-100' : ''}`}>
             {isSidebarOpen && (
-              <div className="d-flex flex-fill">
+              <div className="d-flex justify-content-center flex-fill">
                 <FilterDropdown
                   items={cities}
                   labelText="location"
+                  filteredItem={filteredLocation}
                   handleItemOnClick={this.handleLocationsItemOnClick}
                 />
 
                 <FilterDropdown
                   items={services}
                   labelText="service"
+                  filteredItem={filteredService}
                   handleItemOnClick={this.handleServicesItemOnClick}
                 />
               </div>
@@ -178,7 +195,7 @@ export class MapPage extends Component {
             <Button
               color="link"
               onClick={this.toggleIsSidebarOpen}
-              className={`p-0 border-0 text-decoration-none ${!isSidebarOpen ? 'w-100 h-100 d-flex flex-column align-items-center' : ''}`}
+              className={`border-0 text-decoration-none ${!isSidebarOpen ? 'w-100 h-100 d-flex flex-column align-items-center' : ''}`}
             >
               <FontAwesomeIcon
                 fixedWidth={isSidebarOpen}
@@ -193,7 +210,7 @@ export class MapPage extends Component {
           </div>
 
           <Collapse isOpen={isSidebarOpen} className="position-absolute w-100 sidebar-collapse">
-            <ListGroup className="mb-3 pb-5 overflow-auto">
+            <ListGroup className="mb-3 overflow-auto">
               {businesses.map(business => {
                 const isSelected = isInfoWindowShown && selectedBusiness.name === business.name;
                 return (
@@ -218,7 +235,7 @@ export class MapPage extends Component {
             initialCenter={mapCenterLocation}
             onClick={this.handleMapOnClick}
             className="position-relative"
-            containerStyle={{ height: '90%' }}
+            containerStyle={{ height: '100%' }}
           >
             {businesses.map((business, index) => (
               <Marker

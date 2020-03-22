@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  padding-top: 59px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -30,6 +31,10 @@ code {
 
 .business-details-image {
   max-height: 250px;
+}
+
+.map-page {
+  height: 91vh;
 }
 
 .map-sidebar:not(.closed) {
@@ -107,6 +112,8 @@ code {
 }
 
 .coffee-button {
+  width: 42px;
+  height: 42px;
   color: #ffffff !important;
   background-color: #FF813F !important;
   /* border-radius: 5px !important; */
@@ -136,16 +143,34 @@ code {
 
 @media (min-width: 768px) {
   .details-sidebar {
-    width: 33%;
+    width: 300px;
   }
 
   .menu-tab-content {
-    height: 60vh;
+    height: 70vh;
     overflow-y: auto;
   }
 }
 
 @media (max-width: 575px) {
+  body {
+    padding-top: 41px;
+  }
+
+  .map-page {
+    height: 93.75vh;
+  }
+
+  .coffee-button img {
+    height: 20px !important;
+    width: 20px !important;
+  }
+
+  .coffee-button {
+    height: 28px !important;
+    width: 28px !important;
+  }
+
   .font-xxl {
     font-size: large !important;
   }

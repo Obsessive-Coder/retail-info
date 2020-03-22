@@ -166,13 +166,6 @@
       "category": "entrees"
     },
     {
-      "name": "Torta Sandwich (Pork, Steak, Guacamole)",
-      "subText": "Lettuce, shredded cheese, tomato, salsa, and crema",
-      "price": 6.00,
-      "category": "entrees"
-    },
-
-    {
       "name": "3 Beef Tacos",
       "subText": "Corn or flour tortillas\nHector Style: Cilantro and Onion\nMichelle Style: Lettuce, Cheese, Tomato, Onion, Crema\nEvyn Style: Hector & Michelle combo\n* Red or green salsa and jalapenos upon request",
       "price": 5.00,

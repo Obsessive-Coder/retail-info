@@ -93,7 +93,7 @@ export class BusinessDetails extends Component {
     return (
       <div>
         <div className="d-flex flex-column flex-md-row">
-          <div className="mb-4 px-1 pb-3 mb-md-0 bg-dark border-right border-bottom details-sidebar">
+          <div className="mb-4 px-1 pb-3 mb-md-0 bg-dark details-sidebar">
             <img
               src={image}
               alt={name}

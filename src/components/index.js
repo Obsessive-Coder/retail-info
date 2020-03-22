@@ -1,5 +1,4 @@
 import SiteHeader from './SiteHeader';
-import SiteFooter from './SiteFooter';
 import BusinessDetails from './BusinessDetails';
 import MenuTabs from './MenuTabs';
 import MapPage from './MapPage';
@@ -10,7 +9,6 @@ import Services from './Services';
 
 export {
   SiteHeader,
-  SiteFooter,
   BusinessDetails,
   MenuTabs,
   MapPage,
@@ -22,7 +20,6 @@ export {
 
 export default {
   SiteHeader,
-  SiteFooter,
   BusinessDetails,
   MenuTabs,
   MapPage,

@@ -5,10 +5,10 @@ import {
 } from 'reactstrap';
 
 export default function FilterDropdown({
-  items, labelText, handleItemOnClick
+  items, labelText, filteredItem, handleItemOnClick
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState('all');
+  const [selectedItem, setSelectedItem] = useState(filteredItem || 'all');
 
   return (
     <div className="mx-3">

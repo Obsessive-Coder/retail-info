@@ -33,12 +33,12 @@ export default function MenuTabs({ menuItems }) {
 
   return (
     <div>
-      <Nav tabs className="mb-2">
+      <Nav tabs className="mb-2 shadow-sm">
         {categories.map((category, index) => (
           <NavItem key={`${category}-nav`} className="flex-fill">
             <NavLink
               onClick={() => setActiveTabIndex(index)}
-              className={`text-capitalize cursor-pointer border-right rounded-0 ${activeTabIndex === index ? 'bg-dark text-info' : 'text-secondary'}`}
+              className={`text-capitalize cursor-pointer border-right rounded-0 text-center ${activeTabIndex === index ? 'bg-dark text-info' : 'text-secondary'}`}
             >
               {category}
             </NavLink>
