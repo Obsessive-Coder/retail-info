@@ -102,7 +102,7 @@ export default function MapListItem({
 
           <div className="d-flex justify-content-around align-items-center">
             {menuData.hasOwnProperty(business.menuId) && (
-              <div className="d-flex flex-column font-weight-bold font-xs text-success">
+              <div className="d-flex flex-column font-weight-bold font-xs text-center text-success">
                 <span>
                   Menu
                 </span>
@@ -114,7 +114,7 @@ export default function MapListItem({
 
             <Link
               to={`/retail-info/businesses/${business.menuId}`}
-              className="btn btn-outline-success btn-sm px-4"
+              className="btn btn-outline-success btn-sm px-2 mx-2"
             >
               More Info
             </Link>
