@@ -61,6 +61,7 @@ export class BusinessDetails extends Component {
             geometry: { location: { lat, lng }},
             photos,
           } = results[i];
+
           if (photos) {
             business.image = photos[0].getUrl();
           }
@@ -91,14 +92,17 @@ export class BusinessDetails extends Component {
       regularHours,
       image,
       location,
+      photos,
     } = business;
+
+    const imageUrl = image || photos[0]
 
     return (
       <div>
         <div className="d-flex flex-column flex-md-row">
           <div className="mb-4 px-1 pb-3 mb-md-0 bg-dark details-sidebar">
             <img
-              src={image}
+              src={imageUrl}
               alt={name}
               className="w-100 h-auto business-details-image"
             />

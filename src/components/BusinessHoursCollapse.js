@@ -41,7 +41,7 @@ export default function BusinessHoursCollapse({
               <span className="font-weight-bold">
                 {firstDay.day}
               </span>
-              <span className="mx-1">
+              <span className="mx-1 text-truncate">
                 {firstDay.dayHours}
               </span>
             </Fragment>
@@ -73,7 +73,7 @@ export default function BusinessHoursCollapse({
             <span className="font-weight-bold">
               {day}
             </span>
-            <span className="mx-1">
+            <span className="mx-1 text-truncate">
               {dayHours}
             </span>
           </div>

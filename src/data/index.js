@@ -158,9 +158,9 @@ const getGoogleData = () => {
     .catch(error => console.log(error));
 }
 
-// getGoogleData();
+getGoogleData();
 
-console.log(updatedBusinessesJSON.length)
+// console.log(updatedBusinessesJSON.length)
 
 
 
