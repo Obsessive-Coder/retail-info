@@ -12,7 +12,8 @@ import { Services } from './';
 const menuData = require('../data/menus.json');
 
 export default function MapListItem({
-  business, isSelected, handleItemOnClick, handleAddressClick
+  business, isSelected, handleItemOnClick,
+  handleItemOnDoubleClick, handleAddressClick
 }) {
   const [isCollapseOpen, setIsOpen] = useState(isSelected);
 
@@ -24,7 +25,11 @@ export default function MapListItem({
   return (
     <ListGroupItem
       key={business.name}
-      onClick={() => handleItemOnClick(business)}
+      onClick={event => {
+        toggleIsCollapseOpen(event);
+        handleItemOnClick(business);
+      }}
+      onDoubleClick={() => handleItemOnDoubleClick(business.menuId)}
       className="py-2 rounded-0 cursor-pointer bg-dark text-secondary"
     >
       <div className="d-flex justify-content-between align-items-center ">

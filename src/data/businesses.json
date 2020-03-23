@@ -170,7 +170,7 @@
       "city": "Oregon",
       "services": [
         "pickup",
-        "D-T"
+        "drive-through"
       ]
     },
     {
@@ -258,7 +258,7 @@
       "city": "Mt Morris",
       "services": [
         "pickup",
-        "D-T"
+        "drive-through"
       ]
     },
     {
@@ -275,7 +275,7 @@
       "city": "Oregon",
       "services": [
         "pickup",
-        "D-T",
+        "drive-through",
         "in-store"
       ]
     },

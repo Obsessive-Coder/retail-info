@@ -135,8 +135,8 @@ export class MapPage extends Component {
     this.setState(() => ({ businesses, filteredService: service }));
   }
 
-  handleGoToOnClick() {
-    const { selectedBusiness: { menuId } } = this.state;
+  handleGoToOnClick(menuId) {
+    if (!menuId) return;
     const { history } = this.props;
     history.push(`/retail-info/businesses/${menuId}`);
   }
@@ -182,9 +182,9 @@ export class MapPage extends Component {
     return (
       <div className="d-flex map-page">
         <div className={`position-relative border-right border-dark bg-dark map-sidebar ${!isSidebarOpen ? 'closed' : ''}`}>
-          <div className={`d-flex justify-content-between mw-100 text-secondary sidebar-collapse-header ${!isSidebarOpen ? 'h-100' : ''}`}>
+          <div className={`d-flex justify-content-between align-items-center mw-100 text-secondary sidebar-collapse-header ${!isSidebarOpen ? 'h-100' : ''}`}>
             {isSidebarOpen && (
-              <div className="d-flex justify-content-center flex-fill">
+              <div className="d-flex justify-content-center flex-fill py-2">
                 <FilterDropdown
                   items={cities}
                   labelText="location"
@@ -204,7 +204,7 @@ export class MapPage extends Component {
             <Button
               color="link"
               onClick={this.toggleIsSidebarOpen}
-              className={`border-0 text-decoration-none ${!isSidebarOpen ? 'w-100 h-100 d-flex flex-column align-items-center' : ''}`}
+              className={`p-2 border-0 text-decoration-none ${!isSidebarOpen ? 'w-100 h-100 d-flex flex-column align-items-center' : ''}`}
             >
               <FontAwesomeIcon
                 fixedWidth={isSidebarOpen}
@@ -219,7 +219,7 @@ export class MapPage extends Component {
           </div>
 
           <Collapse isOpen={isSidebarOpen} className="position-absolute w-100 sidebar-collapse">
-            <ListGroup className="mb-3 overflow-auto">
+            <ListGroup className="mb-5 pb-5 overflow-auto">
               {businesses.length === 0 && (
                 <ListGroupItem
                   className="py-2 rounded-0 bg-dark text-secondary"
@@ -238,10 +238,19 @@ export class MapPage extends Component {
                     business={business}
                     isSelected={isSelected}
                     handleItemOnClick={this.handleBusinessItemOnClick}
+                    handleItemOnDoubleClick={this.handleGoToOnClick}
                     handleAddressClick={this.handleAddressClick}
                   />
                 );
               })}
+
+              <ListGroupItem
+                className="py-2 rounded-0 bg-dark border-0 text-secondary"
+              >
+                <p className="d-none">
+                  This is a dummy list item so that the last item is in view on mobile devices.
+                </p>
+              </ListGroupItem>
             </ListGroup>
           </Collapse>
         </div>

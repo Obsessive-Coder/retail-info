@@ -13,6 +13,7 @@ export default function MapInfo({
   handleCloseOnClick,
 }) {
   const { name, address, city, phone, hours, services, menuId } = business;
+
   return (
     <div id="test-div">
       <div className="position-relative mb-1">
@@ -29,7 +30,7 @@ export default function MapInfo({
           <FontAwesomeIcon icon={faTimes} size="xs" />
         </Button>
       </div>
-      <div className="font-weight-bold">
+      <div className="d-flex align-items-center font-weight-bold">
         <FontAwesomeIcon
           fixedWidth
           icon={faMapMarkerAlt}
@@ -39,12 +40,12 @@ export default function MapInfo({
           color="link"
           size="sm"
           onClick={() => handleAddressClick(name, address, city)}
-          className="mx-2 p-0 font-sm"
+          className="mx-2 p-0 border-0"
         >
-          {`${address}, ${city}`}
+          <span className="font-sm">{`${address}, ${city}`}</span>
         </Button>
       </div>
-      <div className="font-weight-bold">
+      <div className="d-flex align-items-center mt-1 mb-2 font-weight-bold">
         <FontAwesomeIcon
           fixedWidth
           icon={faPhoneAlt}
@@ -58,7 +59,7 @@ export default function MapInfo({
           {phone}
         </a>
       </div>
-      <div className="d-flex mt-1">
+      <div className="d-flex">
         <FontAwesomeIcon
           fixedWidth
           icon={faClock}
@@ -99,7 +100,7 @@ export default function MapInfo({
           block={!menuData.hasOwnProperty(menuId)}
           color="info"
           size="sm"
-          onClick={handleGoToOnClick}
+          onClick={() => handleGoToOnClick(menuId)}
           className="px-3"
         >
           More Info

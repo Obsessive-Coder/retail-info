@@ -33,7 +33,7 @@ export default function FilterDropdown({
         >
           <span className="mx-2">{selectedItem}</span>
         </DropdownToggle>
-        <DropdownMenu>
+        <DropdownMenu className="bg-dark shadow">
           {items.map(item => (
             <DropdownItem
               key={`${item}-dropdown-item`}
@@ -41,7 +41,7 @@ export default function FilterDropdown({
                 setSelectedItem(item);
                 handleItemOnClick(item);
               }}
-              className="text-capitalize"
+              className="bg-dark text-capitalize text-secondary filter-list-item"
             >
               {item}
             </DropdownItem>

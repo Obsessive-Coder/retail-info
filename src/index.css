@@ -34,7 +34,7 @@ code {
 }
 
 .map-page {
-  height: 91vh;
+  height: 89.75vh;
 }
 
 .map-sidebar:not(.closed) {
@@ -46,7 +46,7 @@ code {
 }
 
 .map-sidebar:not(.closed) .sidebar-collapse {
-  top: 65px;
+  top: 70px;
   bottom: 0;
   overflow: auto;
 }
@@ -57,6 +57,10 @@ code {
   width: 0 !important;
   overflow: hidden !important;
   transition: width .35s ease !important;
+}
+
+.filter-list-item.bg-dark:hover {
+  background-color: #292b2d !important;
 }
 
 .dollar:before {
@@ -125,6 +129,11 @@ code {
   height: 12px !important;
   margin: 10px 12px !important;
   display: none !important;
+}
+
+.gm-style .gm-style-iw-t::after {
+  background: linear-gradient(45deg,#343a40 50%,
+  rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%) !important;
 }
 
 .coffee-button img {
