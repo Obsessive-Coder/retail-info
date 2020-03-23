@@ -33,6 +33,8 @@ export class MapPage extends Component {
         lat: 42.030169,
         lng: -89.363343
       },
+      mapZoom: null,
+      defaultMapZoom: 12,
     };
 
     // Bind class methods.
@@ -72,6 +74,7 @@ export class MapPage extends Component {
       <MapInfo
         business={this.state.selectedBusiness}
         handleGoToOnClick={this.handleGoToOnClick}
+        handleAddressClick={this.handleAddressClick}
       />
     );
     ReactDOM.render(
@@ -82,7 +85,8 @@ export class MapPage extends Component {
 
   handleBusinessItemOnClick(business) {
     this.setState(() => ({
-      mapCenterLocation: business.location
+      mapCenterLocation: business.location,
+      mapZoom: 18,
     }));
   }
 
@@ -145,6 +149,8 @@ export class MapPage extends Component {
       mapCenterLocation,
       filteredLocation,
       filteredService,
+      mapZoom,
+      defaultMapZoom,
     } = this.state;
 
     let { businesses } = this.state;
@@ -243,7 +249,7 @@ export class MapPage extends Component {
           <Map
             key={`${mapCenterLocation.lat}-${mapCenterLocation.lng}`}
             google={google}
-            zoom={12}
+            zoom={mapZoom || defaultMapZoom}
             initialCenter={mapCenterLocation}
             onClick={this.handleMapOnClick}
             className="position-relative"

@@ -20,7 +20,7 @@ export default function Services({
             icon={faCheck}
             className={'text-success'}
           />
-          <span className={`font-weight-bold ${fontSize}`}>
+          <span className={`font-weight-bold text-capitalize ${fontSize}`}>
             {service}
           </span>
         </div>
