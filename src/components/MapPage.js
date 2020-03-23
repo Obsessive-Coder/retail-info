@@ -19,7 +19,7 @@ export class MapPage extends Component {
   constructor(props) {
     super(props);
 
-    const businesses = businessesData.businesses.filter(({ isOpen }) => isOpen);
+    const businesses = businessesData.businesses.filter(({ isOperating }) => isOperating);
 
     this.state = {
       isSidebarOpen: false,
@@ -91,21 +91,21 @@ export class MapPage extends Component {
     }));
   }
 
-  handleAddressClick(name, address, city) {
+  handleAddressClick(name, address) {
     if ((navigator.platform.indexOf("iPhone") !== -1) ||
      (navigator.platform.indexOf("iPad") !== -1) ||
      (navigator.platform.indexOf("iPod") !== -1)) {
-      window.open(`maps://maps.google.com/maps/dir/?daddr=${name}%20${address},%20${city}&amp;ll=`);
+      window.open(`maps://maps.google.com/maps/dir/?daddr=${name}%20${address}&amp;ll=`);
     } else {
-      window.open(`https://maps.google.com/maps/dir/?daddr=${name}%20${address},%20${city}&amp;ll=`);
+      window.open(`https://maps.google.com/maps/dir/?daddr=${name}%20${address}&amp;ll=`);
     }
   }
 
   handleLocationsItemOnClick(city) {
     let { businesses } = businessesData;
     if (city.toLowerCase() !== 'all') {
-      businesses = businesses.filter(({ city: cityData, isOpen }) => (
-        isOpen && cityData === city
+      businesses = businesses.filter(({ city: cityData, isOperating }) => (
+        isOperating && cityData === city
       ));
     }
 
@@ -122,8 +122,8 @@ export class MapPage extends Component {
   handleServicesItemOnClick(service) {
     let { businesses } = businessesData;
     if (service.toLowerCase() !== 'all') {
-      businesses = businesses.filter(({ services, isOpen }) => (
-        isOpen && services.includes(service)
+      businesses = businesses.filter(({ services, isOperating }) => (
+        isOperating && services.includes(service)
       ));
     }
 
@@ -168,14 +168,14 @@ export class MapPage extends Component {
     services.unshift('all');
 
     if (filteredLocation && filteredLocation.toLowerCase() !== 'all') {
-      businesses = businesses.filter(({ isOpen, city }) => (
-        isOpen && city.toLowerCase() === filteredLocation.toLowerCase()
+      businesses = businesses.filter(({ isOperating, city }) => (
+        isOperating && city.toLowerCase() === filteredLocation.toLowerCase()
       ));
     }
 
     if (filteredService && filteredService.toLowerCase() !== 'all') {
-      businesses = businesses.filter(({ isOpen, services }) => (
-        isOpen && services.includes(filteredService)
+      businesses = businesses.filter(({ isOperating, services }) => (
+        isOperating && services.includes(filteredService)
       ));
     }
 

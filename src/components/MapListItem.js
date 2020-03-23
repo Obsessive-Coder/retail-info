@@ -30,10 +30,10 @@ export default function MapListItem({
         handleItemOnClick(business);
       }}
       onDoubleClick={() => handleItemOnDoubleClick(business.menuId)}
-      className="py-2 rounded-0 cursor-pointer bg-dark text-secondary"
+      className="py-2 rounded-0 cursor-pointer bg-dark text-extra-light"
     >
       <div className="d-flex justify-content-between align-items-center ">
-        <span className="flex-fill font-weight-bold">
+        <span className="flex-fill pr-4 font-weight-bold text-capitalize text-truncate">
           {business.name}
         </span>
 
@@ -63,7 +63,7 @@ export default function MapListItem({
           <div className="text-truncate">
             <Link
               to="#"
-              onClick={() => handleAddressClick(business.name, business.address, business.city)}
+              onClick={() => handleAddressClick(business.name, business.address)}
               className="mx-1 font-sm"
             >
               <FontAwesomeIcon
@@ -79,7 +79,7 @@ export default function MapListItem({
           outline
           color="link"
           onClick={toggleIsCollapseOpen}
-          className="p-0 text-secondary outline-none"
+          className="p-0 text-extra-light outline-none"
         >
           <FontAwesomeIcon
             fixedWidth
@@ -91,32 +91,34 @@ export default function MapListItem({
 
       <Collapse
         isOpen={isCollapseOpen}
-        className="pt-2 text-center"
+        className="pt-2"
       >
-        <Services
-          services={business.services}
-          businessName={business.name}
-          fontSize="font-xs"
-        />
+        <div className="d-flex justify-content-around align-items-center flex-wrap">
+          <Services
+            services={business.services}
+            businessName={business.name}
+            fontSize="font-xs"
+          />
 
-        <div className="d-flex justify-content-around align-items-center mt-3">
-          {menuData.hasOwnProperty(business.menuId) && (
-            <div className="d-flex flex-column font-weight-bold font-xs text-success">
-              <span>
-                Menu
-              </span>
-              <span>
-                Available
-              </span>
-            </div>
-          )}
+          <div className="d-flex justify-content-around align-items-center">
+            {menuData.hasOwnProperty(business.menuId) && (
+              <div className="d-flex flex-column font-weight-bold font-xs text-success">
+                <span>
+                  Menu
+                </span>
+                <span>
+                  Available
+                </span>
+              </div>
+            )}
 
-          <Link
-            to={`/retail-info/businesses/${business.menuId}`}
-            className="btn btn-outline-success btn-sm px-4"
-          >
-            More Info
-          </Link>
+            <Link
+              to={`/retail-info/businesses/${business.menuId}`}
+              className="btn btn-outline-success btn-sm px-4"
+            >
+              More Info
+            </Link>
+          </div>
         </div>
       </Collapse>
     </ListGroupItem>

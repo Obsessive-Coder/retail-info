@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
-import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMapMarkerAlt, faPhoneAlt, faClock
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Map, Marker , GoogleApiWrapper } from 'google-maps-react';
-import { MenuTabs, Services } from './';
+import { MenuTabs, Services, BusinessHoursCollapse } from './';
 
 // Restaurant Data File.
 const businessData = require('../data/businesses.json');
@@ -24,14 +26,14 @@ export class BusinessDetails extends Component {
   }
 
   handleAddressClick() {
-    const { business: { name, address, city } } = this.state;
+    const { business: { name, address } } = this.state;
 
     if ((navigator.platform.indexOf("iPhone") !== -1) ||
      (navigator.platform.indexOf("iPad") !== -1) ||
      (navigator.platform.indexOf("iPod") !== -1)) {
-      window.open(`maps://maps.google.com/maps/dir/?daddr=${name}%20${address},%20${city}&amp;ll=`);
+      window.open(`maps://maps.google.com/maps/dir/?daddr=${name}%20${address}&amp;ll=`);
     } else {
-      window.open(`https://maps.google.com/maps/dir/?daddr=${name}%20${address},%20${city}&amp;ll=`);
+      window.open(`https://maps.google.com/maps/dir/?daddr=${name}%20${address}&amp;ll=`);
     }
   }
 
@@ -85,7 +87,8 @@ export class BusinessDetails extends Component {
       address,
       city,
       phone,
-      hours,
+      specialHours,
+      regularHours,
       image,
       location,
     } = business;
@@ -100,31 +103,52 @@ export class BusinessDetails extends Component {
               className="w-100 h-auto business-details-image"
             />
             <div className="pt-3 px-3">
-              <h2 className="mb-0 text-center text-light font-xxl business-heading">
+              <h2 className="mb-0 text-center text-extra-light font-xxl business-heading">
                 {name}
               </h2>
-              <Link
-                to="#"
-                onClick={this.handleAddressClick}
-                className="d-inline-block w-100 mx-2 text-center"
-              >
-                {`${address}, ${city}`}
-              </Link>
-              <div className="d-sm-flex flex-md-column justify-content-sm-around text-center text-secondary">
-                <div className="d-flex justify-content-around">
-                  <span className="font-weight-bold">Phone:</span>
-                  <a
-                    href={`tel:${phone}`}
-                    target="_blank"
-                    className="mx-2"
-                  >
-                    {phone}
-                  </a>
-                </div>
-                <div className="d-flex justify-content-around">
-                  <span className="font-weight-bold">Hours:</span>
-                  <span className="mx-2 text-capitalize">{hours}</span>
-                </div>
+
+
+              <div className="d-flex align-items-center my-2 font-weight-bold">
+                <FontAwesomeIcon
+                  fixedWidth
+                  icon={faMapMarkerAlt}
+                  className="text-secondary"
+                />
+                <Link
+                  to="#"
+                  onClick={this.handleAddressClick}
+                  className="d-inline-block mx-2 text-center text-truncate"
+                >
+                  {address}
+                </Link>
+              </div>
+
+              <div className="d-flex align-items-center my-2 font-weight-bold">
+                <FontAwesomeIcon
+                  fixedWidth
+                  icon={faPhoneAlt}
+                  className="text-secondary"
+                />
+                <a
+                  href={`tel:${phone}`}
+                  target="_blank"
+                  className="mx-2"
+                >
+                  {phone}
+                </a>
+              </div>
+
+              <div className="d-flex my-2">
+                <FontAwesomeIcon
+                  fixedWidth
+                  icon={faClock}
+                  className="mt-1 text-secondary"
+                />
+
+                <BusinessHoursCollapse
+                  operatingHours={specialHours || regularHours}
+                  textSize="font-sm"
+                />
               </div>
 
               <Services
@@ -154,7 +178,7 @@ export class BusinessDetails extends Component {
             )}
           </div>
           <div className="flex-fill px-4 py-2 bg-light">
-            <h3 className="py-2 text-center text-light bg-dark border-bottom border-warning menu-heading">
+            <h3 className="py-2 text-center text-extra-light bg-dark border-bottom border-warning menu-heading">
               Menu
             </h3>
 

@@ -6,6 +6,7 @@ import MapInfo from './MapInfo';
 import MapListItem from './MapListItem';
 import FilterDropdown from './FilterDropdown';
 import Services from './Services';
+import BusinessHoursCollapse from './BusinessHoursCollapse';
 
 export {
   SiteHeader,
@@ -16,6 +17,7 @@ export {
   MapListItem,
   FilterDropdown,
   Services,
+  BusinessHoursCollapse,
 };
 
 export default {
@@ -27,4 +29,5 @@ export default {
   MapListItem,
   FilterDropdown,
   Services,
+  BusinessHoursCollapse,
 };

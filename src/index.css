@@ -95,8 +95,16 @@ code {
   font-size: xx-large !important;
 }
 
+.text-extra-light {
+  color: #bbb !important;
+}
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default !important;
 }
 
 .no-pointer-events {

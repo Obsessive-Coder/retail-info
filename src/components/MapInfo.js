@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Button } from 'reactstrap';
 import {
   faMapMarkerAlt, faPhoneAlt, faClock, faTimes
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Services } from './';
+import { Services, BusinessHoursCollapse } from './';
 
 const menuData = require('../data/menus.json');
 
@@ -12,12 +12,21 @@ export default function MapInfo({
   business, handleGoToOnClick, handleAddressClick,
   handleCloseOnClick,
 }) {
-  const { name, address, city, phone, hours, services, menuId } = business;
+  const {
+    name,
+    address,
+    city,
+    phone,
+    specialHours,
+    regularHours,
+    services,
+    menuId,
+  } = business;
 
   return (
     <div id="test-div">
       <div className="position-relative mb-1">
-        <h6 className="m-0 text-center text-light font-weight-bold">
+        <h6 className="mx-4 text-center text-extra-light font-weight-bold text-truncate">
           {name}
         </h6>
         <Button
@@ -39,13 +48,13 @@ export default function MapInfo({
         <Button
           color="link"
           size="sm"
-          onClick={() => handleAddressClick(name, address, city)}
+          onClick={() => handleAddressClick(name, address)}
           className="mx-2 p-0 border-0"
         >
-          <span className="font-sm">{`${address}, ${city}`}</span>
+          <span className="font-sm">{address}</span>
         </Button>
       </div>
-      <div className="d-flex align-items-center mt-1 mb-2 font-weight-bold">
+      <div className="d-flex align-items-center my-1 font-weight-bold">
         <FontAwesomeIcon
           fixedWidth
           icon={faPhoneAlt}
@@ -63,23 +72,20 @@ export default function MapInfo({
         <FontAwesomeIcon
           fixedWidth
           icon={faClock}
-          className="text-secondary"
+          className="mt-1 text-secondary"
         />
 
-        <div className="flex-fill text-light">
-          {hours.split('\n').map(line => (
-            <span key={line} className="d-block mx-2 text-capitalize font-weight-bold">
-              {line}
-            </span>
-          ))}
-        </div>
+        <BusinessHoursCollapse
+          operatingHours={specialHours || regularHours}
+          textSize="font-sm"
+        />
       </div>
 
       <Services
         services={services}
         businessName={name}
         fontSize="font-xs"
-        iconSize="lg"
+        iconSize="2x"
         containerClassName="my-3"
       />
 

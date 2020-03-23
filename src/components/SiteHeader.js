@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   Navbar,
   NavbarBrand,
-  NavbarToggler,
-  Collapse,
   Nav,
   NavItem,
   NavLink,
 } from 'reactstrap';
 
 export default function SiteHeader() {
-  const [isOpen, setIsOpen] = useState(true);
-  const toggleIsOpen = () => setIsOpen(!isOpen);
-
   return (
     <Navbar
       dark
@@ -21,13 +16,19 @@ export default function SiteHeader() {
       style={{ top: 0, zIndex: 999 }}
       className="position-fixed w-100 py-0 border-bottom border-warning page-header"
     >
-      <NavbarBrand tag={Link} to="/retail-info" className="mr-auto font-xxl">
+      <NavbarBrand tag={Link} to="/retail-info" className="mr-auto text-extra-light font-xxl">
         Local Food
       </NavbarBrand>
 
       <Nav navbar className="flex-row justify-content-around align-items-center ml-auto font-xl">
         <NavItem className="mx-3">
-          <NavLink tag={Link} to="/retail-info">Home</NavLink>
+          <NavLink
+            tag={Link}
+            to="/retail-info"
+            className="text-extra-light"
+          >
+            Home
+          </NavLink>
         </NavItem>
         <NavItem>
         <a

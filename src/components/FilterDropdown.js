@@ -14,7 +14,7 @@ export default function FilterDropdown({
     <div className="mx-3">
       <Label
         for={`${labelText}-dropdown`}
-        className="m-0 text-capitalize font-weight-bold"
+        className="m-0 text-extra-light text-capitalize font-weight-bold"
       >
         {labelText}
       </Label>
@@ -41,7 +41,7 @@ export default function FilterDropdown({
                 setSelectedItem(item);
                 handleItemOnClick(item);
               }}
-              className="bg-dark text-capitalize text-secondary filter-list-item"
+              className="bg-dark text-capitalize text-extra-light filter-list-item"
             >
               {item}
             </DropdownItem>
