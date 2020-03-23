@@ -5786,6 +5786,31 @@
         "https://lh3.googleusercontent.com/p/AF1QipO_MMGgcob2L3-kCr8Vcxu-5zIUVVdw0SXbcoq_=s1600-w400",
         "https://lh3.googleusercontent.com/p/AF1QipNxghb1oYAPmdyv-N1eAoHeDP0M_yhScGg8HmdL=s1600-w400"
       ]
+    },
+    {
+      "name": "Meals On Wheels of Dixon",
+      "phone": "(815) 284-0333",
+      "specialHours": false,
+      "menuId": "meals-wheels-dixon",
+      "isOperating": true,
+      "services": [
+        "delivery"
+      ],
+      "city": "Dixon",
+      "address": "403 East 1st Street, Dixon",
+      "regularHours": [],
+      "priceLevel": "unknown",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "location": {
+        "lat": 41.8445624,
+        "lng": -89.47911739999999
+      },
+      "photos": [
+        "https://geo0.ggpht.com/cbk?panoid=q-revOFx2Uo77WffoTQozg&output=thumbnail&cb_client=search.gws-prod/local-details-localweb.gps&thumb=2&yaw=69.388&pitch=0&thumbfov=100&w=183&h=160"
+      ]
     }
   ]
 }
