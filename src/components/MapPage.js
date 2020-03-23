@@ -75,6 +75,7 @@ export class MapPage extends Component {
         business={this.state.selectedBusiness}
         handleGoToOnClick={this.handleGoToOnClick}
         handleAddressClick={this.handleAddressClick}
+        handleCloseOnClick={this.handleMapOnClick}
       />
     );
     ReactDOM.render(

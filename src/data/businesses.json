@@ -74,7 +74,7 @@
     {
       "name": "Breakers Saloon",
       "phone": "(815) 732-3319",
-      "hours": "4pm - 8pm",
+      "hours": "Mon-Sun: 4pm-8pm",
       "address": "100 S 2nd St",
       "menuId": "breakers-saloon-oregon",
       "location": {
@@ -91,7 +91,7 @@
     {
       "name": "Campus Cafe",
       "phone": "(779) 545-0007",
-      "hours": "normal hours",
+      "hours": "Mon-Sun: 9am-1pm",
       "address": "101 S Wesley Ave",
       "menuId": "campus-cafe-mt-morris",
       "location": {
@@ -109,7 +109,7 @@
     {
       "name": "Chile Pepper",
       "phone": "(815) 732-1583",
-      "hours": "Thurs-Sat: 5-8",
+      "hours": "Thurs-Sat: 5pm-8pm",
       "address": "416 W Washington St",
       "menuId": "chile-pepper-oregon",
       "location": {
@@ -367,7 +367,7 @@
     {
       "name": "Subway",
       "phone": "(815) 732-7827",
-      "hours": "10am - 6pm",
+      "hours": "Mon-Sun: 10am-6pm",
       "address": "511 W Washington St",
       "menuId": "subway-oregon",
       "location": {

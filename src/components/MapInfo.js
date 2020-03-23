@@ -1,20 +1,34 @@
 import React, { Fragment } from 'react';
 import { Button } from 'reactstrap';
-import { faMapMarkerAlt, faPhoneAlt, faClock } from '@fortawesome/free-solid-svg-icons';
+import {
+  faMapMarkerAlt, faPhoneAlt, faClock, faTimes
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Services } from './';
 
 const menuData = require('../data/menus.json');
 
 export default function MapInfo({
-  business, handleGoToOnClick, handleAddressClick
+  business, handleGoToOnClick, handleAddressClick,
+  handleCloseOnClick,
 }) {
   const { name, address, city, phone, hours, services, menuId } = business;
   return (
     <div id="test-div">
-      <h6 className="my-1 text-center text-light">
-        {name}
-      </h6>
+      <div className="position-relative mb-1">
+        <h6 className="m-0 text-center text-light font-weight-bold">
+          {name}
+        </h6>
+        <Button
+          close
+          size="sm"
+          onClick={handleCloseOnClick}
+          style={{ top: '-5px', right: 0 }}
+          className="position-absolute text-danger outline-none"
+        >
+          <FontAwesomeIcon icon={faTimes} size="xs" />
+        </Button>
+      </div>
       <div className="font-weight-bold">
         <FontAwesomeIcon
           fixedWidth
