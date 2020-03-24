@@ -141,6 +141,20 @@ export class MapPage extends Component {
     history.push(`/retail-info/businesses/${menuId}`);
   }
 
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(({
+      coords: { latitude, longitude }
+    }) => {
+        const mapCenterLocation = {
+          lat: latitude,
+          lng: longitude
+        }
+
+        this.setState(() => ({ mapCenterLocation }));
+      }
+    );
+  }
+
   render() {
     const {
       isSidebarOpen,

@@ -37,10 +37,10 @@ export default function FilterDropdown({
           {items.map(item => (
             <DropdownItem
               key={`${item}-dropdown-item`}
-              // onClick={() => {
-              //   setSelectedItem(item);
-              //   handleItemOnClick(item);
-              // }}
+              onClick={() => {
+                setSelectedItem(item);
+                handleItemOnClick(item);
+              }}
               className="bg-dark text-capitalize text-extra-light filter-list-item"
             >
               {item}
