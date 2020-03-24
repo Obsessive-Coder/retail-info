@@ -162,21 +162,6 @@ const getGoogleData = () => {
 
 // console.log(updatedBusinessesJSON.length)
 
-const newBusinessObjects = updatedBusinessesJSON.map(business => {
-  let formattedName = business.name.toLowerCase().replace(/[^\w\s]/gi, '');
-  formattedName = formattedName.replace(/[^a-z0-9+]+/gi, '-');
-  const formattedCity = business.city.toLowerCase().replace(/[^a-z0-9+]+/gi, '-')
-
-  return {
-    ...business,
-    menuId: `${formattedName}-${formattedCity}`
-  };
-})
-
-fs.writeFile('updatedBusinesses.json', JSON.stringify(newBusinessObjects, null, 2), (err) => {
-  if (err) throw err;
-})
-
 
 
 

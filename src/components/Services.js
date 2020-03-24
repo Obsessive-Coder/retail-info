@@ -8,7 +8,7 @@ export default function Services({
   fontSize, containerClassName
 }) {
   return (
-    <div className={`d-flex justify-content-around flex-wrap text-extra-light ${containerClassName}`}>
+    <div className={`d-flex justify-content-center flex-wrap text-extra-light ${containerClassName}`}>
       {services.map(service => (
         <div
           key={`${businessName}-${service}`}

@@ -94,11 +94,13 @@ export default function MapListItem({
         className="pt-2"
       >
         <div className="d-flex justify-content-around align-items-center flex-wrap">
-          <Services
-            services={business.services}
-            businessName={business.name}
-            fontSize="font-xs"
-          />
+          <div className="flex-fill pr-4">
+            <Services
+              services={business.services}
+              businessName={business.name}
+              fontSize="font-xs"
+            />
+          </div>
 
           <div className="d-flex justify-content-around align-items-center">
             {menuData.hasOwnProperty(business.menuId) && (

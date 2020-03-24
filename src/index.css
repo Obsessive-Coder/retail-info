@@ -59,6 +59,10 @@ code {
   transition: width .35s ease !important;
 }
 
+.filter-dropdown-menu {
+  max-height: 200px;
+}
+
 .filter-list-item.bg-dark:hover {
   background-color: #292b2d !important;
 }
