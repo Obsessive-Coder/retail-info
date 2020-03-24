@@ -11,7 +11,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Map, Marker , GoogleApiWrapper, InfoWindow
 } from 'google-maps-react';
-import { MapListItem, MapInfo, FilterDropdown } from './'
+import { MapListItem, MapInfo, FilterDropdown } from './';
+
+import Geocode from "react-geocode";
+Geocode.setApiKey('AIzaSyBWc45Eb4D3pf2A-I3aki-aM8HxMHRPfpc');
 
 const businessesData = require('../data/businesses.json');
 
@@ -33,6 +36,7 @@ export class MapPage extends Component {
         lat: 42.030169,
         lng: -89.363343
       },
+      userCity: null,
       mapZoom: null,
       defaultMapZoom: 12,
     };
@@ -150,7 +154,29 @@ export class MapPage extends Component {
           lng: longitude
         }
 
-        this.setState(() => ({ mapCenterLocation }));
+        Geocode.fromLatLng(latitude, longitude).then(
+          response => {
+            const { address_components } = response.results[0]
+            const cityAddressComponent = address_components.filter(({ types }) => (
+              types.includes('locality')
+            ))[0];
+
+            let cities = businessesData.businesses.map(({ city }) => city);
+            cities = cities.filter((a, b) => cities.indexOf(a) === b);
+
+            const userCity = cityAddressComponent.short_name;
+
+            if (cities.includes(userCity)) {
+              this.setState(() => ({
+                mapCenterLocation,
+                filteredLocation: userCity,
+              }));
+            }
+          },
+          error => {
+            console.error(error);
+          }
+        );
       }
     );
   }
