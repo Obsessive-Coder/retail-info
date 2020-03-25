@@ -60,7 +60,7 @@ export default function MapListItem({
               />
             </a>
           </div>
-          <div className="text-truncate">
+          <div>
             <Link
               to="#"
               onClick={() => handleAddressClick(business.name, business.address)}

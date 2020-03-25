@@ -58,22 +58,22 @@ export default function BusinessHoursCollapse({
           {operatingHours.length > 0 ? (
             <Fragment>
               <span
-                style={{ width: '75px' }}
-                className="mr-1 font-weight-bold"
+                style={{ width: isAllDaysShown ? '80px' : '75px' }}
+                className="text-left font-weight-bold"
               >
                 {firstDay.day}
               </span>
 
               {firstDay.dayHours.split(', ') ? (
-                <div className="mr-1 d-flex flex-column">
+                <div className="d-flex flex-column">
                   {firstDay.dayHours.split(', ').map(dayHour => (
-                    <span className="text-truncate">
+                    <span key={`${dayHour}-today`}>
                       {dayHour}
                     </span>
                   ))}
                 </div>
               ) : (
-                <span className="mr-1 text-truncate">
+                <span>
                   {firstDay.dayHours}
                 </span>
               )}
@@ -104,22 +104,22 @@ export default function BusinessHoursCollapse({
             className={`d-flex text-extra-light ${textSize} ${index === 0 ? 'mb-1' : 'my-1'}`}
           >
             <span
-              style={{ width: '75px' }}
-              className="mr-1 font-weight-bold"
+              style={{ width: isAllDaysShown ? '80px' : '75px' }}
+              className="text-left font-weight-bold"
             >
               {day}
             </span>
 
             {dayHours.split(', ') ? (
-              <div className="mr-1 d-flex flex-column">
-                {dayHours.split(', ').map(dayHour => (
-                  <span className="text-truncate">
+              <div className="d-flex flex-column">
+                {dayHours.split(', ').map((dayHour, index) => (
+                  <span key={`${dayHour}-other-${index}`}>
                     {dayHour}
                   </span>
                 ))}
               </div>
             ) : (
-              <span className="mr-1 text-truncate">
+              <span>
                 {dayHours}
               </span>
             )}

@@ -34,7 +34,7 @@ code {
 }
 
 .hours-caret {
-  right: 10px;
+  right: 40px;
 }
 
 .map-page {
@@ -124,11 +124,11 @@ code {
   box-shadow: none !important;
 }
 
-.gm-style-iw-d,
 .gm-style-iw,
 .gm-style-iw-c {
-  min-width: 220px !important;
-  max-width: 300px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+  width: 260px !important;
 }
 
 .gm-style-iw.gm-style-iw-c {
@@ -197,6 +197,10 @@ code {
     height: 70vh;
     overflow-y: auto;
   }
+
+  .address-link {
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -228,7 +232,13 @@ code {
     font-size: x-large !important;
   }
 
-  .font-xl {
+  .font-xl:not(.business-heading) {
     font-size: large !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .address-link {
+    max-width: 250px;
   }
 }

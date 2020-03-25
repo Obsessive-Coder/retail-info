@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'reactstrap';
+import { Button, UncontrolledTooltip } from 'reactstrap';
 import {
   faMapMarkerAlt, faPhoneAlt, faClock, faTimes
 } from '@fortawesome/free-solid-svg-icons';
@@ -15,7 +15,6 @@ export default function MapInfo({
   const {
     name,
     address,
-    city,
     phone,
     specialHours,
     regularHours,
@@ -26,9 +25,15 @@ export default function MapInfo({
   return (
     <div id="test-div">
       <div className="position-relative mb-1">
-        <h6 className="mx-4 text-center text-extra-light font-weight-bold text-truncate">
+        <h6
+          id={`${menuId}-heading-info`}
+          className="mx-4 text-center text-extra-light font-weight-bold text-truncate"
+        >
           {name}
         </h6>
+        <UncontrolledTooltip placement="bottom" target={`${menuId}-heading-info`}>
+          {name}
+        </UncontrolledTooltip>
         <Button
           close
           size="sm"
@@ -39,22 +44,26 @@ export default function MapInfo({
           <FontAwesomeIcon icon={faTimes} size="xs" />
         </Button>
       </div>
-      <div className="d-flex align-items-center font-weight-bold">
+      <div className="d-flex align-items-center mr-4 font-weight-bold">
         <FontAwesomeIcon
           fixedWidth
           icon={faMapMarkerAlt}
           className="text-secondary"
         />
         <Button
+          id={`${menuId}-address`}
           color="link"
           size="sm"
           onClick={() => handleAddressClick(name, address)}
-          className="mx-2 p-0 border-0"
+          className="mx-2 p-0 border-0 text-truncate"
         >
           <span className="font-sm">{address}</span>
         </Button>
+        <UncontrolledTooltip placement="bottom" target={`${menuId}-address`}>
+          {address}
+        </UncontrolledTooltip>
       </div>
-      <div className="d-flex align-items-center my-1 font-weight-bold">
+      <div className="d-flex align-items-center mr-4 my-1 font-weight-bold">
         <FontAwesomeIcon
           fixedWidth
           icon={faPhoneAlt}
@@ -68,7 +77,7 @@ export default function MapInfo({
           {phone}
         </a>
       </div>
-      <div className="d-flex">
+      <div className="d-flex mr-4">
         <FontAwesomeIcon
           fixedWidth
           icon={faClock}

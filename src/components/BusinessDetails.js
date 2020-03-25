@@ -107,7 +107,7 @@ export class BusinessDetails extends Component {
               className="w-100 h-auto business-details-image"
             />
             <div className="d-flex flex-column align-items-center pt-3 px-3">
-              <h2 className="mb-0 text-center text-extra-light font-xxl business-heading">
+              <h2 className="mb-0 text-center text-extra-light font-xl business-heading">
                 {name}
               </h2>
 
@@ -123,7 +123,7 @@ export class BusinessDetails extends Component {
                     <Link
                       to="#"
                       onClick={this.handleAddressClick}
-                      className="d-inline-block mx-2 text-center text-truncate"
+                      className="mx-2 text-center text-truncate address-link"
                     >
                       {address}
                     </Link>
