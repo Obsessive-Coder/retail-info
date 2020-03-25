@@ -662,7 +662,8 @@
       ]
     },
     {
-      "name": "Home town diner",
+      "name": "Home Town Diner",
+      "phone": "(815) 994-0573",
       "specialHours": false,
       "menuId": "home-town-diner-mt-morris",
       "isOperating": true,
@@ -1733,6 +1734,7 @@
     },
     {
       "name": "Hardee's",
+      "phone": "(815) 561-1125",
       "specialHours": false,
       "menuId": "hardees-rochelle",
       "isOperating": true,
@@ -3366,6 +3368,7 @@
     },
     {
       "name": "Flip Side Coffee & Espresso Bar",
+      "phone": "(815) 718-0022",
       "city": "Rock Falls",
       "specialHours": false,
       "isOperating": true,
