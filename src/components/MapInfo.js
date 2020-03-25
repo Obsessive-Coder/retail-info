@@ -78,6 +78,7 @@ export default function MapInfo({
         <BusinessHoursCollapse
           operatingHours={specialHours || regularHours}
           textSize="font-sm"
+          isAllDaysShown={false}
         />
       </div>
 

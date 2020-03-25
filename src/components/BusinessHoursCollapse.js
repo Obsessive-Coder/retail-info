@@ -1,4 +1,6 @@
 import React, { Fragment, useState } from 'react';
+import moment from 'moment';
+
 import { Collapse, Button } from 'reactstrap';
 import {
   faAngleUp, faAngleDown
@@ -6,18 +8,12 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function BusinessHoursCollapse({
-  operatingHours, textSize
+  operatingHours, isAllDaysShown, textSize
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleIsOpen = () => setIsOpen(!isOpen);
 
-  // const copiedOperatingHours = operatingHours.concat([]);
-  // const firstDayHours = firstDay.split(': ')
-  // firstDayHours.shift();
-  // const firstDaySplit = firstDayHours[0].split(' – ');
-  // const [ openTime, closeTime ] = firstDaySplit;
-
-  const daysData = operatingHours.map(hours => {
+  let daysData = operatingHours.map(hours => {
     const splitHours = hours.split(': ')
 
     const [day, dayHours ] = splitHours
@@ -25,6 +21,29 @@ export default function BusinessHoursCollapse({
     return { day, dayHours };
   });
 
+  const today = moment().format('dddd').toLowerCase();
+
+  let orderedDaysData = daysData.filter(({ day }) => day.toLowerCase() === today);
+
+  let todayIndex = -1;
+  const orderedDays = [today];
+  for (let i = 0; i < daysData.length; i++) {
+    const dayData = daysData[i];
+    const lowerCaseDay = dayData.day.toLowerCase()
+
+    if (lowerCaseDay === today) {
+      todayIndex = i;
+    }
+
+    if ((todayIndex >= 0) && (i > todayIndex) && (lowerCaseDay !== today)) {
+      orderedDaysData.push(dayData)
+      orderedDays.push(lowerCaseDay)
+    }
+  }
+
+  const restOfDaysData = daysData.filter(({ day }) => !orderedDays.includes(day.toLowerCase()));
+
+  daysData = orderedDaysData.concat(restOfDaysData)
   const firstDay = daysData.shift();
 
   return (
@@ -33,7 +52,7 @@ export default function BusinessHoursCollapse({
         color="link"
         size="sm"
         onClick={toggleIsOpen}
-        className={`d-flex align-items-center p-0 border-0 text-extra-light text-decoration-none ${operatingHours.length > 0 ? 'cursor-pointer': 'cursor-default'}`}
+        className={`d-flex align-items-center p-0 border-0 text-extra-light text-decoration-none ${isAllDaysShown && operatingHours.length > 0 ? 'cursor-pointer': 'cursor-default'}`}
       >
         <div className={`d-inline-block ${textSize}`}>
           {operatingHours.length > 0 ? (
@@ -52,7 +71,7 @@ export default function BusinessHoursCollapse({
           )}
         </div>
 
-        {operatingHours.length > 1 && (
+        {isAllDaysShown && operatingHours.length > 1 && (
           <FontAwesomeIcon
             fixedWidth
             icon={isOpen ? faAngleUp : faAngleDown}
@@ -62,10 +81,10 @@ export default function BusinessHoursCollapse({
       </Button>
 
       <Collapse
-        isOpen={isOpen && daysData.length > 0}
+        isOpen={isOpen && isAllDaysShown && daysData.length > 0}
         className="text-left"
       >
-        {daysData.map(({ day, dayHours }, index) => (
+        {isAllDaysShown && daysData.map(({ day, dayHours }, index) => (
           <div
             key={`${day}-operating-hours`}
             className={`text-extra-light ${textSize} ${index === 0 ? 'mb-1' : 'my-1'}`}

@@ -152,6 +152,7 @@ export class BusinessDetails extends Component {
                 <BusinessHoursCollapse
                   operatingHours={specialHours || regularHours}
                   textSize="font-sm"
+                  isAllDaysShown={true}
                 />
               </div>
 
