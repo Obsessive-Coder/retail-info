@@ -106,54 +106,58 @@ export class BusinessDetails extends Component {
               alt={name}
               className="w-100 h-auto business-details-image"
             />
-            <div className="pt-3 px-3">
+            <div className="d-flex flex-column align-items-center pt-3 px-3">
               <h2 className="mb-0 text-center text-extra-light font-xxl business-heading">
                 {name}
               </h2>
 
 
-              <div className="d-flex align-items-center my-2 font-weight-bold">
-                <FontAwesomeIcon
-                  fixedWidth
-                  icon={faMapMarkerAlt}
-                  className="text-secondary"
-                />
-                <Link
-                  to="#"
-                  onClick={this.handleAddressClick}
-                  className="d-inline-block mx-2 text-center text-truncate"
-                >
-                  {address}
-                </Link>
-              </div>
+              <div>
+                <div>
+                  <div className="d-flex align-items-center my-2 font-weight-bold">
+                    <FontAwesomeIcon
+                      fixedWidth
+                      icon={faMapMarkerAlt}
+                      className="text-secondary"
+                    />
+                    <Link
+                      to="#"
+                      onClick={this.handleAddressClick}
+                      className="d-inline-block mx-2 text-center text-truncate"
+                    >
+                      {address}
+                    </Link>
+                  </div>
 
-              <div className="d-flex align-items-center my-2 font-weight-bold">
-                <FontAwesomeIcon
-                  fixedWidth
-                  icon={faPhoneAlt}
-                  className="text-secondary"
-                />
-                <a
-                  href={`tel:${phone}`}
-                  target="_blank"
-                  className="mx-2"
-                >
-                  {phone}
-                </a>
-              </div>
+                  <div className="d-flex align-items-center my-2 font-weight-bold">
+                    <FontAwesomeIcon
+                      fixedWidth
+                      icon={faPhoneAlt}
+                      className="text-secondary"
+                    />
+                    <a
+                      href={`tel:${phone}`}
+                      target="_blank"
+                      className="mx-2"
+                    >
+                      {phone}
+                    </a>
+                  </div>
+                </div>
 
-              <div className="d-flex my-2">
-                <FontAwesomeIcon
-                  fixedWidth
-                  icon={faClock}
-                  className="mt-1 text-secondary"
-                />
+                <div className="d-flex my-2">
+                  <FontAwesomeIcon
+                    fixedWidth
+                    icon={faClock}
+                    className="mt-1 text-secondary"
+                  />
 
-                <BusinessHoursCollapse
-                  operatingHours={specialHours || regularHours}
-                  textSize="font-sm"
-                  isAllDaysShown={true}
-                />
+                  <BusinessHoursCollapse
+                    operatingHours={specialHours || regularHours}
+                    textSize="font-sm"
+                    isAllDaysShown={true}
+                  />
+                </div>
               </div>
 
               <Services

@@ -33,6 +33,10 @@ code {
   max-height: 250px;
 }
 
+.hours-caret {
+  right: 10px;
+}
+
 .map-page {
   height: 89.75vh;
 }
@@ -192,6 +196,12 @@ code {
   .menu-tab-content {
     height: 70vh;
     overflow-y: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .hours-caret {
+    right: -25px;
   }
 }
 

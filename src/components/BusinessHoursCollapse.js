@@ -47,22 +47,36 @@ export default function BusinessHoursCollapse({
   const firstDay = daysData.shift();
 
   return (
-    <div className="flex-fill mx-2">
+    <div className="flex-md-fill mx-2">
       <Button
         color="link"
         size="sm"
         onClick={toggleIsOpen}
-        className={`d-flex align-items-center p-0 border-0 text-extra-light text-decoration-none ${isAllDaysShown && operatingHours.length > 0 ? 'cursor-pointer': 'cursor-default'}`}
+        className={`d-flex position-relative w-100 p-0 border-0 text-extra-light text-decoration-none ${isAllDaysShown && operatingHours.length > 0 ? 'cursor-pointer': 'cursor-default'}`}
       >
-        <div className={`d-inline-block ${textSize}`}>
+        <div className={`d-flex w-100 ${textSize}`}>
           {operatingHours.length > 0 ? (
             <Fragment>
-              <span className="font-weight-bold">
+              <span
+                style={{ width: '75px' }}
+                className="mr-1 font-weight-bold"
+              >
                 {firstDay.day}
               </span>
-              <span className="mx-1 text-truncate">
-                {firstDay.dayHours}
-              </span>
+
+              {firstDay.dayHours.split(', ') ? (
+                <div className="mr-1 d-flex flex-column">
+                  {firstDay.dayHours.split(', ').map(dayHour => (
+                    <span className="text-truncate">
+                      {dayHour}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <span className="mr-1 text-truncate">
+                  {firstDay.dayHours}
+                </span>
+              )}
             </Fragment>
           ) : (
             <span className="font-weight-bold">
@@ -75,26 +89,40 @@ export default function BusinessHoursCollapse({
           <FontAwesomeIcon
             fixedWidth
             icon={isOpen ? faAngleUp : faAngleDown}
-            className="text-secondary"
+            className={`position-absolute text-secondary hours-caret`}
           />
         )}
       </Button>
 
       <Collapse
         isOpen={isOpen && isAllDaysShown && daysData.length > 0}
-        className="text-left"
+        className="w-100 text-left"
       >
         {isAllDaysShown && daysData.map(({ day, dayHours }, index) => (
           <div
             key={`${day}-operating-hours`}
-            className={`text-extra-light ${textSize} ${index === 0 ? 'mb-1' : 'my-1'}`}
+            className={`d-flex text-extra-light ${textSize} ${index === 0 ? 'mb-1' : 'my-1'}`}
           >
-            <span className="font-weight-bold">
+            <span
+              style={{ width: '75px' }}
+              className="mr-1 font-weight-bold"
+            >
               {day}
             </span>
-            <span className="mx-1 text-truncate">
-              {dayHours}
-            </span>
+
+            {dayHours.split(', ') ? (
+              <div className="mr-1 d-flex flex-column">
+                {dayHours.split(', ').map(dayHour => (
+                  <span className="text-truncate">
+                    {dayHour}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              <span className="mr-1 text-truncate">
+                {dayHours}
+              </span>
+            )}
           </div>
         ))}
       </Collapse>
