@@ -1,7 +1,7 @@
 {
   "businesses": [
     {
-      "name": "Alfano's Pizzeria & Italian Restaurant",
+      "name": "Alfano's Pizzeria",
       "phone": "(815) 732-2774",
       "specialHours": false,
       "menuId": "alfanos-oregon",
@@ -176,7 +176,7 @@
       ]
     },
     {
-      "name": "Breakers Saloon & Eatery",
+      "name": "Breakers Saloon",
       "phone": "(815) 732-3319",
       "specialHours": [
         "Monday: Closed",
@@ -284,7 +284,7 @@
       ]
     },
     {
-      "name": "Chile Pepper Grill and Bar",
+      "name": "Chile Pepper Grill",
       "phone": "(815) 732-1583",
       "specialHours": [
         "Monday: Closed",
@@ -377,7 +377,7 @@
       ]
     },
     {
-      "name": "Cimino's Pizza and Restaurant",
+      "name": "Cimino's Pizza",
       "phone": "(815) 734-6660",
       "specialHours": false,
       "menuId": "ciminos-mt-morris",
@@ -423,7 +423,7 @@
       ]
     },
     {
-      "name": "Dairy Queen Grill & Chill",
+      "name": "Dairy Queen",
       "phone": "(815) 881-8025",
       "specialHours": false,
       "menuId": "dairy-queen-oregon",
@@ -874,7 +874,7 @@
       ]
     },
     {
-      "name": "Scoops - Famous Steamed Subs (Inside The Popper Shoppe)",
+      "name": "Scoops",
       "phone": "(815) 732-7676",
       "specialHours": false,
       "menuId": "scoops-oregon",
@@ -920,7 +920,7 @@
       ]
     },
     {
-      "name": "Spring Valley Family Restaurant",
+      "name": "Spring Valley",
       "phone": "(815) 732-4877",
       "specialHours": false,
       "menuId": "spring-valley-oregon",
@@ -1060,7 +1060,7 @@
       ]
     },
     {
-      "name": "Aldo's Pizzeria and The Red Brick Pub",
+      "name": "Aldo's Pizzeria",
       "phone": "(815) 562-3456",
       "specialHours": false,
       "menuId": "aldos-rochelle",
@@ -1107,7 +1107,7 @@
       ]
     },
     {
-      "name": "Alfano's Pizzeria & Italian Restaurant",
+      "name": "Alfano's Pizzeria",
       "phone": "(815) 562-3312",
       "specialHours": false,
       "menuId": "alfanos-rochelle",
@@ -1161,7 +1161,8 @@
       "menuId": "arbys-rochelle",
       "isOperating": true,
       "services": [
-        "pickup"
+        "pickup",
+        "drive-through"
       ],
       "city": "Rochelle",
       "address": "328 East, Illinois 38, Rochelle",
@@ -1334,13 +1335,14 @@
       ]
     },
     {
-      "name": "Country School of Rochelle",
+      "name": "Country School",
       "phone": "(815) 562-6039",
       "specialHours": false,
       "menuId": "country-school-rochelle",
       "isOperating": true,
       "services": [
-        "pickup"
+        "pickup",
+        "drive-through"
       ],
       "city": "Rochelle",
       "address": "1110 S 7th St, Rochelle",
@@ -1385,7 +1387,8 @@
       "menuId": "culvers-rochelle",
       "isOperating": true,
       "services": [
-        "pickup"
+        "pickup",
+        "drive-through"
       ],
       "city": "Rochelle",
       "address": "1060 South Dement Road, Rochelle",
@@ -1478,7 +1481,8 @@
       "menuId": "dunkin-donuts-rochelle",
       "isOperating": true,
       "services": [
-        "pickup"
+        "pickup",
+        "drive-through"
       ],
       "city": "Rochelle",
       "address": "213 Illinois 38, Rochelle",
@@ -1612,7 +1616,7 @@
       ]
     },
     {
-      "name": "El Tapatio Mexican Restaurant",
+      "name": "El Tapatio",
       "phone": "(815) 561-6590",
       "specialHours": false,
       "menuId": "el-tapatio-rochelle",
@@ -1739,7 +1743,8 @@
       "menuId": "hardees-rochelle",
       "isOperating": true,
       "services": [
-        "pickup"
+        "pickup",
+        "drive-through"
       ],
       "city": "Rochelle",
       "address": "400 South Steward Road, Rochelle",
@@ -1798,7 +1803,7 @@
       ]
     },
     {
-      "name": "Iron Skillet Restaurant",
+      "name": "Iron Skillet",
       "phone": "(815) 562-5840",
       "specialHours": false,
       "menuId": "iron-skillet-rochelle",
@@ -1881,7 +1886,7 @@
       ]
     },
     {
-      "name": "Kennay Farms Distilling",
+      "name": "Kennay Farms",
       "phone": "(815) 901-1512",
       "specialHours": false,
       "menuId": "kennay-distilling-rochelle",
@@ -1967,7 +1972,7 @@
       ]
     },
     {
-      "name": "Little Caesars Pizza",
+      "name": "Little Caesars",
       "phone": "(815) 562-2727",
       "specialHours": false,
       "menuId": "little-caesars-rochelle",
@@ -2019,7 +2024,8 @@
       "menuId": "mcdonalds-rochelle",
       "isOperating": true,
       "services": [
-        "pickup"
+        "pickup",
+        "drive-through"
       ],
       "city": "Rochelle",
       "address": "1120 North 7th Street, Rochelle",
@@ -2341,7 +2347,7 @@
       ]
     },
     {
-      "name": "Subway (Road Ranger)",
+      "name": "Subway",
       "phone": "(815) 209-9038",
       "specialHours": false,
       "menuId": "subway-road-ranger-rochelle",
@@ -2523,7 +2529,8 @@
       "menuId": "taco-bell-rochelle",
       "isOperating": true,
       "services": [
-        "pickup"
+        "pickup",
+        "drive-through"
       ],
       "city": "Rochelle",
       "address": "1221 North Caron Road #700, Rochelle",
@@ -2655,7 +2662,7 @@
       ]
     },
     {
-      "name": "Meals On Wheels of Dixon",
+      "name": "Meals On Wheels",
       "phone": "(815) 284-0333",
       "specialHours": false,
       "menuId": "meals-wheels-dixon",
@@ -2680,7 +2687,7 @@
       ]
     },
     {
-      "name": "The Factory Pub 'n' Grub",
+      "name": "The Factory Pub",
       "phone": "(815) 548-9550",
       "city": "Sterling",
       "specialHours": false,
@@ -2727,7 +2734,7 @@
       "menuId": "the-factory-pub-n-grub-sterling"
     },
     {
-      "name": "Al & Leda's Pizza Villa",
+      "name": "Al & Leda's Pizza",
       "phone": "(815) 626-2780",
       "city": "Sterling",
       "specialHours": false,
@@ -2773,7 +2780,7 @@
       "menuId": "al-ledas-pizza-villa-sterling"
     },
     {
-      "name": "All-American Bar & Grill",
+      "name": "All American Bar",
       "phone": "(815) 626-5500",
       "city": "Rock Falls",
       "specialHours": false,
@@ -2864,7 +2871,7 @@
       "menuId": "angelos-ii-sterling"
     },
     {
-      "name": "Applebee's Grill + Bar",
+      "name": "Applebee's",
       "phone": "(815) 535-0528",
       "city": "Sterling",
       "specialHours": false,
@@ -3094,7 +3101,7 @@
       "menuId": "buffalo-wild-wings-sterling"
     },
     {
-      "name": "Candlelight Inn Restaurant",
+      "name": "Candlelight Inn",
       "phone": "(815) 625-2600",
       "city": "Sterling",
       "specialHours": false,
@@ -3140,7 +3147,7 @@
       "menuId": "candlelight-inn-restaurant-sterling"
     },
     {
-      "name": "Candlelight Inn Restaurant",
+      "name": "Candlelight Inn",
       "phone": "(815) 626-1897",
       "city": "Rock Falls",
       "specialHours": false,
@@ -3233,7 +3240,7 @@
       "menuId": "dairy-mart-plus-sterling"
     },
     {
-      "name": "Don's Seafood & Chicken",
+      "name": "Don's Seafood",
       "phone": "(815) 622-0258",
       "city": "Sterling",
       "specialHours": false,
@@ -3367,7 +3374,7 @@
       "menuId": "el-tapatio-rock-falls"
     },
     {
-      "name": "Flip Side Coffee & Espresso Bar",
+      "name": "Flip Side Coffee",
       "phone": "(815) 718-0022",
       "city": "Rock Falls",
       "specialHours": false,
@@ -3456,7 +3463,7 @@
       "menuId": "j-ws-3rd-base-rock-falls"
     },
     {
-      "name": "Kelly's Restaurant and Lounge",
+      "name": "Kelly's Restaurant",
       "phone": "(815) 625-7969",
       "city": "Sterling",
       "specialHours": false,
@@ -3547,7 +3554,7 @@
       "menuId": "la-familia-rock-falls"
     },
     {
-      "name": "Lisa's Brick House Bar & Grill",
+      "name": "Lisa's Brick House",
       "phone": "(815) 590-5472",
       "city": "Sterling",
       "specialHours": false,
@@ -3660,7 +3667,7 @@
       "menuId": "pizza-ranch-sterling"
     },
     {
-      "name": "Red Apple Family Restaurant",
+      "name": "Red Apple",
       "phone": "(815) 625-5160",
       "city": "Sterling",
       "specialHours": false,
@@ -3797,7 +3804,7 @@
       "menuId": "sloppy-genes-cafe-sterling"
     },
     {
-      "name": "Smoked On 3rd BBQ Bistro & Catering",
+      "name": "Smoked On 3rd",
       "phone": "(815) 632-3773",
       "city": "Sterling",
       "specialHours": false,
@@ -3842,7 +3849,7 @@
       "menuId": "smoked-on-3rd-bbq-bistro-catering-sterling"
     },
     {
-      "name": "The Boulevard Pub and Grill",
+      "name": "The Boulevard Pub",
       "phone": "(815) 905-2583",
       "city": "Sterling",
       "specialHours": false,
@@ -3982,7 +3989,7 @@
       "menuId": "triple-p-bbq-rock-falls"
     },
     {
-      "name": "Wagon Wheel Lounge & Restaurant",
+      "name": "Wagon Wheel",
       "phone": "(815) 625-6680",
       "city": "Sterling",
       "specialHours": false,
@@ -4445,7 +4452,7 @@
         "pickup",
         "delivery"
       ],
-      "name": "The Crystal Cork Wine Shoppe",
+      "name": "The Crystal Cork",
       "menuId": "crystal-cork-dixon",
       "phone": "(844) 843-2675",
       "address": "219 West 1st Street, Dixon",
@@ -4489,7 +4496,8 @@
       "specialHours": false,
       "isOperating": true,
       "services": [
-        "pickup"
+        "pickup",
+        "drive-through"
       ],
       "name": "Culver's",
       "menuId": "culvers-dixon",
@@ -4853,7 +4861,8 @@
       "specialHours": false,
       "isOperating": true,
       "services": [
-        "pickup"
+        "pickup",
+        "drive-through"
       ],
       "name": "McDonald's",
       "menuId": "mcdonalds-dixon",
@@ -4947,7 +4956,7 @@
         "pickup",
         "delivery"
       ],
-      "name": "Palmyra Pub and Eatery",
+      "name": "Palmyra Pub",
       "menuId": "palmyra-pub-dixon",
       "phone": "(815) 288-6300",
       "address": "628 Palmyra Road, Dixon",
@@ -5085,7 +5094,7 @@
       "services": [
         "pickup"
       ],
-      "name": "Salamandra Restaurant",
+      "name": "Salamandra",
       "menuId": "salamandras-dixon",
       "phone": "(815) 285-0874",
       "address": "105 West 1st Street, Dixon",
@@ -5178,7 +5187,7 @@
         "pickup",
         "delivery"
       ],
-      "name": "Somkit (Touch of Thai)",
+      "name": "Somkit",
       "menuId": "somkit-dixon",
       "phone": "(815) 284-8499",
       "address": "214 West 1st Street, Dixon",
@@ -5308,7 +5317,7 @@
       ]
     },
     {
-      "name": "Veterans of Foreign Wars",
+      "name": "VFW",
       "phone": "(815) 562-3878",
       "specialHours": [
         "Monday: Closed",

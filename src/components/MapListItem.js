@@ -33,7 +33,7 @@ export default function MapListItem({
       className="py-2 rounded-0 cursor-pointer bg-dark text-extra-light"
     >
       <div className="d-flex justify-content-between align-items-center ">
-        <span className="flex-fill pr-4 font-weight-bold text-capitalize text-truncate">
+        <span className="flex-fill mr-2 font-weight-bold text-capitalize text-truncate">
           {business.name}
         </span>
 

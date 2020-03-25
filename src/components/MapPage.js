@@ -106,6 +106,7 @@ export class MapPage extends Component {
 
   handleLocationsItemOnClick(city) {
     let { businesses } = businessesData;
+    businesses = businesses.filter(({ isOperating }) => isOperating);
     if (city.toLowerCase() !== 'all') {
       Geocode.fromAddress(`${city} IL`)
         .then(response => {
@@ -134,6 +135,7 @@ export class MapPage extends Component {
 
   handleServicesItemOnClick(service) {
     let { businesses } = businessesData;
+    businesses = businesses.filter(({ isOperating }) => isOperating);
     if (service.toLowerCase() !== 'all') {
       businesses = businesses.filter(({ services, isOperating }) => (
         isOperating && services.includes(service)

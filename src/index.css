@@ -241,6 +241,10 @@ code {
 }
 
 @media (max-width: 350px) {
+  .map-sidebar:not(.closed) {
+    width: 100%;
+  }
+
   .address-link {
     max-width: 250px;
   }

@@ -3,6 +3,8 @@ import {
   Dropdown, DropdownToggle, DropdownMenu,
   DropdownItem, Label
 } from 'reactstrap';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function FilterDropdown({
   items, labelText, filteredItem, handleItemOnClick
@@ -28,10 +30,10 @@ export default function FilterDropdown({
           outline
           color="info"
           size="sm"
-          style={{ minWidth: '100px' }}
+          style={{ width: '100px' }}
           className="d-flex justify-content-between align-items-center text-capitalize"
         >
-          <span className="mx-2">{selectedItem}</span>
+          <span className="text-truncate">{selectedItem}</span>
         </DropdownToggle>
         <DropdownMenu className="bg-dark shadow overflow-auto filter-dropdown-menu">
           {items.map(item => (
@@ -41,9 +43,15 @@ export default function FilterDropdown({
                 setSelectedItem(item);
                 handleItemOnClick(item);
               }}
-              className="bg-dark text-capitalize text-extra-light filter-list-item"
+              className="d-flex align-items-center px-2 bg-dark text-capitalize text-extra-light filter-list-item"
             >
-              {item}
+              <FontAwesomeIcon
+                fixedWidth
+                size="sm"
+                icon={faCheck}
+                className={`text-success ${item !== selectedItem ? 'invisible' : ''}`}
+              />
+              <span className="flex-fill mx-2">{item}</span>
             </DropdownItem>
           ))}
         </DropdownMenu>
