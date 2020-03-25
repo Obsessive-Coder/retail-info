@@ -63,7 +63,7 @@ export default function MapInfo({
           {address}
         </UncontrolledTooltip>
       </div>
-      <div className="d-flex align-items-center mr-4 my-1 font-weight-bold">
+      <div className="d-flex align-items-center my-1 font-weight-bold">
         <FontAwesomeIcon
           fixedWidth
           icon={faPhoneAlt}
@@ -77,7 +77,7 @@ export default function MapInfo({
           {phone}
         </a>
       </div>
-      <div className="d-flex mr-4">
+      <div className="d-flex">
         <FontAwesomeIcon
           fixedWidth
           icon={faClock}
