@@ -36,7 +36,6 @@ export class MapPage extends Component {
         lat: 42.030169,
         lng: -89.363343
       },
-      userCity: null,
       mapZoom: null,
       defaultMapZoom: 12,
     };
@@ -108,6 +107,16 @@ export class MapPage extends Component {
   handleLocationsItemOnClick(city) {
     let { businesses } = businessesData;
     if (city.toLowerCase() !== 'all') {
+      Geocode.fromAddress(`${city} IL`)
+        .then(response => {
+          const { lat, lng } = response.results[0].geometry.location;
+
+          const mapCenterLocation = { lat, lng };
+
+          this.setState(() => ({ mapCenterLocation }));
+        })
+        .catch(error => console.error(error));
+
       businesses = businesses.filter(({ city: cityData, isOperating }) => (
         isOperating && cityData === city
       ));
@@ -154,8 +163,8 @@ export class MapPage extends Component {
           lng: longitude
         }
 
-        Geocode.fromLatLng(latitude, longitude).then(
-          response => {
+        Geocode.fromLatLng(latitude, longitude)
+          .then(response => {
             const { address_components } = response.results[0]
             const cityAddressComponent = address_components.filter(({ types }) => (
               types.includes('locality')
@@ -172,11 +181,8 @@ export class MapPage extends Component {
                 filteredLocation: userCity,
               }));
             }
-          },
-          error => {
-            console.error(error);
-          }
-        );
+          })
+          .catch(error => console.error(error));
       }
     );
   }
