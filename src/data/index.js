@@ -169,4 +169,4 @@ const getGoogleData = () => {
     .catch(error => console.log(error));
 };
 
-// getGoogleData();
+getGoogleData();
