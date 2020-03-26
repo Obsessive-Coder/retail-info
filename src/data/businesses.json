@@ -237,8 +237,8 @@
         "Tuesday: 9:00 AM – 1:00 PM",
         "Wednesday: 9:00 AM – 1:00 PM",
         "Thursday: 9:00 AM – 1:00 PM",
-        "Friday: 9:00 AM – 1:00 PM",
-        "Saturday: 9:00 AM – 1:00 PM",
+        "Friday: 9:00 AM – 1:00 PM, 4:00 PM – 8:00 PM",
+        "Saturday: 9:00 AM – 1:00 PM, 4:00 PM – 8:00 PM",
         "Sunday: 9:00 AM – 1:00 PM"
       ],
       "menuId": "campus-cafe-mt-morris",
@@ -830,7 +830,15 @@
     {
       "name": "The Pepper Mill",
       "phone": "(815) 734-4141",
-      "specialHours": false,
+      "specialHours": [
+        "Monday: Closed",
+        "Tuesday: 4:00 PM – 8:00 PM",
+        "Wednesday: 4:00 PM – 8:00 PM",
+        "Thursday: 4:00 PM – 8:00 PM",
+        "Friday: 4:00 PM – 8:00 PM",
+        "Saturday: 4:00 PM – 8:00 PM",
+        "Sunday: 4:00 PM – 8:00 PM"
+      ],
       "menuId": "the-pepper-mill-mt-morris",
       "isOperating": true,
       "services": [
@@ -964,7 +972,7 @@
       ]
     },
     {
-      "name": "Subway",
+      "name": "Subway Oregon",
       "phone": "(815) 732-7827",
       "specialHours": [
         "Monday: 10:00 AM – 6:00 PM",
@@ -2347,7 +2355,7 @@
       ]
     },
     {
-      "name": "Subway",
+      "name": "Subway Road Ranger",
       "phone": "(815) 209-9038",
       "specialHours": false,
       "menuId": "subway-road-ranger-rochelle",
@@ -2396,7 +2404,7 @@
       ]
     },
     {
-      "name": "Subway",
+      "name": "Subway 7th St",
       "phone": "(815) 562-7827",
       "specialHours": false,
       "menuId": "subway-seventh-street-rochelle",
@@ -4268,7 +4276,8 @@
       "isOperating": true,
       "services": [
         "pickup",
-        "delivery"
+        "delivery",
+        "drive-through"
       ],
       "name": "Badazz Pizzeria N Grill",
       "menuId": "badazz-pizzeria-and-grill-dixon",
@@ -5280,7 +5289,7 @@
       "services": [
         "pickup"
       ],
-      "name": "Subway",
+      "name": "Subway Dixon",
       "menuId": "subway-dixon",
       "phone": "(815) 288-7827",
       "address": "206 West Everett Street, Dixon",
