@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import emailjs from 'emailjs-com';
 
 import {
   Button,
@@ -85,15 +86,60 @@ export default class AddBusinessModal extends Component {
       delivery: { checked: isDelivery },
     } = event.target;
 
-    console.log({
+    const { specialHours: stateHours } = this.state;
+
+    const specialHours = stateHours.map(({
+      day, timeText
+    }) => {
+      let fullDay;
+
+    switch (day) {
+      case 'Sun':
+        fullDay = 'Sunday';
+        break;
+      case 'Mon':
+        fullDay = 'Monday';
+        break;
+      case 'Tue':
+        fullDay = 'Tuesday';
+        break;
+      case 'Wed':
+        fullDay = 'Wednesday';
+        break;
+      case 'Thu':
+        fullDay = 'Thursday';
+        break;
+      case 'Fri':
+        fullDay = 'Friday';
+        break;
+      case 'Sat':
+        fullDay = 'Saturday';
+        break;
+      default:
+        fullDay = day;
+        break;
+    }
+
+      return `${fullDay}: ${timeText}\n`;
+    });
+
+    const services = [];
+    if (isPickup) services.push('pickup');
+    if (isDriveThrough) services.push('drive-through');
+    if (isDelivery) services.push('delivery');
+
+    let menuId = `${businessName} ${city}`.replace(/[^\w\s]/gi, '').replace(/_/gi, '');
+    menuId = menuId.replace(/ /gi, '-').toLowerCase();
+
+    const data = {
       businessName,
       phoneNumber,
       streetAddress,
       city,
-      isPickup,
-      isDriveThrough,
-      isDelivery,
-    })
+      services: JSON.stringify(services, null, 4),
+      specialHours: JSON.stringify(specialHours, null, 4),
+      menuId,
+    };
 
     const isPhoneInvalid = phoneNumber === '' || phoneNumber.includes('_');
     const isServicesInValid = !isPickup && !isDelivery && !isDriveThrough;
@@ -108,15 +154,21 @@ export default class AddBusinessModal extends Component {
       }));
     }
 
-    this.setState(() => ({
-      isNameInvalid: false,
-      isPhoneInvalid: false,
-      isAddressInvalid: false,
-      isCityInvalid: false,
-      isServicesInValid: false,
-    }));
+    emailjs.send('gmail','local_food_options', data, 'user_BmQcxG4DGNCxaVmMfVwwe')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
 
-    this.toggleIsModalOpen();
+        this.setState(() => ({
+        isNameInvalid: false,
+        isPhoneInvalid: false,
+        isAddressInvalid: false,
+        isCityInvalid: false,
+        isServicesInValid: false,
+      }));
+
+      //  this.toggleIsModalOpen();
+      })
+      .catch(error => console.log('Failed to send email', error));
   }
 
   render() {

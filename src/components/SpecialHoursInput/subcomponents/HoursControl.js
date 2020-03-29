@@ -82,35 +82,6 @@ export default function HoursControl({ handleAddHours }) {
   })
 
   const handleAddOnClick = () => {
-    // let fullDay;
-
-    // switch (selectedDay) {
-    //   case 'Sun':
-    //     fullDay = 'Sunday';
-    //     break;
-    //   case 'Mon':
-    //     fullDay = 'Monday';
-    //     break;
-    //   case 'Tue':
-    //     fullDay = 'Tuesday';
-    //     break;
-    //   case 'Wed':
-    //     fullDay = 'Wednesday';
-    //     break;
-    //   case 'Thu':
-    //     fullDay = 'Thursday';
-    //     break;
-    //   case 'Fri':
-    //     fullDay = 'Friday';
-    //     break;
-    //   case 'Sat':
-    //     fullDay = 'Saturday';
-    //     break;
-    //   default:
-    //     fullDay = selectedDay;
-    //     break;
-    // }
-
     let nextDayIndex = availableDays.indexOf(selectedDay) + 1;
     if (nextDayIndex >= availableDays.length) nextDayIndex = 0;
 

@@ -39,9 +39,9 @@ export default function SpecialHoursInput({
 
       <div className="mb-2">
         {specialHours.map(({ day, timeText }) => (
-          <p
+          <div
             key={day}
-            className="d-flex m-0"
+            className="d-flex"
           >
             <small
               style={{ width: '40px' }}
@@ -62,7 +62,7 @@ export default function SpecialHoursInput({
                 </Fragment>
               ))}
             </div>
-          </p>
+          </div>
         ))}
       </div>
 
