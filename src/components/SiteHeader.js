@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
+  Button,
   Navbar,
   NavbarBrand,
   Nav,
@@ -8,19 +9,24 @@ import {
   NavLink,
 } from 'reactstrap';
 
+import { AddBusinessModal } from './';
+
 export default function SiteHeader() {
   return (
     <Navbar
       dark
       color="dark"
       style={{ top: 0, zIndex: 999 }}
-      className="position-fixed w-100 py-0 border-bottom border-warning page-header"
+      className="position-fixed w-100 py-0 border-bottom border-warning page-header shadow"
     >
       <NavbarBrand tag={Link} to="/retail-info" className="mr-auto text-extra-light font-xxl">
         Local Food
       </NavbarBrand>
 
       <Nav navbar className="flex-row justify-content-around align-items-center ml-auto font-xl">
+        <NavItem>
+          <AddBusinessModal />
+        </NavItem>
         <NavItem className="mx-3">
           <NavLink
             tag={Link}

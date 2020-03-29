@@ -3,7 +3,7 @@ import { createBrowserHistory } from 'history';
 import { Route, Router, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-  BusinessDetails, SiteHeader, MapPage
+  BusinessDetails, SiteHeader, MapPage,
 } from './components';
 
 import './index.css';

@@ -47,6 +47,117 @@
       ]
     },
     {
+      "name": "The Village Bakery",
+      "phone": "(815) 732-3830",
+      "specialHours": [
+        "Monday: 7:00 AM – 11:00 AM",
+        "Tuesday: 7:00 AM – 11:00 AM",
+        "Wednesday: 7:00 AM – 11:00 AM",
+        "Thursday: 7:00 AM – 11:00 AM",
+        "Friday: 7:00 AM – 11:00 AM",
+        "Saturday: 7:00 AM – 11:00 AM",
+        "Sunday: 7:00 AM – 11:00 AM"
+      ],
+      "menuId": "village-bakery-oregon",
+      "isOperating": true,
+      "services": [
+        "drive-through"
+      ],
+      "city": "Oregon",
+      "address": "101 North 3rd Street, Oregon",
+      "regularHours": [
+        "Monday: 6:00 AM – 6:00 PM",
+        "Tuesday: 6:00 AM – 6:00 PM",
+        "Wednesday: 6:00 AM – 6:00 PM",
+        "Thursday: 6:00 AM – 6:00 PM",
+        "Friday: 6:00 AM – 6:00 PM",
+        "Saturday: 7:00 AM – 4:00 PM",
+        "Sunday: 7:00 AM – 4:00 PM"
+      ],
+      "isOpenNow": true,
+      "priceLevel": "Moderate",
+      "website": "http://www.thevillagebakery.org/",
+      "types": [
+        "bakery",
+        "cafe",
+        "food",
+        "point_of_interest",
+        "store",
+        "establishment"
+      ],
+      "location": {
+        "lat": 42.0147809,
+        "lng": -89.3309321
+      },
+      "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipOEvuOQeTZrtvkH8T0W8Zaevb87s4QqOu_ExLrl=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPHQnfG0bHFWwdYOOaYsthPMVnFLiHpmHbLKlQd=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipP7g4lsDNQ3G-aIPEExtCWYSufbnFsJxSdkRbOg=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPTQ9qNpLuZt9vwETsAaypupnpdp4eXPOqkao7J=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipNkDkpUUW7YBl1bTHWS64KPCaoe9xVS2hYVqOXc=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMdIiOMEzAx6l8NuUqDF0Q4d-aJowPgyLjVbSRS=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMFpJ-uKj6TfTGe4ztcaiQKbHuGG7EafWN_7lSz=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPawmjP4uvd-4WlwbXK1sgtSAzZef33zHKx454P=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMwkJgr9owrPjHJwKps7u-j56ybBB7vzmxRXd-M=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPFzyYHXjE3aKrzg99zq8LN1wWx-Xe8aLlKjJR1=s1600-w400"
+      ]
+    },
+    {
+      "name": "Jay's Drive In",
+      "phone": "(815) 732-2396",
+      "specialHours": [
+        "Monday: 11:00 AM – 8:00 PM",
+        "Tuesday: 11:00 AM – 8:00 PM",
+        "Wednesday: 11:00 AM – 8:00 PM",
+        "Thursday: 11:00 AM – 8:00 PM",
+        "Friday: 11:00 AM – 8:00 PM",
+        "Saturday: 11:00 AM – 8:00 PM",
+        "Sunday: 11:00 AM – 8:00 PM"
+      ],
+      "menuId": "jays-drive-in-oregon",
+      "isOperating": true,
+      "services": [
+        "pickup",
+        "delivery"
+      ],
+      "city": "Oregon",
+      "address": "107 West Washington Street, Oregon",
+      "regularHours": [
+        "Monday: 11:00 AM – 9:00 PM",
+        "Tuesday: 11:00 AM – 9:00 PM",
+        "Wednesday: 11:00 AM – 9:00 PM",
+        "Thursday: 11:00 AM – 9:00 PM",
+        "Friday: 11:00 AM – 9:00 PM",
+        "Saturday: 11:00 AM – 9:00 PM",
+        "Sunday: 11:00 AM – 9:00 PM"
+      ],
+      "isOpenNow": false,
+      "priceLevel": "Inexpensive",
+      "website": "http://www.jaysdrivein.com/",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "location": {
+        "lat": 42.0141615,
+        "lng": -89.32974
+      },
+      "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipPjqyEwSdakIWLa0JHc5kRf3mIEH48mn6NN9fOT=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMdcKhY172qilF4peHzlr4hXLVF3VScjxy9FhS_=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOG0ygCnevE33wv60PVwa59G2-aRmuso_04vBpG=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOUug39OlSEw9twvDJnHjJc_88V9RFfKZYagP4C=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipNltn-Ef1LCoSABnpxD5pXcVLfQQ78M8i582zcq=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipP08l4fu31QiH4TBLXI5ChqctcxAuw1IBbjcgVk=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPnoc2SOLfgvI87RBIgVmQQQ090dRerZR5MBTCY=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOenYv29C2dg8a8uRCX2arH_NZORoF_Cl8MjzQU=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMjuSN7JqXbgEkW4YWLhrYBEVOYK3z6BXGYbTTm=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipO1z1vQ_CEyachhnzs2mRwfbRKlTn-qyfVpWgui=s1600-w400"
+      ]
+    },
+    {
       "name": "Bela's Cafe",
       "phone": "(815) 732-0991",
       "specialHours": false,
@@ -2197,11 +2308,11 @@
       "phone": "(815) 732-3922",
       "specialHours": [
         "Monday: Closed",
-        "Tuesday: 11 AM – 2 PM & 4 PM – 7 PM",
+        "Tuesday: 11 AM – 2 PM, 4 PM – 7 PM",
         "Wednesday: 12:00 PM – 7:00 PM",
-        "Thursday: 11 AM – 2 PM & 4 PM – 7 PM",
+        "Thursday: 11 AM – 2 PM, 4 PM – 7 PM",
         "Friday: 12:00 PM – 7:00 PM",
-        "Saturday: 12:00 PM – 7:00 PM",
+        "Saturday: 4:00 PM – 8:00 PM",
         "Sunday: Closed"
       ],
       "menuId": "cornetts-chana-tap-chana",
@@ -5326,7 +5437,7 @@
       ]
     },
     {
-      "name": "VFW",
+      "name": "VFW Rochelle",
       "phone": "(815) 562-3878",
       "specialHours": [
         "Monday: Closed",
@@ -5366,6 +5477,92 @@
         "https://lh3.googleusercontent.com/p/AF1QipPY_YDugr_3QsQQmGsoqdt9Cc_hNjATIY_7KFfi=s1600-w400",
         "https://lh3.googleusercontent.com/p/AF1QipN9lnvsGSOplCkw6jYJ41XR3M2XE-qeOkXnEZOC=s1600-w400",
         "https://lh3.googleusercontent.com/p/AF1QipOtoUesK6Qx7E1_q8kP49M6PIGO7t_WDy3HjPGw=s1600-w400"
+      ]
+    },
+    {
+      "name": "Maxson Restaurant",
+      "phone": "(815) 732-6761",
+      "specialHours": false,
+      "menuId": "maxson-oregon",
+      "isOperating": true,
+      "services": [
+        "pickup",
+        "delivery"
+      ],
+      "city": "Oregon",
+      "address": "1469 Illinois 2, Oregon",
+      "regularHours": [
+        "Friday: 11:00 AM – 8:00 PM",
+        "Saturday: 11:00 AM – 8:00 PM",
+        "Sunday: 10:00 AM – 2:00 PM",
+        "Monday: Closed",
+        "Tuesday: 11:00 AM – 8:00 PM",
+        "Wednesday: 11:00 AM – 8:00 PM",
+        "Thursday: 11:00 AM – 8:00 PM"
+      ],
+      "priceLevel": "unknown",
+      "website": "http://maxsons.net/",
+      "types": [
+        "tourist_attraction",
+        "point_of_interest",
+        "establishment"
+      ],
+      "location": {
+        "lat": 42.0349454,
+        "lng": -89.33755479999999
+      },
+      "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipP8ulUSr357wtHJDXvJq2msMkJ9Vn02sgzfOBq4=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOn2DmU9qRqukwIXEJ_DkH1hMUZFpOx47JmsYGX=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOyiSshYZMUofaCEqQKSp_mAcRdN13TXGtc4egp=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPWcRSTUhWctI23-74oGcdJGvsDQz75EjYL13O7=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMw57NGsIPi_nLYa5I4vvjJNcym8XtpJ_e-mmz3=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipNEkKy0n_Mq8OXiLnJP_CPSB9LZIjBhPZLNWQJJ=s1600-w400"
+      ]
+    },
+    {
+      "name": "VFW Oregon",
+      "phone": "(815) 732-6851",
+      "specialHours": false,
+      "menuId": "vfw-oregon",
+      "isOperating": false,
+      "services": [
+        "pickup"
+      ],
+      "city": "Oregon",
+      "address": "1310 West Washington Street, Oregon",
+      "regularHours": [
+        "Monday: 3:00 – 8:00 PM",
+        "Tuesday: 3:00 – 8:00 PM",
+        "Wednesday: 3:00 – 9:00 PM",
+        "Thursday: 3:00 – 8:00 PM",
+        "Friday: 3:00 – 8:00 PM",
+        "Saturday: 11:00 AM – 3:00 PM",
+        "Sunday: Closed"
+      ],
+      "isOpenNow": true,
+      "priceLevel": "Inexpensive",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "location": {
+        "lat": 42.01761299999999,
+        "lng": -89.343406
+      },
+      "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipOe88LRkJiLpyF4-mlgk8HBLQSlaPCgBl3ZdBK6=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPJzVuMn6tLBvh1WtBjEvclOzIJmP1O3w2dHkcM=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipN5wM4-2r6ahf4aAhUkYnV6DpETspPQ86rWn-49=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOxU7Sy7czegjk9Lev3R65yWlTo34N-slTdAoDQ=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPoAG2NCQ4de4R7ssaDYb2JNdwl3Jv36EBQp6Mc=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOtIQsxla5z-DoLsCgCVGK0JKr_Jc6IlcgKfAv4=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipN62W4NF1xVceuy-uzPBNaH33wj9mbquNvESSK9=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMwHwSq9L-LEoEzeJIBFWqej3867s5HuNnmDCmZ=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOYTGJC-zmOHc8UxPJMGLUHaGm10SXxABSUFlmr=s1600-w400"
       ]
     }
   ]

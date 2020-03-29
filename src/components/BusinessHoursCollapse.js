@@ -85,13 +85,13 @@ export default function BusinessHoursCollapse({
           )}
         </div>
 
-        {isAllDaysShown && operatingHours.length > 1 && (
+        {/* {isAllDaysShown && operatingHours.length > 1 && (
           <FontAwesomeIcon
             fixedWidth
             icon={isOpen ? faAngleUp : faAngleDown}
             className={`position-absolute text-secondary hours-caret`}
           />
-        )}
+        )} */}
       </Button>
 
       <Collapse

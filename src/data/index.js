@@ -69,16 +69,13 @@ const getGoogleData = () => {
       })
       .then(({ data: { result: detailsResult } }) => {
         const {
-          reviews,
           name,
-          rating,
           website,
           types,
           address_components,
           price_level,
           photos: photosData,
           vicinity: address,
-          user_ratings_total: ratingsCount,
           formatted_phone_number: phone,
           geometry: { location },
           opening_hours
@@ -108,12 +105,9 @@ const getGoogleData = () => {
           regularHours,
           isOpenNow,
           priceLevel,
-          rating,
-          ratingsCount,
           website,
           types,
-          location,
-          reviews
+          location
         };
 
         let photoRequests = [];
@@ -170,3 +164,4 @@ const getGoogleData = () => {
 };
 
 // getGoogleData();
+

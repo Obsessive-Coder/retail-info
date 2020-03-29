@@ -34,7 +34,7 @@ code {
 }
 
 .hours-caret {
-  right: 40px;
+  right: 0
 }
 
 .map-page {
@@ -67,7 +67,9 @@ code {
   max-height: 200px;
 }
 
-.filter-list-item.bg-dark:hover {
+.filter-list-item.bg-dark:hover,
+.business-hours-item:hover,
+.business-hours-item.active {
   background-color: #292b2d !important;
 }
 
@@ -77,10 +79,55 @@ code {
   vertical-align: text-top;
 }
 
+.modal-body {
+  max-height: 60vh;
+}
+
+.form-section .long-form-group {
+  margin-right: 16px;
+}
+
+.form-section .form-control.is-invalid,
+.was-validated .form-control:invalid {
+  background-image: none;
+  padding-right: 8px;
+}
+
+.business-form .form-control:focus,
+.custom-control-input:focus~.custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, .25) !important;
+}
+
+.business-form .custom-control-input:checked~.custom-control-label::before {
+  border-color: #17a2b8;
+  background-color: #17a2b8;
+}
+
+.business-submit-button {
+  flex: 0;
+  padding: 4px 48px !important;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
+  border-top-color: rgba(34, 34, 34, 1) !important;
+}
+
+.border.border-transparent {
+  border-color: transparent !important;
+}
+
 .vertical-text {
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-family: monospace;
+}
+
+.bg-darker {
+  background-color: rgba(34, 34, 34, 1) !important;
+}
+
+.bg-darker-50 {
+  background-color: rgba(34, 34, 34, 0.5) !important;
 }
 
 .font-xs {
@@ -206,11 +253,11 @@ code {
   }
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .hours-caret {
     right: -25px;
   }
-}
+} */
 
 @media (max-width: 575px) {
   body {
@@ -237,6 +284,34 @@ code {
 
   .font-xl:not(.business-heading) {
     font-size: large !important;
+  }
+}
+
+@media (max-width: 400px) and (min-width: 220px) {
+  .business-submit-button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-section {
+    flex-direction: column;
+  }
+
+  .form-section .long-form-group {
+    margin-right: 0;
+  }
+
+  .hours-text {
+    flex-direction: column;
+  }
+
+  .hours-and {
+    display: none;
+  }
+
+  .business-submit-button {
+    padding: 4px 8px !important;
   }
 }
 

@@ -42,39 +42,7 @@ export class BusinessDetails extends Component {
     const { menuId } = this.props.match.params;
     const menuItems = menuData[menuId] || [];
     const business = businessData.businesses.filter(business => business.menuId === menuId)[0];
-    const { name, address, city } = business;
-
-    const { google } = this.props;
-    const map = new google.maps.Map(<div></div>);
-
-    var service = new google.maps.places.PlacesService(map);
-
-    const request = {
-      query: `${name} ${address}, ${city} IL`,
-      fields: ['photos', 'geometry'],
-    };
-
-    service.findPlaceFromQuery(request, (results, status) => {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-          const {
-            geometry: { location: { lat, lng }},
-            photos,
-          } = results[i];
-
-          if (photos) {
-            business.image = photos[0].getUrl();
-          }
-
-          business.location = {
-            lat: lat(),
-            lng: lng(),
-          };
-        }
-
-        this.setState(() => ({ business, menuItems }));
-      }
-    });
+    this.setState(() => ({ business, menuItems }));
   }
 
   render() {
@@ -90,19 +58,16 @@ export class BusinessDetails extends Component {
       phone,
       specialHours,
       regularHours,
-      image,
       location,
       photos,
     } = business;
-
-    const imageUrl = image || photos[0]
 
     return (
       <div>
         <div className="d-flex flex-column flex-md-row">
           <div className="mb-4 px-1 pb-3 mb-md-0 bg-dark details-sidebar">
             <img
-              src={imageUrl}
+              src={photos[0]}
               alt={name}
               className="w-100 h-auto business-details-image"
             />
