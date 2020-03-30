@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Button,
   Navbar,
   NavbarBrand,
   Nav,
@@ -9,9 +8,21 @@ import {
   NavLink,
 } from 'reactstrap';
 
-import { AddBusinessModal } from './';
+import { AddBusinessModal, InfoModal } from './';
 
 export default function SiteHeader() {
+  const [isInfoModalShown, setIsInfoModalShown] = useState(false);
+  const [infoModal, setInfoModal] = useState({ title: 'test title', message: 'test message' });
+
+  const handleShowInfoModal = (title, message, isSuccess) => {
+    setInfoModal({
+      title,
+      message,
+      headerClassName: isSuccess ? 'text-success' : 'text-danger'
+    });
+    setIsInfoModalShown(true);
+  }
+
   return (
     <Navbar
       dark
@@ -25,7 +36,7 @@ export default function SiteHeader() {
 
       <Nav navbar className="flex-row justify-content-around align-items-center ml-auto font-xl">
         <NavItem>
-          <AddBusinessModal />
+          <AddBusinessModal handleShowInfoModal={handleShowInfoModal} />
         </NavItem>
         <NavItem className="mx-3">
           <NavLink
@@ -56,6 +67,10 @@ export default function SiteHeader() {
         </a>
         </NavItem>
       </Nav>
+
+      {isInfoModalShown && (
+        <InfoModal {...infoModal} />
+      )}
     </Navbar>
   );
 }

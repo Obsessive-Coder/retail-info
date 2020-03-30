@@ -39,6 +39,7 @@ export default class AddBusinessModal extends Component {
     // Bind class methods.
     this.toggleIsModalOpen = this.toggleIsModalOpen.bind(this);
     this.handleAddHours = this.handleAddHours.bind(this);
+    this.handleRemoveHours = this.handleRemoveHours.bind(this);
     this.handleSubmitForm = this.handleSubmitForm.bind(this);
   }
 
@@ -50,6 +51,7 @@ export default class AddBusinessModal extends Component {
       isAddressInvalid: false,
       isCityInvalid: false,
       isServicesInValid: false,
+      specialHours: [],
     }))
   }
 
@@ -59,7 +61,7 @@ export default class AddBusinessModal extends Component {
     let isExistingDay = false;
     specialHours = specialHours.map(hourData => {
       if (hourData.day === day) {
-        hourData.timeText += `, ${timeText}`;
+        hourData.hours.push(timeText);
         isExistingDay = true;
       }
 
@@ -67,7 +69,26 @@ export default class AddBusinessModal extends Component {
     });
 
     if (!isExistingDay) {
-      specialHours.push({ day, timeText })
+      specialHours.push({
+        day,
+        hours: [timeText],
+      })
+    }
+
+    this.setState(() => ({ specialHours }));
+  }
+
+  handleRemoveHours(removeDay, hoursIndex) {
+    const { specialHours: stateHours } = this.state;
+
+    let specialHours = stateHours.concat([]);
+
+    const removeDayData = specialHours.filter(({ day }) => day === removeDay)[0];
+
+    if (removeDayData.hours.length === 1) {
+      specialHours = specialHours.filter(({ day }) => day !== removeDay);
+    } else {
+      removeDayData.hours.splice(hoursIndex, 1);
     }
 
     this.setState(() => ({ specialHours }));
@@ -89,38 +110,38 @@ export default class AddBusinessModal extends Component {
     const { specialHours: stateHours } = this.state;
 
     const specialHours = stateHours.map(({
-      day, timeText
+      day, hours
     }) => {
       let fullDay;
 
-    switch (day) {
-      case 'Sun':
-        fullDay = 'Sunday';
-        break;
-      case 'Mon':
-        fullDay = 'Monday';
-        break;
-      case 'Tue':
-        fullDay = 'Tuesday';
-        break;
-      case 'Wed':
-        fullDay = 'Wednesday';
-        break;
-      case 'Thu':
-        fullDay = 'Thursday';
-        break;
-      case 'Fri':
-        fullDay = 'Friday';
-        break;
-      case 'Sat':
-        fullDay = 'Saturday';
-        break;
-      default:
-        fullDay = day;
-        break;
-    }
+      switch (day) {
+        case 'Sun':
+          fullDay = 'Sunday';
+          break;
+        case 'Mon':
+          fullDay = 'Monday';
+          break;
+        case 'Tue':
+          fullDay = 'Tuesday';
+          break;
+        case 'Wed':
+          fullDay = 'Wednesday';
+          break;
+        case 'Thu':
+          fullDay = 'Thursday';
+          break;
+        case 'Fri':
+          fullDay = 'Friday';
+          break;
+        case 'Sat':
+          fullDay = 'Saturday';
+          break;
+        default:
+          fullDay = day;
+          break;
+      }
 
-      return `${fullDay}: ${timeText}\n`;
+      return `${fullDay}: ${hours.join(', ')}`;
     });
 
     const services = [];
@@ -154,21 +175,15 @@ export default class AddBusinessModal extends Component {
       }));
     }
 
+    const { handleShowInfoModal } = this.props;
     emailjs.send('gmail','local_food_options', data, 'user_BmQcxG4DGNCxaVmMfVwwe')
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-
-        this.setState(() => ({
-        isNameInvalid: false,
-        isPhoneInvalid: false,
-        isAddressInvalid: false,
-        isCityInvalid: false,
-        isServicesInValid: false,
-      }));
-
-      //  this.toggleIsModalOpen();
+      .then(() => {
+        this.toggleIsModalOpen();
+        handleShowInfoModal('Success', 'Thank you for suggesting this business. It should be available on the site within 24 hours.', true);
       })
-      .catch(error => console.log('Failed to send email', error));
+      .catch(error =>
+        (handleShowInfoModal('Failed', 'Unfortunately something went wrong. Please try again later.', false))
+      );
   }
 
   render() {
@@ -224,9 +239,8 @@ export default class AddBusinessModal extends Component {
             Add Business
           </ModalHeader>
           <ModalBody className="pb-5 overflow-auto">
-            <p className="text-justify text-danger">
-              This feature is currently under development and not functional.
-              Please check back later.
+            <p className="text-justify">
+              Use the form below to suggest a new business and it should be added within 24 hours. Thank you.
             </p>
             <Form
               id="add-business-form"
@@ -327,6 +341,7 @@ export default class AddBusinessModal extends Component {
                 <SpecialHoursInput
                   specialHours={specialHours}
                   handleAddHours={this.handleAddHours}
+                  handleRemoveHours={this.handleRemoveHours}
                 />
               </FormGroup>
             </Form>

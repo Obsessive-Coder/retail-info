@@ -9,6 +9,7 @@ import Services from './Services';
 import BusinessHoursCollapse from './BusinessHoursCollapse';
 import AddBusinessModal from './AddBusinessModal';
 import SpecialHoursInput from './SpecialHoursInput';
+import InfoModal from './InfoModal';
 
 export {
   SiteHeader,
@@ -22,6 +23,7 @@ export {
   BusinessHoursCollapse,
   AddBusinessModal,
   SpecialHoursInput,
+  InfoModal,
 };
 
 export default {
@@ -36,4 +38,5 @@ export default {
   BusinessHoursCollapse,
   AddBusinessModal,
   SpecialHoursInput,
+  InfoModal,
 };

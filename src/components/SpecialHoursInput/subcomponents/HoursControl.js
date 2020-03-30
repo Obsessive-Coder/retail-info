@@ -67,26 +67,29 @@ const hours = [
   '11:30 PM',
 ];
 
-export default function HoursControl({ handleAddHours }) {
+export default function HoursControl({ specialHours, handleAddHours }) {
   const [isDayOpen, setIsDayOpen] = useState(false);
-  const [selectedDay, setSelectedDay] = useState('Sun');
+  let [selectedDay, setSelectedDay] = useState('Sun');
   const [isOpenTimeOpen, setIsOpenTimeOpen] = useState(false);
   const [selectedOpenTime, setSelectedOpenTime] = useState('9:00 AM');
   const [isCloseTimeOpen, setIsCloseTimeOpen] = useState(false);
   const [selectedCloseTime, setSelectedCloseTime] = useState('5:00 PM');
-  const [allSelectedDays] = useState([]);
+
 
   const availableDays = days.filter(day => {
-    const dayCount = allSelectedDays.filter(selectedDay => day === selectedDay).length;
-    return dayCount < 2;
-  })
+    const specialHour = specialHours.filter(({ day: specialDay }) => specialDay === day)[0];
+    return !specialHour || specialHour.hours.length < 2;
+  });
+
+  if (!availableDays.includes(selectedDay)) {
+    selectedDay = availableDays[0];
+  }
 
   const handleAddOnClick = () => {
     let nextDayIndex = availableDays.indexOf(selectedDay) + 1;
     if (nextDayIndex >= availableDays.length) nextDayIndex = 0;
 
     handleAddHours(selectedDay, `${selectedOpenTime} – ${selectedCloseTime}`);
-    allSelectedDays.push(selectedDay);
     setSelectedDay(availableDays[nextDayIndex]);
   }
 
