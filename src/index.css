@@ -24,13 +24,8 @@ code {
   font-size: 32pt;
 }
 
-.menu-heading {
-  font-family: 'Josefin Sans', cursive;
-  font-size: 24pt;
-}
-
 .business-details-image {
-  max-height: 250px;
+  height: 250px;
 }
 
 .hours-caret {
@@ -108,12 +103,25 @@ code {
   padding: 4px 48px !important;
 }
 
+.details-tab a:hover {
+  border-color: #ffc107 !important;
+  background-color: #1d2124 !important;
+}
+
+.business-rating {
+  font-size: x-large !important;
+}
+
 .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before {
   border-top-color: rgba(34, 34, 34, 1) !important;
 }
 
 .border.border-transparent {
   border-color: transparent !important;
+}
+
+.border-darker {
+  border-color: #222 !important;
 }
 
 .vertical-text {
@@ -200,6 +208,20 @@ code {
 .gm-style .gm-style-iw-t::after {
   background: linear-gradient(45deg,#343a40 50%,
   rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%) !important;
+}
+
+.photo-carousel .carousel-control-prev-icon,
+.menu-carousel .carousel-control-prev-icon {
+  background-image: url(chevron-left-solid.svg);
+  height: 100px;
+  opacity: 1;
+}
+
+.photo-carousel .carousel-control-next-icon,
+.menu-carousel .carousel-control-next-icon {
+  background-image: url(chevron-right-solid.svg);
+  height: 100px;
+  opacity: 1;
 }
 
 .coffee-button img {
@@ -322,5 +344,9 @@ code {
 
   .address-link {
     max-width: 250px;
+  }
+
+  .reviewer-name {
+    width: 60px;
   }
 }

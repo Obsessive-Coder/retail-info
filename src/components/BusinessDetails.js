@@ -2,24 +2,21 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
 import {
-  faMapMarkerAlt, faPhoneAlt, faClock
+  faMapMarkerAlt, faPhoneAlt, faClock, faGlobe,
+  faDollarSign,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Map, Marker , GoogleApiWrapper } from 'google-maps-react';
-import { MenuTabs, Services, BusinessHoursCollapse } from './';
+import { DetailsTabs, Services, BusinessHoursCollapse, ImageCarousel } from './';
 
 // Restaurant Data File.
 const businessData = require('../data/businesses.json');
-const menuData = require('../data/menus.json');
 
 export class BusinessDetails extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      business: null,
-      menuItems: [],
-    };
+    this.state = { business: null };
 
     // Bind class methods.
     this.handleAddressClick = this.handleAddressClick.bind(this);
@@ -39,14 +36,42 @@ export class BusinessDetails extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    const { menuId } = this.props.match.params;
-    const menuItems = menuData[menuId] || [];
+    const { google, match } = this.props;
+    const { menuId } = match.params;
     const business = businessData.businesses.filter(business => business.menuId === menuId)[0];
-    this.setState(() => ({ business, menuItems }));
+
+    const map = new google.maps.Map(<div></div>);
+
+    var service = new google.maps.places.PlacesService(map);
+
+    const request = {
+      placeId: business.placeId,
+      fields: ['url', 'price_level', 'rating', 'user_ratings_total', 'reviews'],
+    };
+
+    service.getDetails(request, (result, status) => {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        const {
+          url,
+          price_level,
+          rating,
+          user_ratings_total,
+          reviews,
+        } = result;
+
+        business.googleUrl = url;
+        business.priceLevel = price_level;
+        business.rating = rating;
+        business.ratingsCount = user_ratings_total;
+        business.reviews = reviews;
+
+        this.setState(() => ({ business }));
+      }
+    })
   }
 
   render() {
-    const { business, menuItems } = this.state;
+    const { business } = this.state;
     const { google } = this.props;
 
     if (!business) return null;
@@ -54,28 +79,63 @@ export class BusinessDetails extends Component {
     const {
       name,
       address,
-      city,
       phone,
       specialHours,
       regularHours,
       location,
       photos,
+      website,
+      priceLevel,
     } = business;
+
+    let cost;
+    let costColor;
+
+    switch (priceLevel) {
+      case 0:
+        cost = 'Free';
+        costColor = 'text-success';
+        break;
+      case 1:
+        cost = 'Inexpensive';
+        costColor = 'text-success';
+        break;
+      case 2:
+        cost = 'Moderate';
+        costColor = 'text-warning';
+        break;
+      case 3:
+        cost = 'Expensive';
+        costColor = 'text-warning';
+        break;
+      case 1:
+        cost = 'Very Expensive';
+        costColor = 'text-danger';
+        break;
+      default:
+        cost = 'Unknown';
+        costColor = 'text-info';
+        break;
+    }
 
     return (
       <div>
         <div className="d-flex flex-column flex-md-row">
           <div className="mb-4 px-1 pb-3 mb-md-0 bg-dark details-sidebar">
-            <img
-              src={photos[0]}
-              alt={name}
-              className="w-100 h-auto business-details-image"
-            />
+            {photos.length > 1 ? (
+              <ImageCarousel photos={photos} />
+            ) : (
+              <img
+                src={photos[0]}
+                alt={name}
+                className="w-100 business-details-image"
+              />
+            )}
+
             <div className="d-flex flex-column align-items-center pt-3 px-3">
               <h2 className="mb-0 text-center text-extra-light font-xl business-heading">
                 {name}
               </h2>
-
 
               <div>
                 <div>
@@ -108,6 +168,34 @@ export class BusinessDetails extends Component {
                       {phone}
                     </a>
                   </div>
+
+                  {website && (
+                    <div className="d-flex align-items-center my-2 font-weight-bold">
+                      <FontAwesomeIcon
+                        fixedWidth
+                        icon={faGlobe}
+                        className="text-secondary"
+                      />
+                      <a
+                        href={website}
+                        target="_blank"
+                        className="mx-2"
+                      >
+                        Visit Our Website
+                      </a>
+                    </div>
+                  )}
+
+                  <div className="d-flex align-items-center my-2 font-weight-bold">
+                    <FontAwesomeIcon
+                      fixedWidth
+                      icon={faDollarSign}
+                      className="text-secondary"
+                    />
+                    <span className={`mx-2 ${costColor}`}>
+                      {cost}
+                    </span>
+                  </div>
                 </div>
 
                 <div className="d-flex my-2">
@@ -134,60 +222,23 @@ export class BusinessDetails extends Component {
               />
             </div>
 
-            {menuItems.length > 0 && (
-              <div className="px-4 px-sm-5 px-md-0">
-                <Map
-                  google={google}
-                  zoom={16}
-                  initialCenter={location}
-                  style={{ position: 'relative',  width: '100%', height: '200px' }}
-                  className="position-relative"
-                >
-                  <Marker
-                    position={location}
-                    onClick={this.handleAddressClick}
-                  />
-                </Map>
-              </div>
-            )}
+            <div className="px-4 px-sm-5 px-md-0">
+              <Map
+                google={google}
+                zoom={16}
+                initialCenter={location}
+                style={{ position: 'relative',  width: '100%', height: '200px' }}
+                className="position-relative"
+              >
+                <Marker
+                  position={location}
+                  onClick={this.handleAddressClick}
+                />
+              </Map>
+            </div>
           </div>
           <div className="flex-fill px-4 py-2 bg-light">
-            <h3 className="py-2 text-center text-extra-light bg-dark border-bottom border-warning menu-heading">
-              Menu
-            </h3>
-
-            {menuItems.length > 0 ? (
-              <MenuTabs menuItems={menuItems} />
-            ) : (
-              <div className="text-center">
-                <p className="font-weight-bold font-xl text-dark">
-                  No Menu Available
-                </p>
-                <span className="font-lg text-secondary">
-                  Please check back later as we are always updating the site.
-                </span>
-                <p className="font-lg text-secondary">
-                  If you have a menu for this business, please email it to&nbsp;
-                  <a href="mailto:jaredhuff85@gmail.com?Subject=Retail%20Info">Jared</a>
-                  .
-                </p>
-
-                <div>
-                  <Map
-                    google={google}
-                    zoom={16}
-                    initialCenter={location}
-                    style={{ position: 'relative',  width: '100%', height: '350px' }}
-                    className="position-relative"
-                  >
-                    <Marker
-                      position={location}
-                      onClick={this.handleAddressClick}
-                    />
-                  </Map>
-                </div>
-              </div>
-            )}
+            <DetailsTabs business={business} />
           </div>
         </div>
       </div>

@@ -6,8 +6,6 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Services, BusinessHoursCollapse } from './';
 
-const menuData = require('../data/menus.json');
-
 export default function MapInfo({
   business, handleGoToOnClick, handleAddressClick,
   handleCloseOnClick,
@@ -20,6 +18,7 @@ export default function MapInfo({
     regularHours,
     services,
     menuId,
+    menuPhotos,
   } = business;
 
   return (
@@ -100,7 +99,7 @@ export default function MapInfo({
       />
 
       <div className="d-flex justify-content-around align-items-center">
-        {menuData.hasOwnProperty(menuId) && (
+        {menuPhotos && (
           <div className="d-flex flex-column font-weight-bold text-center text-success">
             <span>
               Menu
@@ -113,11 +112,11 @@ export default function MapInfo({
 
         <Button
           outline
-          block={!menuData.hasOwnProperty(menuId)}
+          block={menuPhotos ? false : true}
           color="info"
           size="sm"
           onClick={() => handleGoToOnClick(menuId)}
-          className="px-3"
+          className="px-5"
         >
           More Info
         </Button>

@@ -9,8 +9,6 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Services } from './';
 
-const menuData = require('../data/menus.json');
-
 export default function MapListItem({
   business, isSelected, handleItemOnClick,
   handleItemOnDoubleClick, handleAddressClick
@@ -38,7 +36,7 @@ export default function MapListItem({
         </span>
 
         <div className="d-flex mx-2">
-          {menuData.hasOwnProperty(business.menuId) && (
+          {business.menuPhotos && (
             <div>
               <FontAwesomeIcon
                 fixedWidth
@@ -103,7 +101,7 @@ export default function MapListItem({
           </div>
 
           <div className="d-flex justify-content-around align-items-center">
-            {menuData.hasOwnProperty(business.menuId) && (
+            {business.menuPhotos && (
               <div className="d-flex flex-column font-weight-bold font-xs text-center text-success">
                 <span>
                   Menu

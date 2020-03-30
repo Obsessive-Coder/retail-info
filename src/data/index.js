@@ -10,7 +10,7 @@ const updatedBusinessesJSON = require("./updatedBusinesses.json");
 const client = new Client({});
 
 const apiKey = "AIzaSyDdYR63yO2dIw6J0amjUkpTa0xa_SvCVMY";
-const timeout = 10000;
+const timeout = 60000;
 
 const priceLevels = [
   {
@@ -42,13 +42,14 @@ const priceLevels = [
 const getGoogleData = () => {
   const businessRequests = newBusinessesJSON.map(businessData => {
     let business;
+    let placeId;
     return client
       .findPlaceFromText({
         params: {
-          input: `+1 ${businessData.phone}`,
-          inputtype: 'phonenumber',
-          // input: `${businessData.name} ${businessData.city} IL`,
-          // inputtype: "textquery",
+          // input: `+1 ${businessData.phone}`,
+          // inputtype: 'phonenumber',
+          input: `${businessData.name} ${businessData.city} IL`,
+          inputtype: "textquery",
           key: apiKey
         },
         timeout
@@ -59,6 +60,7 @@ const getGoogleData = () => {
         }
 
         const { place_id } = data.candidates[0];
+        placeId = place_id;
         return client.placeDetails({
           params: {
             place_id,
@@ -78,7 +80,7 @@ const getGoogleData = () => {
           vicinity: address,
           formatted_phone_number: phone,
           geometry: { location },
-          opening_hours
+          opening_hours,
         } = detailsResult;
 
         let isOpenNow = undefined;
@@ -107,7 +109,8 @@ const getGoogleData = () => {
           priceLevel,
           website,
           types,
-          location
+          location,
+          placeId,
         };
 
         let photoRequests = [];
@@ -165,3 +168,19 @@ const getGoogleData = () => {
 
 // getGoogleData();
 
+// const oldBusinessesJSON = require('./oldTemp.json');
+
+// const businesses = oldBusinessesJSON.businesses.map(business => {
+//   const newBusiness = businessesJSON.businesses.filter(({ menuId }, index) => (
+//     business.menuId === menuId
+//   ))[0];
+
+//   business.placeId = newBusiness.placeId;
+
+//   return business;
+// });
+
+// fs.writeFile("updatedBusinesses.json", JSON.stringify(businesses, null, 2), err => {
+//   if (err) throw err;
+//   console.log("done");
+// });
