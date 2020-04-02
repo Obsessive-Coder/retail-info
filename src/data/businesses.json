@@ -48,6 +48,53 @@
       "placeId": "ChIJo_5m6E_5CIgRsy6lUuB5Ga4"
     },
     {
+      "name": "The Rack Bar & Grill",
+      "phone": "(815) 561-6254",
+      "specialHours": false,
+      "menuId": "the-rack-bar-and-grill--rochelle-",
+      "isOperating": true,
+      "services": [
+        "pickup",
+        "delivery"
+      ],
+      "city": "Rochelle",
+      "address": "406 Cherry Avenue, Rochelle, IL, Rochelle",
+      "regularHours": [
+        "Monday: 10:00 AM – 1:00 AM",
+        "Tuesday: 10:00 AM – 1:00 AM",
+        "Wednesday: 10:00 AM – 1:00 AM",
+        "Thursday: 10:00 AM – 2:00 AM",
+        "Friday: 10:00 AM – 12:00 AM",
+        "Saturday: 8:00 AM – 2:00 AM",
+        "Sunday: 8:00 AM – 11:00 PM"
+      ],
+      "isOpenNow": false,
+      "priceLevel": "Inexpensive",
+      "website": "http://www.rackbarandgrill.com/",
+      "types": [
+        "bar",
+        "point_of_interest",
+        "establishment"
+      ],
+      "location": {
+        "lat": 41.921965,
+        "lng": -89.065538
+      },
+      "placeId": "ChIJoVvh9IXfCIgRu_8TwLzHvXY",
+      "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipN8SKluWY-Q222s8uh-TdpiMgzNT0o8qye_rD4l=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPqI-xtgGyPUsndVdsdzvCgyywF2m-NGNTios9N=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOGWDWSTdoHfulbsmDs9jONxdgfG97tAYad8aCj=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOx-RDTm_OKmPq0j3A3Sfy1uDGFs41jB9Bc9YGM=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMpoyN9ojTgN5yNqZOu2_zQXQ-DLIv1ImfntCHE=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipNzbwuougbWnYZ6cDXiw7J1oQ03XPDrc2QnL8Wd=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPbNrybpNlCN02Nsp26fkSBcZSpBucu0NJYtYUg=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMo4un8c9WOIaP0dmadBiLU6sd6HUV6RFKNYkBf=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMoihHpEhuukaVvDRIhUjS0oowViaDBI8dDFDkn=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipNhqmrWiDGshYjcMKUACFbAKeUGvLrDyNpEsUy4=s1600-w400"
+      ]
+    },
+    {
       "name": "The Village Bakery",
       "phone": "(815) 732-3830",
       "specialHours": [

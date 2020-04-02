@@ -158,7 +158,7 @@ export default class AddBusinessModal extends Component {
       streetAddress,
       city,
       services: JSON.stringify(services, null, 4),
-      specialHours: JSON.stringify(specialHours, null, 4),
+      specialHours: specialHours.length > 0 ? JSON.stringify(specialHours, null, 4) : false,
       menuId,
     };
 

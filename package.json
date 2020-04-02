@@ -24,6 +24,7 @@
     "react-rating": "^2.0.5",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "react-ticker": "^1.2.2",
     "reactstrap": "^8.4.1"
   },
   "scripts": {

@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "name": "The Rack Bar and Grill ",
+    "phone": "(815) 561-6254",
+    "specialHours": [],
+    "menuId": "the-rack-bar-and-grill--rochelle-",
+    "isOperating": true,
+    "services": [
+      "pickup",
+      "delivery"
+    ],
+    "city": "Rochelle ",
+    "address": "406 Cherry Ave "
+  }
+]

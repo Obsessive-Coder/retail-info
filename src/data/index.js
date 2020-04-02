@@ -46,10 +46,10 @@ const getGoogleData = () => {
     return client
       .findPlaceFromText({
         params: {
-          // input: `+1 ${businessData.phone}`,
-          // inputtype: 'phonenumber',
-          input: `${businessData.name} ${businessData.city} IL`,
-          inputtype: "textquery",
+          input: `+1 ${businessData.phone}`,
+          inputtype: 'phonenumber',
+          // input: `${businessData.name} ${businessData.city} IL`,
+          // inputtype: "textquery",
           key: apiKey
         },
         timeout
@@ -166,7 +166,7 @@ const getGoogleData = () => {
     .catch(error => console.log(error));
 };
 
-// getGoogleData();
+getGoogleData();
 
 // const oldBusinessesJSON = require('./oldTemp.json');
 
