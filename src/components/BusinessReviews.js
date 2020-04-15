@@ -58,7 +58,7 @@ export default function BusinessReviews({
       </div>
 
       <ListGroup flush>
-        {reviews.map(review => (
+        {reviews && reviews.map(review => (
           <ListGroupItem
             key={`${review.author_name}-${review.rating}-review`}
             className="my-2 bg-darker"

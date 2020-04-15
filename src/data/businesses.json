@@ -48,6 +48,60 @@
       "placeId": "ChIJo_5m6E_5CIgRsy6lUuB5Ga4"
     },
     {
+      "name": "Sunrise 3",
+      "phone": "(815) 732-2022",
+      "specialHours": [
+        "Sunday: 9:00 AM – 3:00 PM",
+        "Monday: 9:00 AM – 7:00 PM",
+        "Tuesday: 9:00 AM – 7:00 PM",
+        "Wednesday: 9:00 AM – 7:00 PM",
+        "Thursday: 9:00 AM – 7:00 PM",
+        "Friday: 9:00 AM – 7:00 PM",
+        "Saturday: 9:00 AM – 7:00 PM"
+      ],
+      "menuId": "sunrise-3-oregon",
+      "isOperating": true,
+      "services": [
+        "pickup"
+      ],
+      "city": "Oregon",
+      "address": "116 North 4th Street, Oregon",
+      "regularHours": [
+        "Monday: Closed",
+        "Tuesday: 6:00 AM – 8:00 PM",
+        "Wednesday: 6:00 AM – 8:00 PM",
+        "Thursday: 6:00 AM – 8:00 PM",
+        "Friday: 6:00 AM – 9:00 PM",
+        "Saturday: 6:00 AM – 9:00 PM",
+        "Sunday: 6:00 AM – 3:00 PM"
+      ],
+      "isOpenNow": true,
+      "priceLevel": "Inexpensive",
+      "types": [
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "location": {
+        "lat": 42.015227,
+        "lng": -89.332848
+      },
+      "placeId": "ChIJZ1URzkL5CIgRtPPuqZ6QuVY",
+      "photos": [
+        "https://lh3.googleusercontent.com/p/AF1QipP-wwvghyOCj9LjXwcMLdLhT5oEueoQXP8eSYG6=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMe0CioC8PUPFgpjBndyTtYKR_dbgSgu8HG4I91=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPKeVGNEUrNZ363TtzoYBYGZm_J0APlWbDVmRl_=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMJ0R0LW3fxwePc6nJ-98tyR-NNnU9fPBblU2G9=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMg2eCz_8yXy-8JgerG-IsK8c850QPV8lFjLW1D=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipOmuOyl_G_zaPg2TnN2CwW790VC_IQf95xCT7ta=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMBxkuQ2bZdm6TkE3Ror4C8rsp5bixNAySrwoiy=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipO9jMvwEi0rV2x72BpPbXKIkCvm38iJZSpe1yPa=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipMYrjlUnPGoWt6TlFDufEd3r1-960hLbi1h0nkZ=s1600-w400",
+        "https://lh3.googleusercontent.com/p/AF1QipPKj64ubQR0NncyX5BXP8NvrR1ybrXVnW2Fv0j6=s1600-w400"
+      ]
+    },
+    {
       "name": "The Rack Bar & Grill",
       "phone": "(815) 561-6254",
       "specialHours": false,

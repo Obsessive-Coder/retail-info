@@ -28,7 +28,7 @@ export default function DetailsTabs({ business }) {
     )
   }, {
     textLabel: 'Reviews',
-    content: reviews.length === 0 ? (
+    content: (!reviews || reviews.length) === 0 ? (
       <NoReviews googleUrl={googleUrl} />
     ) : (
       <BusinessReviews
