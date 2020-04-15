@@ -2498,16 +2498,17 @@
       "phone": "(815) 732-3922",
       "specialHours": [
         "Monday: Closed",
-        "Tuesday: 11 AM – 2 PM, 4 PM – 7 PM",
-        "Wednesday: 12:00 PM – 7:00 PM",
-        "Thursday: 11 AM – 2 PM, 4 PM – 7 PM",
-        "Friday: 12:00 PM – 7:00 PM",
-        "Saturday: 4:00 PM – 8:00 PM",
+        "Tuesday: 4:00 PM – 8:00 PM",
+        "Wednesday: 4:00 PM – 8:00 PM",
+        "Thursday: 4:00 PM – 8:00 PM",
+        "Friday: 12:00 PM – 8:00 PM",
+        "Saturday: 12:00 PM – 8:00 PM",
         "Sunday: Closed"
       ],
       "menuId": "cornetts-chana-tap-chana",
       "menuPhotos": [
-        "chanaTap/chanaTap.jpg"
+        "chanaTap/first.jpg",
+        "chanaTap/second.jpg"
       ],
       "isOperating": true,
       "services": [
