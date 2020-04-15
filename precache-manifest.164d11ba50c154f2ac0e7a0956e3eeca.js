@@ -1,35 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9467cbdcd80ec8d0e0764741b4b52aa5",
+    "revision": "e0a44463779ba95de372049d4797167a",
     "url": "/retail-info/index.html"
   },
   {
-    "revision": "ccbeecbed88cfbfadec3",
+    "revision": "5fefb1108836f457cc4b",
     "url": "/retail-info/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "133fd704932e13349ef0",
+    "revision": "ad882849f3855d5792b6",
     "url": "/retail-info/static/css/main.5c00b3bb.chunk.css"
   },
   {
-    "revision": "ccbeecbed88cfbfadec3",
-    "url": "/retail-info/static/js/2.c8a7c96a.chunk.js"
+    "revision": "5fefb1108836f457cc4b",
+    "url": "/retail-info/static/js/2.82f470e8.chunk.js"
   },
   {
     "revision": "abb9da767145eda5b3742d5991dd2e4e",
-    "url": "/retail-info/static/js/2.c8a7c96a.chunk.js.LICENSE.txt"
+    "url": "/retail-info/static/js/2.82f470e8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "133fd704932e13349ef0",
-    "url": "/retail-info/static/js/main.8924caf4.chunk.js"
+    "revision": "ad882849f3855d5792b6",
+    "url": "/retail-info/static/js/main.89146c78.chunk.js"
   },
   {
     "revision": "fbb537478382bad64299",
     "url": "/retail-info/static/js/runtime-main.a8bbc453.js"
-  },
-  {
-    "revision": "584ab34c0b6abee03bcfe1ed633468cc",
-    "url": "/retail-info/static/media/chanaTap.584ab34c.jpg"
   },
   {
     "revision": "2ca5a867ac53b4fa845d3049458d27d9",
@@ -72,6 +68,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/retail-info/static/media/first.80c3fa1f.jpg"
   },
   {
+    "revision": "ab34bdf36514e7677595aabb403ddf6e",
+    "url": "/retail-info/static/media/first.ab34bdf3.jpg"
+  },
+  {
     "revision": "decf54e692d236dd3f5ae2e3323deabb",
     "url": "/retail-info/static/media/first.decf54e6.jpg"
   },
@@ -98,6 +98,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5b74ce0058682e3c1a1f38b86835691a",
     "url": "/retail-info/static/media/second.5b74ce00.jpg"
+  },
+  {
+    "revision": "9a3015d14656b044acba470643c6a280",
+    "url": "/retail-info/static/media/second.9a3015d1.jpg"
   },
   {
     "revision": "d1fc238430093fa09d540d73717140db",
