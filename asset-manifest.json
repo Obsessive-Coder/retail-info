@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/retail-info/static/css/main.5c00b3bb.chunk.css",
-    "main.js": "/retail-info/static/js/main.98ad0a99.chunk.js",
-    "main.js.map": "/retail-info/static/js/main.98ad0a99.chunk.js.map",
+    "main.css": "/retail-info/static/css/main.f93ee35a.chunk.css",
+    "main.js": "/retail-info/static/js/main.caafc04d.chunk.js",
+    "main.js.map": "/retail-info/static/js/main.caafc04d.chunk.js.map",
     "runtime-main.js": "/retail-info/static/js/runtime-main.a8bbc453.js",
     "runtime-main.js.map": "/retail-info/static/js/runtime-main.a8bbc453.js.map",
     "static/css/2.17e5ed98.chunk.css": "/retail-info/static/css/2.17e5ed98.chunk.css",
-    "static/js/2.82f470e8.chunk.js": "/retail-info/static/js/2.82f470e8.chunk.js",
-    "static/js/2.82f470e8.chunk.js.map": "/retail-info/static/js/2.82f470e8.chunk.js.map",
+    "static/js/2.840fa077.chunk.js": "/retail-info/static/js/2.840fa077.chunk.js",
+    "static/js/2.840fa077.chunk.js.map": "/retail-info/static/js/2.840fa077.chunk.js.map",
     "index.html": "/retail-info/index.html",
-    "precache-manifest.e1538c36b8b018fe2a9eb699cf5ca7cb.js": "/retail-info/precache-manifest.e1538c36b8b018fe2a9eb699cf5ca7cb.js",
+    "precache-manifest.0efbda37d08b2b82092f895eb8a12c68.js": "/retail-info/precache-manifest.0efbda37d08b2b82092f895eb8a12c68.js",
     "service-worker.js": "/retail-info/service-worker.js",
     "static/css/2.17e5ed98.chunk.css.map": "/retail-info/static/css/2.17e5ed98.chunk.css.map",
-    "static/css/main.5c00b3bb.chunk.css.map": "/retail-info/static/css/main.5c00b3bb.chunk.css.map",
-    "static/js/2.82f470e8.chunk.js.LICENSE.txt": "/retail-info/static/js/2.82f470e8.chunk.js.LICENSE.txt",
+    "static/css/main.f93ee35a.chunk.css.map": "/retail-info/static/css/main.f93ee35a.chunk.css.map",
+    "static/js/2.840fa077.chunk.js.LICENSE.txt": "/retail-info/static/js/2.840fa077.chunk.js.LICENSE.txt",
     "static/media/index.css": "/retail-info/static/media/chevron-right-solid.f6ebbb88.svg",
     "static/media/fifth.jpg": "/retail-info/static/media/fifth.8928ef91.jpg",
     "static/media/first.jpg": "/retail-info/static/media/first.f22620db.jpg",
@@ -25,8 +25,8 @@
   "entrypoints": [
     "static/js/runtime-main.a8bbc453.js",
     "static/css/2.17e5ed98.chunk.css",
-    "static/js/2.82f470e8.chunk.js",
-    "static/css/main.5c00b3bb.chunk.css",
-    "static/js/main.98ad0a99.chunk.js"
+    "static/js/2.840fa077.chunk.js",
+    "static/css/main.f93ee35a.chunk.css",
+    "static/js/main.caafc04d.chunk.js"
   ]
 }
