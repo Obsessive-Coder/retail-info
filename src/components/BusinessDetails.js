@@ -68,6 +68,8 @@ export class BusinessDetails extends Component {
         this.setState(() => ({ business }));
       }
     })
+
+    alert('Due to final limitations the Google Maps API data is unavailable. I apologize for any inconvenience.');
   }
 
   render() {

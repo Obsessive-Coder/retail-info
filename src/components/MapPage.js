@@ -187,6 +187,8 @@ export class MapPage extends Component {
           .catch(error => console.error(error));
       }
     );
+
+    alert('Due to final limitations the Google Maps API data is unavailable. I apologize for any inconvenience.');
   }
 
   render() {
@@ -341,4 +343,3 @@ export class MapPage extends Component {
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyBWc45Eb4D3pf2A-I3aki-aM8HxMHRPfpc'
 })(MapPage);
-
